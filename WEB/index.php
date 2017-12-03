@@ -11,6 +11,7 @@ if( strlen($_SERVER['REQUEST_URI']) > 1 && substr($_SERVER['REQUEST_URI'], -1) !
      exit;
 }
 
+include 'config.php';
 include 'includes.php';
 
 //Show errors | disable when live

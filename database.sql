@@ -14,6 +14,7 @@
 CREATE DATABASE IF NOT EXISTS `boompanel` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */;
 USE `boompanel`;
 
+SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
 
 -- Dumping structure for table boompanel.bp_admins
 CREATE TABLE IF NOT EXISTS `bp_admins` (
