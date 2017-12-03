@@ -70,10 +70,11 @@ public Action OnAddBanCommand(int client, const char[] command, int args)
 		}
 		
 		int adminID = (client == 0) ? 0 : iClientID[client];
+		int serverToBan = (g_cvBansAllSrvs.IntValue == 0) ? iServerID : 0;
 		char query[500];
 		Format(query, sizeof(query), 
 		"INSERT INTO bp_bans (pid, sid, aid, reason, length) "...
-		"VALUES((SELECT id FROM bp_players WHERE steamid = '%s'), %i, %i, '%s', %i)", steamid64, iServerID, adminID, cReason, length);
+		"VALUES((SELECT id FROM bp_players WHERE steamid = '%s'), %i, %i, '%s', %i)", steamid64, serverToBan, adminID, cReason, length);
 		
 		
 		DB.Query(OnRowInserted, query);
@@ -133,7 +134,8 @@ public Action OnBanClient(int client, int time, int flags, const char[] reason, 
 	char query[255], cEscReason[100];
 	DB.Escape(reason, cEscReason, sizeof(cEscReason));
 	int adminID = (admin == 0) ? 0 : iClientID[admin];
-	Format(query, sizeof(query), "INSERT INTO bp_bans (pid, sid, aid, reason, length) VALUES ('%i', '%i', '%i', '%s', '%i')", iClientID[client], iServerID, adminID, reason, time);
+	int serverToBan = (g_cvBansAllSrvs.IntValue == 0) ? iServerID : 0;
+	Format(query, sizeof(query), "INSERT INTO bp_bans (pid, sid, aid, reason, length) VALUES ('%i', '%i', '%i', '%s', '%i')", iClientID[client], serverToBan, adminID, reason, time);
 	DB.Query(OnRowInserted, query);
 	
 	//Get kick message data

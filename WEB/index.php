@@ -11,27 +11,7 @@ if( strlen($_SERVER['REQUEST_URI']) > 1 && substr($_SERVER['REQUEST_URI'], -1) !
      exit;
 }
 
-include 'config.php';
-
-//Some other configs
-define("TIMEFORMAT", "Y-m-d H:i");
-define("ITEMSPERPAGE", 25);
-define("ONLINELASTMINUTES", 10);
-define("HEADERERROR", "HTTP/1.1 500 Internal Server Booboo");
-define("UNKNOWN_COUNTRY", "HZ");
-
-//Require
-include 'class/DataBase.php';
-include 'class/AltoRouter.php';
-require 'steamauth/steamauth.php';
-require 'class/SourceQuery/bootstrap.php';
-include 'lang/'.LANGUAGE.'.php';
-include 'model/navigation.php';
-
-$db = new DataBase();
-use xPaw\SourceQuery\SourceQuery;
-$Query = new SourceQuery();
-$Source = SourceQuery::SOURCE;
+include 'includes.php';
 
 //Show errors | disable when live
 if(DEVELOPERMOD == 1) {
@@ -47,8 +27,12 @@ date_default_timezone_set($timezone_name);
 $url        = WEBSITE;
 $url        = preg_match("@^https?://@", $url) ? $url : 'http://' . $url;
 $url        = parse_url($url);
-$explode    = explode('/', $url['path']);
-$basepath   = (!empty($explode[1])) ? "/".$explode[1] : '';
+if(isset($url['path'])) {
+    $explode    = explode('/', $url['path']);
+    $basepath   = (!empty($explode[1])) ? "/".$explode[1] : '';
+} else {
+    $basepath 	= '';
+}
 
 //Router
 $router = new AltoRouter();
@@ -88,7 +72,6 @@ if(isset($CurrentURL))
 else
     $CurrentURL = WEBSITE;
 
-require 'model/global_functions.php';
 require 'partial/header.php';
 
 

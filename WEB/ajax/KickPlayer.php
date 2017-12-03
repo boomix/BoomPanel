@@ -1,5 +1,9 @@
 <?php
 
+//Start sessions
+session_start();
+ob_start();
+
 //Check if neccessary data is entered
 if(isset($_POST['steamid'], $_POST['serverName'], $_POST['reason']))
 {
@@ -8,13 +12,14 @@ if(isset($_POST['steamid'], $_POST['serverName'], $_POST['reason']))
     if(!isset($_SESSION['steamid']))
         die();
 
+    include '../includes.php';
+
     //Check if is admin
     $IsAdmin = $db->selectOne("SELECT * FROM bp_panel_admins WHERE steamid = :steamid", array("steamid" => $_SESSION['steamid']));
     if(!$IsAdmin && $_SESSION['steamid'] != MAINADMIN)
         die();
 
     //Get all data in variables
-    include '../model/global_functions.php';
     $serverName = htmlspecialchars($_POST['serverName']);
     $steamid    = toSteamID($_POST['steamid']);
     $reason     = htmlspecialchars($_POST['reason']);

@@ -1,5 +1,9 @@
 <?php
 
+//Start sessions
+session_start();
+ob_start();
+
 //Check if neccessary data is entered
 $serverName = isset($_POST['serverName']) ? htmlspecialchars($_POST['serverName']) : '';
 if(empty($serverName))
@@ -12,7 +16,7 @@ if(!isset($_SESSION['steamid']))
     die();
 
 
-include '../model/global_functions.php';
+include '../includes.php';
 
 //Get server date - rccon password, ip, port
 $GetServerDate = $db->selectOne("SELECT `ip`, `port`, `rcon_pw` FROM bp_servers WHERE name = :serverName", array("serverName" => $serverName));
@@ -59,7 +63,7 @@ $PlayerDataFromDB = $db->select(
     "SELECT * FROM bp_players p 
             LEFT JOIN bp_countries c ON p.country = c.country_code 
             LEFT JOIN (SELECT * FROM bp_players_ip GROUP BY pid DESC) ip2 ON p.id = ip2.pid
-            LEFT JOIN (SELECT * FROM bp_players_username GROUP BY pid DESC) u2 ON p.id = u2.pid
+            LEFT JOIN (SELECT * FROM bp_players_username GROUP BY pid ORDER BY last_used DESC) u2 ON p.id = u2.pid
             LEFT JOIN (SELECT `pid`, SUM(TIMESTAMPDIFF(MINUTE, connected, disconnected)) summa FROM bp_players_online WHERE sid = :sid GROUP BY pid) o ON p.id = o.pid
             WHERE `id` IN (".$AllClientIDs.") 
             GROUP BY steamid",
