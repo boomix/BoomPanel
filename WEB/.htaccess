@@ -1,0 +1,8 @@
+RewriteEngine on
+RewriteCond %{REQUEST_URI} /+[^\.]+$
+RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(?:views|module)\b.* index.php/$0 [L]
+RewriteRule \.(css|js|jpe?g|gif|png|ico|otf|eot|svg|ttf|woff)$ - [L]
+RewriteCond %{REQUEST_URI}  !(ajax|template) [NC]
+RewriteRule . index.php [L]

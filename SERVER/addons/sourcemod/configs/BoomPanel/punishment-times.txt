@@ -1,0 +1,6 @@
+10 - 10 min
+60 - 1 hour
+600 - 6 hours
+1440 - 1 day
+4320 - 3 days
+10080 - 7 days
