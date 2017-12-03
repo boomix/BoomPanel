@@ -1,5 +1,4 @@
 <?php
-    include 'config.php';
 
     //Some other configs
     define("TIMEFORMAT", "Y-m-d H:i");
