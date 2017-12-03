@@ -47,8 +47,12 @@ date_default_timezone_set($timezone_name);
 $url        = WEBSITE;
 $url        = preg_match("@^https?://@", $url) ? $url : 'http://' . $url;
 $url        = parse_url($url);
-$explode    = explode('/', $url['path']);
-$basepath   = (!empty($explode[1])) ? "/".$explode[1] : '';
+if(isset($url['path'])) {
+    $explode    = explode('/', $url['path']);
+    $basepath   = (!empty($explode[1])) ? "/".$explode[1] : '';
+} else {
+    $basepath 	= '';
+}
 
 //Router
 $router = new AltoRouter();

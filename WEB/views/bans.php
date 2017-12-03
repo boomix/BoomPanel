@@ -187,7 +187,7 @@
 
                         <?php foreach ((array)$GetAllBans as $ban) {
 
-                            if(empty($ban['steamid']))
+                            if(empty($ban['player_steamid']))
                                 return;
 
                             $starttime  = date(TIMEFORMAT, strtotime($ban['time']));
