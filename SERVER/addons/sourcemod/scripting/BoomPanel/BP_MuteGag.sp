@@ -419,6 +419,7 @@ void DBMuteGag(int admin, int clientID, int type, char[] reason = "", int time =
 {
 	//Update last target for admin
 	int adminID = (admin == 0) ? 0 : iClientID[admin];
+	int serverToBan = (g_cvMuteGagAllSrvs.IntValue == 0) ? iServerID : 0;
 	
 	//SQL stuff
 	char query[500];
@@ -426,11 +427,11 @@ void DBMuteGag(int admin, int clientID, int type, char[] reason = "", int time =
 		Format(query, sizeof(query), 
 		"INSERT INTO bp_mutegag (pid, sid, aid, mgtype, length, reason) "...
 		"VALUES(%i, %i, %i, %i, %i, '%s')", 
-		clientID, iServerID, adminID, type, time, reason);
+		clientID, serverToBan, adminID, type, time, reason);
 	} else {
 		Format(query, sizeof(query), 
 		"UPDATE bp_mutegag SET unbanned = 1 WHERE pid = %i AND sid = %i AND mgtype = %i", 
-		clientID, iServerID, GetOpositeType(type));
+		clientID, serverToBan, GetOpositeType(type));
 	}
 	DB.Query(OnRowInserted, query, _, DBPrio_Low);
 	

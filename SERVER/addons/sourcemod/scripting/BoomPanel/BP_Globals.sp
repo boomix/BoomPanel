@@ -28,8 +28,9 @@ g_cvServerPORT,
 g_cvBansEnabled, 
 g_cvAdminsEnabled, 
 g_cvMuteGagEnabled, 
-g_cvChatLogEnabled;
-//g_cvDefMuteGagTime;
+g_cvChatLogEnabled,
+g_cvMuteGagAllSrvs,
+g_cvBansAllSrvs;
 char cServerHostName[100],
 cMuteReasonsFile[PLATFORM_MAX_PATH], 
 cGagReasonsFile[PLATFORM_MAX_PATH], 

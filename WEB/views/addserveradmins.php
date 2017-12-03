@@ -3,7 +3,7 @@
     <hr>
 
     <div class="row-fluid">
-        <div class="span6">
+        <div class="span12">
 
             <?php include "model/alert-messages.php"; ?>
 
@@ -55,51 +55,6 @@
                     </form>
                 </div>
             </div>
-        </div>
-
-        <div class="span6">
-
-            <div class="widget-box">
-                <div class="widget-title"> <span class="icon"> <i class="icon-search"></i> </span>
-                    <h5><?=UP(SEARCH).' '.ADMIN;?></h5>
-                </div>
-                <div class="widget-content nopadding">
-
-                    <form action="#" method="GET" class="form-horizontal">
-                        <div class="control-group">
-                            <label class="control-label"><?=ADMIN;?> :</label>
-                            <div class="controls">
-                                <input type="text" name="admin" class="span11" placeholder="..." value="<?=isset($_GET['admin']) ? htmlspecialchars($_GET['admin']) : '';?>" >
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <label class="control-label"><?=SERVER;?> </label>
-                            <div class="controls">
-                                <select name="server">
-                                    <option><?=ANYSERVER;?></option>
-                                    <?php foreach ((array)$GetAllServers as $server) {
-                                        if($server['name'] == 'all servers')
-                                            $server['name'] = ALL.' '.NAV_SERVERS;
-                                        ?>
-                                        <option <?=(isset($_GET['server']) && $_GET['server'] == $server['id']) ? 'selected="selected" ' : '';?> value="<?=$server['id'];?>"><?=$server['name'];?></option>
-                                    <?php } ?>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <label class="control-label"><?=GROUP;?> :</label>
-                            <div class="controls">
-                                <input type="text" name="reason" class="span11" placeholder="..." value="<?=isset($_GET['reason']) ? htmlspecialchars($_GET['reason']) : '';?>">
-                            </div>
-                        </div>
-                        <div class="form-actions">
-                            <button type="submit" name="search" class="btn btn-success"><?=UP(SEARCH).' '.BAN;?></button>
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-
         </div>
 
     </div>
