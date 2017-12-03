@@ -58,7 +58,7 @@ $navigation = array(
                 "overrideurl" => "/admins/addadmingroups/", //we use override because we have optinional parameters for url
                 "url"         => "/admins/addadmingroups/[delete|edit:action]?/[i:id]?/",
                 "method"  => "GET|POST",
-                "target"  => "views/admingroups.php"
+                "target"  => "views/addadmingroups.php"
             ),
             array(
                 "name"    => NAV_ADMINONLINETIME,
