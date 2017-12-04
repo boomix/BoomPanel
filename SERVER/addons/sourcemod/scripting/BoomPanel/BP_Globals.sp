@@ -36,7 +36,8 @@ cMuteReasonsFile[PLATFORM_MAX_PATH],
 cGagReasonsFile[PLATFORM_MAX_PATH], 
 cSilenceReasonsFile[PLATFORM_MAX_PATH], 
 cPunishmentTimeFile[PLATFORM_MAX_PATH],
-cMuteGagReason[MAXPLAYERS + 1][3][150];
+cMuteGagReason[MAXPLAYERS + 1][3][150],
+cLastCmd[MAXPLAYERS + 1][50];
 char g_MuteReasons[500],
 g_GagReasons[500],
 g_SilenceReasons[500],
