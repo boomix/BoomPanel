@@ -1,5 +1,7 @@
 <?php
 
+    ini_set('allow_url_fopen',1);
+
     //Some other configs
     define("TIMEFORMAT", "Y-m-d H:i");
     define("ITEMSPERPAGE", 25);
