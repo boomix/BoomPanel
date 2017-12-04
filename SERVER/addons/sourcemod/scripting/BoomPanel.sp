@@ -5,7 +5,6 @@
 #include <sourcemod>
 #include <clientprefs>
 #include <geoip>
-#include <cstrike>
 #include <basecomm>
 
 
@@ -81,7 +80,7 @@ public void OnPluginStart()
 
 bool IsSpectator(int client)
 {
-	if(GetClientTeam(client) == CS_TEAM_CT || GetClientTeam(client) == CS_TEAM_T)
+	if(GetClientTeam(client) == 2 || GetClientTeam(client) == 3)
 		return false;
 	else
 		return true;

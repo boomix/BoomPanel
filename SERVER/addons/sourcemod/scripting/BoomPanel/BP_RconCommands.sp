@@ -155,10 +155,8 @@ public Action CMD_Status(int client, int args)
 	
 	ReplyToCommand(client, "{\"stats\":{\"sid\": \"%i\", \"map\": \"%s\", \"online\": %i}, \"players\": [", iServerID, currentMap, online);
 	//This is done, so everything is sorted
-	AddToList(count, CS_TEAM_T);
-	AddToList(count, CS_TEAM_CT);
-	AddToList(count, CS_TEAM_SPECTATOR);
-	AddToList(count, CS_TEAM_NONE);
+	for (int i = 5; i >= 0; i--)
+		AddToList(count, i);
 
 	ReplyToCommand(client, "]}");
 	return Plugin_Handled;
