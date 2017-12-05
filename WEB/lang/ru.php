@@ -1,9 +1,7 @@
 <?php
 
     //LANGUAGE FILE
-    //--ENGLISH
-    //Made by boomix
-
+    //--Russian
 
     //NAVIGATION
     define("NAV_HOME", 					"Главная");
