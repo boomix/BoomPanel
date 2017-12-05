@@ -93,6 +93,34 @@
     </div>
 
     <hr>
+        <div class="row-fluid">
+            <div class="span12">
+
+                <div class="widget-box">
+                    <div class="widget-title"> <span class="icon"> <i class="icon-user"></i> </span>
+                        <h5><?=UP(SEND).' '.COMMAND.' '.TO.' '.SERVER;?> </h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <div id="response"></div>
+                        <div class="controls">
+                            <form action="#" method="POST" id="SendServerCommand" class="form-horizontal">
+                                <div class="control-group">
+                                    <label class="control-label"><?=UP(COMMAND);?> :</label>
+                                    <div class="controls">
+                                        <input type="text" name="commnad" id="ServerCmd" class="span11" placeholder="..." />
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" onclick="SendCommand();" name="submit" class="btn btn-success pull-right"><?=UP(SEND);?></button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    <hr>
 
     <div class="row-fluid">
         <div class="span12">
@@ -161,6 +189,30 @@
     setTimeout(function(){
         UpdateOnline();
     }, 100);
+
+    function SendCommand() {
+
+        event.preventDefault();
+
+        var data = $("#SendServerCommand").serialize() + '&serverName='+ serverName;
+        $("#ServerCmd").val('');
+
+        $.ajax({
+            type: 'POST',
+            url: '<?=WEBSITE;?>/ajax/SendCommand.php',
+            data: data,
+            error: function(xhr, status, error) {
+                new Noty({type: 'error', progressBar: true, timeout: 3000, text: '<i class="icon-remove alerticon"></i>'+status }).show();
+                UpdateOnline();
+            },
+            success: function(data){
+                new Noty({ type: 'success', progressBar: true, timeout: 3000, text: '<i class="icon-ok alerticon"></i>'+data }).show();
+                UpdateOnline();
+            },
+            dataType: 'html'
+        });
+
+    }
 
     function UpdateOnline()
     {

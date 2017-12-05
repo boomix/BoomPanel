@@ -143,6 +143,8 @@
     define("SELECT",                    "select");
     define("UNKNOWN",                   "unknown");
     define("MESSAGE",                   "message");
+    define("SEND",                      "send");
+    define("TO",                        "to");
 
     //Errors
     define("SERVER_ERROR",              "failed to decode JSON data from server");

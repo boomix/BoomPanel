@@ -6,7 +6,7 @@ define("APIKEY",    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"); //Get it here - http://ste
 define("LANGUAGE",  "en"); //Panel language - all avalible languages in 'lang' folder
 define("MAINADMIN", "76561198071212797"); //steamid64 of main admin
 define("TIMEZONE",  "+2");
-define("DEVELOPERMOD", "1");
+define("DEVELOPERMOD", "0");
 
 //Database connection
 define("DBHOST", "localhost");
