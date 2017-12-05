@@ -15,6 +15,7 @@
     require 'steamauth/steamauth.php';
     require 'class/SourceQuery/bootstrap.php';
     include 'lang/'.LANGUAGE.'.php';
+    include 'lang/default.lang.php';
     include 'model/navigation.php';
 
     $db = new DataBase();
