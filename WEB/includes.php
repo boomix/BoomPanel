@@ -8,6 +8,7 @@
     define("ONLINELASTMINUTES", 10);
     define("HEADERERROR", "HTTP/1.1 500 Internal Server Booboo");
     define("UNKNOWN_COUNTRY", "HZ");
+    define("DEFAULT_MAP", "http://i.imgur.com/O0wBACS.jpg");
 
     //Require
     include 'class/DataBase.php';

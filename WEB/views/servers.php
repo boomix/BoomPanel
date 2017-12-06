@@ -41,11 +41,13 @@
     <?php
         }
     }
+
+    $mapimage = (!$error && file_exists("img/maps/".$stats->map.".jpg")) ? WEBSITE."/"."img/maps/".$stats->map.".jpg" : DEFAULT_MAP;
     ?>
 
     <div class="row-fluid">
         <div class="span12">
-            <div class="map-image" style="background-image: url('http://i.imgur.com/O0wBACS.jpg')">
+            <div class="map-image" style="background-image: url('<?=$mapimage;?>')">
                 <div class="overlay">
                     <?=(!$error) ? $stats->map : '-';?>
                 </div>
@@ -214,6 +216,17 @@
 
     }
 
+    function checkImageExists(imageUrl, callBack) {
+        var imageData = new Image();
+        imageData.onload = function() {
+            callBack(true);
+        };
+        imageData.onerror = function() {
+            callBack(false);
+        };
+        imageData.src = imageUrl;
+    }
+
     function UpdateOnline()
     {
         $('#OnlinePlayers').prepend('<tr><th style="width:18px"><img src="<?=WEBSITE;?>/img/loading.gif" class="loader"></th><tr>');
@@ -228,6 +241,17 @@
                 var split = data.split('||', 3);
                 $('#OnlinePlayers').html(data.replace(split[0]+'||'+split[1]+'||', ""));
                 $('.overlay').html(split[0]);
+
+                var mapurl = '<?=WEBSITE;?>/img/maps/'+split[0]+'.jpg';
+
+                checkImageExists(mapurl, function(existsImage) {
+                    if(existsImage == true)
+                        $('.map-image').css('background-image', 'url('+mapurl+')');
+                    else
+                        $('.map-image').css('background-image', 'url(<?=DEFAULT_MAP;?>)');
+                });
+
+
                 $('#onlineUsers').html(split[1]);
             },
             dataType: 'html'
