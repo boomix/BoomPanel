@@ -19,8 +19,7 @@ iLastTargetID[MAXPLAYERS + 1],
 iLastCommandType[MAXPLAYERS + 1],
 iMuteGagTimeleft[MAXPLAYERS + 1][3],
 iAdminUpdateTimeleft[MAXPLAYERS + 1];
-Handle hConnected,
-hMuteGagTimer[MAXPLAYERS+1],
+Handle hMuteGagTimer[MAXPLAYERS+1],
 g_OnDatabaseReady,
 hAdminTimer[MAXPLAYERS + 1];
 ConVar g_cvServerIP, 
@@ -36,7 +35,8 @@ cMuteReasonsFile[PLATFORM_MAX_PATH],
 cGagReasonsFile[PLATFORM_MAX_PATH], 
 cSilenceReasonsFile[PLATFORM_MAX_PATH], 
 cPunishmentTimeFile[PLATFORM_MAX_PATH],
-cMuteGagReason[MAXPLAYERS + 1][3][150];
+cMuteGagReason[MAXPLAYERS + 1][3][150],
+cLastCmd[MAXPLAYERS + 1][50];
 char g_MuteReasons[500],
 g_GagReasons[500],
 g_SilenceReasons[500],
@@ -44,3 +44,4 @@ g_PunishmentTimes[500];
 bool b_WaitingChatMessage[MAXPLAYERS + 1],
 bShowMuteGagOnce[MAXPLAYERS + 1],
 bMuteGagPermanent[MAXPLAYERS + 1][3];
+ArrayList g_ConnectionTime;

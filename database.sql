@@ -473,16 +473,19 @@ CREATE TABLE IF NOT EXISTS `bp_players_ip` (
 
 
 -- Dumping structure for table boompanel.bp_players_online
-CREATE TABLE IF NOT EXISTS `bp_players_online` (
-  `pid` int(11) NOT NULL,
-  `sid` int(11) NOT NULL,
-  `connected` timestamp DEFAULT 0 NOT NULL,
-  `disconnected` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  KEY `server_id` (`sid`),
-  KEY `player_id` (`pid`),
-  CONSTRAINT `bp_players_online_ibfk_1` FOREIGN KEY (`sid`) REFERENCES `bp_servers` (`id`) ON UPDATE CASCADE,
-  CONSTRAINT `bp_players_online_ibfk_2` FOREIGN KEY (`pid`) REFERENCES `bp_players` (`id`) ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE `bp_players_online` (
+	`pid` INT(11) NOT NULL,
+	`sid` INT(11) NOT NULL,
+	`connected` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	`disconnected` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	INDEX `server_id` (`sid`),
+	INDEX `player_id` (`pid`),
+	CONSTRAINT `bp_players_online_ibfk_1` FOREIGN KEY (`sid`) REFERENCES `bp_servers` (`id`) ON UPDATE CASCADE,
+	CONSTRAINT `bp_players_online_ibfk_2` FOREIGN KEY (`pid`) REFERENCES `bp_players` (`id`) ON UPDATE CASCADE
+)
+COLLATE='utf8mb4_unicode_ci'
+ENGINE=InnoDB
+;
 
 -- Dumping data for table boompanel.bp_players_online: ~0 rows (approximately)
 /*!40000 ALTER TABLE `bp_players_online` DISABLE KEYS */;

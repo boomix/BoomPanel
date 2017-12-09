@@ -41,11 +41,13 @@
     <?php
         }
     }
+
+    $mapimage = (!$error && file_exists("img/maps/".$stats->map.".jpg")) ? WEBSITE."/"."img/maps/".$stats->map.".jpg" : DEFAULT_MAP;
     ?>
 
     <div class="row-fluid">
         <div class="span12">
-            <div class="map-image" style="background-image: url('http://i.imgur.com/O0wBACS.jpg')">
+            <div class="map-image" style="background-image: url('<?=$mapimage;?>')">
                 <div class="overlay">
                     <?=(!$error) ? $stats->map : '-';?>
                 </div>
@@ -54,7 +56,7 @@
     </div>
 
     <div class="row-fluid">
-        <div class="span3">
+        <div class="span2">
             <div class="metric">
                 <span class="icon"><i class="icon-user infoicon"></i></span>
                 <p>
@@ -63,38 +65,84 @@
                 </p>
             </div>
         </div>
-        <div class="span3">
+        <div class="span2 col-half-offset">
             <div class="metric">
                 <span class="icon"><i class="icon-calendar infoicon"></i></span>
                 <p>
                     <span class="number"><span id="onlineUsers"><?=CountOnlinePast($db, $serverName, 1);?></span></span>
-                    <span class="title"><?=PASTDAY.' '.ONLINE;?></span>
+                    <span class="title"><?=PASTDAY;?></span>
                 </p>
             </div>
         </div>
-        <div class="span3">
+        <div class="span2 col-half-offset">
             <div class="metric">
                 <span class="icon"><i class="icon-calendar infoicon"></i></span>
                 <p>
                     <span class="number"><span id="onlineUsers"><?=CountOnlinePast($db, $serverName, 30);?></span></span>
-                    <span class="title"><?=THISMONTH.' '.ONLINE;?></span>
+                    <span class="title"><?=THISMONTH;?></span>
                 </p>
             </div>
         </div>
-        <div class="span3">
+        <div class="span2 col-half-offset">
             <div class="metric">
                 <span class="icon"><i class="icon-globe infoicon"></i></span>
                 <p>
                     <span class="number"><span id="onlineUsers"><?=CountOnlinePast($db, $serverName, -1);?></span></span>
-                    <span class="title"><?=ALL.' '.TIME.' '.ONLINE;?></span>
+                    <span class="title"><?=ALL.' '.TIME;?></span>
+                </p>
+            </div>
+        </div>
+        <div class="span2 col-half-offset">
+            <div class="metric">
+                <span class="icon"><i class="icon-globe infoicon"></i></span>
+                <p>
+                    <span class="number"><span id="timeleft"> <?=(!$error) ? $stats->tl : '-';?></span></span>
+                    <span class="title"><?=TIMELEFT;?></span>
+                </p>
+            </div>
+        </div>
+        <div class="span2 col-half-offset">
+            <div class="metric">
+                <span class="icon"><i class="icon-globe infoicon"></i></span>
+                <p>
+                    <span class="number"><span> <?=(!$error) ? '<span style="color:#d0b311" id="score1">' .$stats->s1. '</span>/<span style="color:#2461db" id="score2">' .$stats->s2.'</span>' : '-';?></span></span>
+                    <span class="title"><?=SCORE;?></span>
                 </p>
             </div>
         </div>
     </div>
 
     <hr>
+        <div class="row-fluid">
+            <div class="span12">
 
-    <div class="row-fluid">
+                <div class="widget-box">
+                    <div class="widget-title"> <span class="icon"> <i class="icon-user"></i> </span>
+                        <h5><?=UP(SEND).' '.COMMAND.' '.TO.' '.SERVER;?> </h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <div id="response"></div>
+                        <div class="controls">
+                            <form action="#" method="POST" id="SendServerCommand" class="form-horizontal">
+                                <div class="control-group">
+                                    <label class="control-label"><?=UP(COMMAND);?> :</label>
+                                    <div class="controls">
+                                        <input type="text" name="commnad" id="ServerCmd" class="span11" placeholder="..." />
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" onclick="SendCommand();" name="submit" class="btn btn-success pull-right"><?=UP(SEND);?></button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    <hr>
+
+    <div class="row-fluid" style="margin-bottom: 15rem">
         <div class="span12">
 
             <button onclick="UpdateOnline()" class="btn btn-info pull-right" style="margin-bottom: 10px;"><?=UP(REFRESH);?></button>
@@ -162,6 +210,41 @@
         UpdateOnline();
     }, 100);
 
+    function SendCommand() {
+
+        event.preventDefault();
+
+        var data = $("#SendServerCommand").serialize() + '&serverName='+ serverName;
+        $("#ServerCmd").val('');
+
+        $.ajax({
+            type: 'POST',
+            url: '<?=WEBSITE;?>/ajax/SendCommand.php',
+            data: data,
+            error: function(xhr, status, error) {
+                new Noty({type: 'error', progressBar: true, timeout: 3000, text: '<i class="icon-remove alerticon"></i>'+status }).show();
+                UpdateOnline();
+            },
+            success: function(data){
+                new Noty({ type: 'success', progressBar: true, timeout: 3000, text: '<i class="icon-ok alerticon"></i>'+data }).show();
+                UpdateOnline();
+            },
+            dataType: 'html'
+        });
+
+    }
+
+    function checkImageExists(imageUrl, callBack) {
+        var imageData = new Image();
+        imageData.onload = function() {
+            callBack(true);
+        };
+        imageData.onerror = function() {
+            callBack(false);
+        };
+        imageData.src = imageUrl;
+    }
+
     function UpdateOnline()
     {
         $('#OnlinePlayers').prepend('<tr><th style="width:18px"><img src="<?=WEBSITE;?>/img/loading.gif" class="loader"></th><tr>');
@@ -173,9 +256,25 @@
                 $('#error').html(xhr.responseText);
             },
             success: function(data){
-                var split = data.split('||', 3);
-                $('#OnlinePlayers').html(data.replace(split[0]+'||'+split[1]+'||', ""));
+                var split = data.split('||', 6);
+
+                //$('#OnlinePlayers').html(data.replace(split[0]+'||'+split[1]+'||', ""));
                 $('.overlay').html(split[0]);
+                $('#timeleft').html(split[2]);
+                $('#score1').html(split[3]);
+                $('#score2').html(split[4]);
+                $('#OnlinePlayers').html(split[5]);
+
+                var mapurl = '<?=WEBSITE;?>/img/maps/'+split[0]+'.jpg';
+
+                checkImageExists(mapurl, function(existsImage) {
+                    if(existsImage == true)
+                        $('.map-image').css('background-image', 'url('+mapurl+')');
+                    else
+                        $('.map-image').css('background-image', 'url(<?=DEFAULT_MAP;?>)');
+                });
+
+
                 $('#onlineUsers').html(split[1]);
             },
             dataType: 'html'
@@ -260,6 +359,12 @@
         });
 
     }
+
+    setInterval(function(){
+        var val = parseInt($('#timeleft').html());
+        if(val != -1)
+            $('#timeleft').html(val - 1);
+    }, 1000);
 
 
 

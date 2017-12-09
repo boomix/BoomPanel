@@ -3,10 +3,9 @@
 #pragma newdecls required
 
 #include <sourcemod>
-#include <clientprefs>
 #include <geoip>
-#include <cstrike>
 #include <basecomm>
+#include <sdktools>
 
 
 #include "BoomPanel/BP_Globals.sp"
@@ -52,7 +51,7 @@ public void OnPluginStart()
 	Database.Connect(SQLConnect, "BoomPanel");
 
 	//Events
-	HookEvent("player_disconnect", 	Event_Disconnect); 
+	HookEvent("player_disconnect", 	Event_Disconnect, EventHookMode_Pre); 
 	HookEvent("player_team",		Event_PlayerTeam); 
 	
 	//Command listeners
@@ -72,16 +71,14 @@ public void OnPluginStart()
 	RegAdminCmd("sm_pgag", 		CMD_PermaMuteGag, 	ADMFLAG_CHAT);
 	RegAdminCmd("sm_psilence", 	CMD_PermaMuteGag, 	ADMFLAG_CHAT);
 
-	
-	//Other stuff
-	hConnected = RegClientCookie("bp_connected", "When player connected to server", CookieAccess_Protected);
+
 	BP_OnPluginStart();
 	
 }
 
 bool IsSpectator(int client)
 {
-	if(GetClientTeam(client) == CS_TEAM_CT || GetClientTeam(client) == CS_TEAM_T)
+	if(GetClientTeam(client) == 2 || GetClientTeam(client) == 3)
 		return false;
 	else
 		return true;
@@ -130,4 +127,5 @@ public void OnRowInserted(Database db, DBResultSet results, const char[] error, 
 		LogError("[BOOMPANEL] MYSQL ERROR: %s", error);
 		return;
 	}	
+	
 }
