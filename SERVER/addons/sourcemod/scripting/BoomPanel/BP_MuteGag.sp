@@ -31,10 +31,20 @@ public Action CMD_PermaMuteGag(int client, int args)
 		//Replace sm_ with !
 		char command2[50];
 		command2 = command3;
+		cLastCmd[client] = command3;
 		ReplaceString(command2, sizeof(command2), "sm_", "!");
 		
 		//Check if enogh arguments are entered
 		if (args < 1) {
+			
+			//Show menu with all players
+			Menu menu = new Menu(MenuHandler_TargetSelected);
+			menu.SetTitle("Select player");
+			AddPeopleToMenu(menu);
+			menu.ExitButton = true;
+			menu.Display(client, 20);
+			
+			
 			ReplyToCommand(client, "%s %s <player> %s", PREFIX, command2, (type <= TYPE_SILENCE) ? "[reason]" : "");
 			return Plugin_Handled;
 	    }
@@ -296,6 +306,16 @@ void MuteGag_OnClientDisconnect(int client)
 {
 	if(hMuteGagTimer[client] != null)
 		hMuteGagTimer[client] = null;
+		
+	//Set default values
+	for (int i = 0; i < 3; i++) {
+		iMuteGagTimeleft[client][i] = -1;
+		bMuteGagPermanent[client][i] = false;
+		cMuteGagReason[client][i] = "";
+	}
+	bShowMuteGagOnce[client] 	= true;
+	hMuteGagTimer[client] 		= null;
+	iLastMuteGagTime[client] 	= -1;
 }
 
 public Action TakeAwayMinute(Handle tmr, any userID)
@@ -326,6 +346,9 @@ public Action OnPlayerMuteGag(int client, const char[] command, int args)
 		//Check if client has permissions
 		if (client && !CheckCommandAccess(client, command, ADMFLAG_CHAT))
 			return Plugin_Stop;
+			
+		//Save command	
+		Format(cLastCmd[client], sizeof(cLastCmd), "%s", command);
 		
 		//Manually send this command to bp_chat, so it gets logged (because such command already exists in sourcemod by default)
 		char cMessage[256], cEscMessage[256];
@@ -348,6 +371,14 @@ public Action OnPlayerMuteGag(int client, const char[] command, int args)
 		
 		//Check if enogh arguments are entered
 		if (args < 1) {
+			
+			//Show menu with all players
+			Menu menu = new Menu(MenuHandler_TargetSelected);
+			menu.SetTitle("Select player");
+			AddPeopleToMenu(menu);
+			menu.ExitButton = true;
+			menu.Display(client, 20);
+			
 			ReplyToCommand(client, "%s %s <player> %s", PREFIX, command2, (type <= TYPE_SILENCE) ? "[time] [reason]" : "");
 			return Plugin_Stop;
 	    }
@@ -415,6 +446,33 @@ public Action OnPlayerMuteGag(int client, const char[] command, int args)
 	return Plugin_Stop;
 }
 
+public int MenuHandler_TargetSelected(Menu menu, MenuAction action, int client, int param)
+{
+	if (action == MenuAction_Select)
+	{
+		char steamid[20];
+		menu.GetItem(param, steamid, sizeof(steamid));
+		FakeClientCommand(client, "%s \"#%s\"", cLastCmd[client], steamid);
+	}
+
+	else if (action == MenuAction_End)
+		delete menu;
+
+}
+
+void AddPeopleToMenu(Menu menu)
+{
+	for (int i = 1; i < MaxClients; i++)
+	{
+		if(IsClientInGame(i) && !IsFakeClient(i)) {
+			char username[128], steamid[20];
+			GetClientName(i, username, sizeof(username));
+			GetClientAuthId(i, AuthId_Steam2, steamid, sizeof(steamid));
+			menu.AddItem(steamid, username);
+		}
+	}
+}
+
 void DBMuteGag(int admin, int clientID, int type, char[] reason = "", int time = -1)
 {
 	//Update last target for admin
@@ -471,7 +529,7 @@ void DBMuteGag(int admin, int clientID, int type, char[] reason = "", int time =
 				PrintToChat(admin, "%s%s successfully set for \x6%N!", PREFIX, cMuteGagName[type], target);
 				
 				//Print to everyone that player recived mute/gag
-				MuteGagAlertAll((type < 3) ? false : true, "Admin %N just set {BREAK} an \x6%s\x1 for \x04%N", admin, cMuteGagName[type], target);
+				MuteGagAlertAll((type < 3) ? false : true, "Admin %N just set {BREAK} a \x6%s\x1 for \x04%N", admin, cMuteGagName[type], target);
 			}
 			
 		}	

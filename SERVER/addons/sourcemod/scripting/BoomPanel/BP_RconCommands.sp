@@ -153,12 +153,16 @@ public Action CMD_Status(int client, int args)
 	char currentMap[50];
 	GetCurrentMap(currentMap, sizeof(currentMap));
 	
-	ReplyToCommand(client, "{\"stats\":{\"sid\": \"%i\", \"map\": \"%s\", \"online\": %i}, \"players\": [", iServerID, currentMap, online);
+	int Tscore 	= GetTeamScore(2);
+	int CTscore = GetTeamScore(3);
+	
+	int timeleft;
+	GetMapTimeLeft(timeleft);
+	
+	ReplyToCommand(client, "{\"stats\":{\"sid\": \"%i\", \"map\": \"%s\", \"online\": %i, \"tl\": %i, \"s1\": \"%i\", \"s2\": \"%i\"}, \"players\": [", iServerID, currentMap, online, timeleft, Tscore, CTscore);
 	//This is done, so everything is sorted
-	AddToList(count, CS_TEAM_T);
-	AddToList(count, CS_TEAM_CT);
-	AddToList(count, CS_TEAM_SPECTATOR);
-	AddToList(count, CS_TEAM_NONE);
+	for (int i = 5; i >= 0; i--)
+		AddToList(count, i);
 
 	ReplyToCommand(client, "]}");
 	return Plugin_Handled;
@@ -169,7 +173,7 @@ void AddToList(int &count, int team)
 	for (int i = 1; i <= MaxClients; i++)
 		if(IsClientInGame(i) && !IsFakeClient(i) && GetClientTeam(i) == team)
 		{
-			char username[MAX_NAME_LENGTH], steamid[20], cConnected[20], cIP[20], cCountry[50];
+			char username[MAX_NAME_LENGTH], steamid[20], cIP[20], cCountry[50];
 			GetClientName(i, username, sizeof(username));
 			ReplaceString(username, sizeof(username), "\\", "");
 			ReplaceString(username, sizeof(username), "\"", "''");
@@ -178,9 +182,7 @@ void AddToList(int &count, int team)
 			GeoipCountry(cIP, cCountry, sizeof(cCountry));
 			int kills 	= (!IsSpectator(i)) ? GetClientFrags(i) : 0;
 			int deaths 	= (!IsSpectator(i)) ? GetClientDeaths(i) : 0;
-			GetClientCookie(i, hConnected, cConnected, sizeof(cConnected));
-			int secondsOnline = (AreClientCookiesCached(i) && StringToInt(cConnected) > 0) ? GetTime() - StringToInt(cConnected) : 0;
-			int online = (secondsOnline / 60);
+			int online = (GetFullConnectionTime(i) / 60);
 			PrintToServer("%s{\"p\":%i,\"t\":%i,\"k\":%i,\"d\":%i,\"o\":%i}", (count == 0) ? "" : ",", iClientID[i], GetClientTeam(i), kills, deaths, online);
 			
 			count++;

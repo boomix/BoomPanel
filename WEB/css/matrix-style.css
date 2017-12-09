@@ -213,7 +213,7 @@ hr{ border-top-color:#dadada;}
 	position: relative;
 	width: 100%;
 	margin-top: -38px;
-	z-index: 20;
+	z-index: 1;
 }
 #content-header h1 {
 	color: #555555;
@@ -1780,4 +1780,8 @@ div.dataTables_wrapper .ui-widget-header {
 
 .player-field {
 	min-width:30px;
+}
+
+.col-half-offset{
+	margin-left:4.166666667%
 }

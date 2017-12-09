@@ -78,7 +78,7 @@ foreach ((array)$PlayerDataFromDB as $player)
 $avatars = GetPlayersAvatars($AvatarPlayers);
 
 //Display first important stuff
-echo $stats->map .'||'.$stats->online.'||';
+echo $stats->map .'||'.$stats->online.'||'.$stats->tl.'||'.$stats->s1.'||'.$stats->s2.'||';
 
 //Display all the players
 for($i = 0;$i < $stats->online;$i++) {
