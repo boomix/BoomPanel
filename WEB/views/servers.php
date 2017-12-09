@@ -360,6 +360,12 @@
 
     }
 
+    setInterval(function(){
+        var val = parseInt($('#timeleft').html());
+        if(val != -1)
+            $('#timeleft').html(val - 1);
+    }, 1000);
+
 
 
     <?php } ?>

@@ -3,10 +3,11 @@ void PlayersOnline_OnPluginStart()
 	g_ConnectionTime = new ArrayList(64);
 }
 
-void PlayersOnline_PlayerTeam(int client)
+void PlayersOnline_OnClientIDRecived(int client)
 {
-	if(GetFullConnectionTime(client) == -1 && iClientID[client] != -1 && GetClientTeam(client) <= 3 && GetClientTeam(client) > 0)
+	if(GetFullConnectionTime(client) == -1 && iClientID[client] != -1) {
 		StartCountingOnlineTime(client);
+	}
 }
 
 void StartCountingOnlineTime(int client)
@@ -25,14 +26,12 @@ void StartCountingOnlineTime(int client)
 void PlayersOnline_OnClientDisconnect(int client)
 {
 	
-	PrintToServer("Disconnect event!");
-	
 	//Add in database
 	if(iClientID[client] > 0 && iServerID > 0) {
 		char query[500];
 		Format(query, sizeof(query), "UPDATE bp_players_online SET disconnected = DATE_ADD(NOW(), INTERVAL 1 SECOND) "...
 		"WHERE pid = %i AND sid = %i AND connected = disconnected ORDER BY connected DESC LIMIT 1", iClientID[client], iServerID);
-		DB.Query(OnRowInserted, query);
+		DB.Query(OnRowInserted, query, _, DBPrio_Low);
 	}
 
 

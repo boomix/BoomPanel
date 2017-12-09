@@ -42,7 +42,7 @@ void OnClientIDRecived(int client)
 	Bans_OnClientIDRecived(client);
 	MuteGag_OnClientIDRecived(client);
 	Admins_OnClientIDRecived(client);
-	PlayersOnline_PlayerTeam(client);
+	PlayersOnline_OnClientIDRecived(client);
 }
 
 public void OnMapStart()
@@ -86,7 +86,6 @@ public Action Event_PlayerTeam(Handle event, const char[] name, bool dontBroadca
 	int team = GetEventInt(event, "team");
 	if(!IsFakeClient(client) && team != 0) {
 		MuteGag_PlayerTeam(client);
-		PlayersOnline_PlayerTeam(client);
 	}
 }
 
