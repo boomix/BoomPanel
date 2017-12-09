@@ -306,6 +306,16 @@ void MuteGag_OnClientDisconnect(int client)
 {
 	if(hMuteGagTimer[client] != null)
 		hMuteGagTimer[client] = null;
+		
+	//Set default values
+	for (int i = 0; i < 3; i++) {
+		iMuteGagTimeleft[client][i] = -1;
+		bMuteGagPermanent[client][i] = false;
+		cMuteGagReason[client][i] = "";
+	}
+	bShowMuteGagOnce[client] 	= true;
+	hMuteGagTimer[client] 		= null;
+	iLastMuteGagTime[client] 	= -1;
 }
 
 public Action TakeAwayMinute(Handle tmr, any userID)
@@ -519,7 +529,7 @@ void DBMuteGag(int admin, int clientID, int type, char[] reason = "", int time =
 				PrintToChat(admin, "%s%s successfully set for \x6%N!", PREFIX, cMuteGagName[type], target);
 				
 				//Print to everyone that player recived mute/gag
-				MuteGagAlertAll((type < 3) ? false : true, "Admin %N just set {BREAK} an \x6%s\x1 for \x04%N", admin, cMuteGagName[type], target);
+				MuteGagAlertAll((type < 3) ? false : true, "Admin %N just set {BREAK} a \x6%s\x1 for \x04%N", admin, cMuteGagName[type], target);
 			}
 			
 		}	

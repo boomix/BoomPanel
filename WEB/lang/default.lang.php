@@ -143,5 +143,7 @@ defined('MESSAGE') or    define("MESSAGE",                   "message");
 defined('SEND') or    define("SEND",                      "send");
 defined('TO') or    define("TO",                        "to");
 defined('SERVER_ERROR') or    define("SERVER_ERROR",              "failed to decode JSON data from server");
+defined('TIMELEFT') or    define("TIMELEFT",                  "timeleft");
+defined('SCORE') or      define("SCORE",                     "score");
 
 ?>

@@ -71,7 +71,7 @@ public void DeleteOldConnections(Database db, DBResultSet results, const char[] 
 {
 	if(results == null)
 	{
-		LogError("[BOOMPANEL] SQL ERROR (GetServerID): %s", error);
+		LogError("[BOOMPANEL] SQL ERROR (DeleteOldConnections): %s", error);
 		return;
 	}
 	
