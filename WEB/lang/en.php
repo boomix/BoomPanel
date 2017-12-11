@@ -135,7 +135,7 @@
     define("MUTEGAG",                   "mutegag");
     define("SILENCE",                   "silence");
     define("THEREWASERROR",             "there was an error");
-    define("PLAYERNOTFOUND",            "Player not found, please use steamID64, steamID32 or steamcommunity profule URL!");
+    define("PLAYERNOTFOUND",            "Player not found, please use steamID64, steamID32 or steamcommunity profile URL!");
     define("ENTERPLAYER",               "Please enter player field");
     define("TYPE",                      "type");
     define("MORE",                      "more");
