@@ -1,8 +1,8 @@
 <?php
 
     //LANGUAGE FILE
-    //--ENGLISH
-    //Made by boomix
+    //--SCHINESE
+    //Made by nicedayzhu 我不当学长
 
 
 defined('NAV_HOME') or    define("NAV_HOME", 					"首页");
