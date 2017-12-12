@@ -8,19 +8,19 @@
             <?php include "model/alert-messages.php"; ?>
             <div class="widget-box">
                 <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-                    <h5><?=NAV_ADDPANELADMINS;?></h5>
+                    <h5><?= _("Add panel admins");?></h5>
                 </div>
                 <div class="widget-content nopadding">
                     <form action="#" method="POST" class="form-horizontal">
                         <div class="control-group">
-                            <label class="control-label"><?=ADMIN;?> :</label>
+                            <label class="control-label"><?= _("Admin");?> :</label>
                             <div class="controls">
                                 <input type="text" name="admin" value="<?=isset($_POST['admin']) ? htmlspecialchars($_POST['admin']) : '';?>" autocomplete="off" class="span11" placeholder="..." value="">
                             </div>
                         </div>
 
                         <div class="form-actions">
-                            <button type="submit" name="submit" class="btn btn-success pull-right"><?=ADD;?></button>
+                            <button type="submit" name="submit" class="btn btn-success pull-right"><?= _("Add");?></button>
                         </div>
                     </form>
                 </div>
@@ -31,14 +31,14 @@
         <div class="span6">
             <div class="widget-box">
                 <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
-                    <h5><?=UP(ALL).' '.PANELADMINS;?></h5>
+                    <h5><?= _("All panel admins");?></h5>
                 </div>
                 <div class="widget-content nopadding">
                     <table class="table table-bordered table-striped">
                         <thead>
                         <tr>
-                            <th><?=ADMIN;?></th>
-                            <th><?=DELETE;?></th>
+                            <th><?= _("Admin");?></th>
+                            <th><?= _("Delete");?></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -69,7 +69,7 @@
                                     </a>
                                 </td>
                                 <td style="text-align: center">
-                                    <a href="<?=$CurrentURL;?>delete/<?=$admin["id"];?>" class="btn btn-danger btn-mini"><?=DELETE;?></a>
+                                    <a href="<?=$CurrentURL;?>delete/<?=$admin["id"];?>" class="btn btn-danger btn-mini"><?=_("delete");?></a>
                                 </td>
                             </tr>
                             <?php

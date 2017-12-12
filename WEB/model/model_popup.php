@@ -68,7 +68,7 @@
     </div>
 
     <div class="modal-footer">
-        <a href="#actionMenu" data-toggle="modal" data-dismiss="modal" class="btn btn-inverse"><?=UP(CANCEL);?></a>
+        <a href="#actionMenu" data-toggle="modal" data-dismiss="modal" class="btn btn-inverse"><?=_("Cancel");?></a>
         <button type="submit" onclick="BanPlayer();" name="submit" class="btn btn-success"><?=UP(BAN).' '.PLAYER;?></button>
     </div>
 
@@ -98,7 +98,7 @@
     </div>
 
     <div class="modal-footer">
-        <a href="#actionMenu" data-toggle="modal" data-dismiss="modal" class="btn btn-inverse"><?=UP(CANCEL);?></a>
+        <a href="#actionMenu" data-toggle="modal" data-dismiss="modal" class="btn btn-inverse"><?=_("Cancel");?></a>
         <button type="submit" onclick="KickPlayer()" data-dismiss="modal" name="submit" class="btn btn-success"><?=UP(KICK).' '.PLAYER;?></button>
     </div>
 
@@ -166,7 +166,7 @@
     </div>
 
     <div class="modal-footer">
-        <a href="#actionMenu" data-toggle="modal" data-dismiss="modal" class="btn btn-inverse"><?=UP(CANCEL);?></a>
+        <a href="#actionMenu" data-toggle="modal" data-dismiss="modal" class="btn btn-inverse"><?=_("Cancel");?></a>
         <button type="submit" onclick="MuteGagPlayer()" data-dismiss="modal" name="submit" class="btn btn-success"><?=UP(MUTE).'/'.GAG.' '.PLAYER;?></button>
     </div>
 

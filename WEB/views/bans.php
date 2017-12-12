@@ -8,7 +8,7 @@
             <?php include "model/alert-messages.php"; ?>
             <div class="widget-box">
                 <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-                    <h5><?=UP(ADD).' '.(($b) ? BAN : MUTE.' '.GAG);?></h5>
+                    <h5><?=_("Add").' '.(($b) ? _("ban") : _("mute gag"));?></h5>
                 </div>
                 <div class="widget-content nopadding">
                     <form action="#" method="POST" class="form-horizontal">
@@ -21,7 +21,7 @@
                         </div>
 
                         <div class="control-group">
-                            <label class="control-label"><?=UP(REASON);?> :</label>
+                            <label class="control-label"><?= _("Reason");?> :</label>
                             <div class="controls">
                                 <input type="text" name="reason" autocomplete="off" class="span11" placeholder="..." value="<?=isset($_POST['reason']) ? htmlspecialchars($_POST['reason']) : '';?>">
                             </div>
@@ -29,7 +29,7 @@
 
                         <?php if(!$b) { ?>
                         <div class="control-group">
-                            <label class="control-label"><?=UP(ACTION);?></label>
+                            <label class="control-label"><?= _("Action");?></label>
                             <div class="controls">
                                 <label>
                                     <input type="radio" value="0" name="mgtype" <?=(!isset($_POST['mgtype'])) ? 'checked' : '';?>
@@ -46,7 +46,7 @@
                         <?php } ?>
 
                         <div class="control-group">
-                            <label class="control-label"><?=UP(SERVER);?> </label>
+                            <label class="control-label"><?= _("Server");?> </label>
                             <div class="controls">
                                 <select name="server">
                                     <?php foreach ((array)$GetAllServers as $server) { ?>
@@ -57,7 +57,7 @@
                         </div>
 
                         <div class="control-group">
-                            <label class="control-label"><?=UP(TIME);?></label>
+                            <label class="control-label"><?= _("Time");?></label>
                             <div class="controls">
                                 <div class="input-prepend span4"> <span class="add-on"><?=DAYS[0];?></span>
                                     <input type="number" min="0" name="days" autocomplete="off" class="span5" value="<?=isset($_POST['days']) ? intval($_POST['days']) : 0;?>">
@@ -74,9 +74,9 @@
 
                         <?php $editing = (isset($match['params']['action']) && $match['params']['action'] == 'edit') ? true : false; ?>
                         <div class="form-actions">
-                            <button type="submit" name="submit" class="btn btn-success"><?=($editing) ?  UP(EDIT) : UP(ADD);?></button>
+                            <button type="submit" name="submit" class="btn btn-success"><?=($editing) ?  _("Edit") : _("Add");?></button>
                             <?php if($editing) { ?>
-                                <a href="<?=$CurrentURL;?>unban/<?=intval($match['params']['id']);?>/" class="btn btn-warning pull-right"><?=(isset($ban) && $ban['unbanned'] == 0) ? UP(UNBAN) : UP(RESTORE).' '.BAN;?></a>
+                                <a href="<?=$CurrentURL;?>unban/<?=intval($match['params']['id']);?>/" class="btn btn-warning pull-right"><?=(isset($ban) && $ban['unbanned'] == 0) ? _("Unban") : _("Restore ban");?></a>
                             <?php } ?>
                         </div>
                     </form>
@@ -88,43 +88,43 @@
         <div class="span6">
             <div class="widget-box">
                 <div class="widget-title"> <span class="icon"> <i class="icon-search"></i> </span>
-                    <h5><?=UP(SEARCH).' '.(($b) ? BAN : MUTE.' '.GAG);?></h5>
+                    <h5><?=_("Search").' '.(($b) ? _("ban") : _("mute gag"));?></h5>
                 </div>
                 <div class="widget-content nopadding">
                     <form action="#" method="GET" class="form-horizontal">
                         <div class="control-group">
-                            <label class="control-label"><?=UP(PLAYER);?> :</label>
+                            <label class="control-label"><?= _("Player");?> :</label>
                             <div class="controls">
                                 <input name="player" type="text" class="span11" placeholder="..." value="<?=isset($_GET['player']) ? htmlspecialchars($_GET['player']) : '';?>" >
                             </div>
                         </div>
                         <div class="control-group">
-                            <label class="control-label"><?=UP(ADMIN);?> :</label>
+                            <label class="control-label"><?= _("Admin");?> :</label>
                             <div class="controls">
                                 <input type="text" name="admin" class="span11" placeholder="..." value="<?=isset($_GET['admin']) ? htmlspecialchars($_GET['admin']) : '';?>" >
                             </div>
                         </div>
                         <div class="control-group">
-                            <label class="control-label"><?=UP(REASON);?> :</label>
+                            <label class="control-label"><?= _("Reason");?> :</label>
                             <div class="controls">
                                 <input type="text" name="reason" class="span11" placeholder="..." value="<?=isset($_GET['reason']) ? htmlspecialchars($_GET['reason']) : '';?>">
                             </div>
                         </div>
                         <?php if(!$b) { ?>
                         <div class="controls">
-                            <label><input type="checkbox" name="mgtype[]" <?=(isset($_GET['mgtype']) && in_array(0, $_GET['mgtype'])) ? 'checked' : ''; ?> value="0"/><?=UP(MUTE);?></label>
-                            <label><input type="checkbox" name="mgtype[]" <?=(isset($_GET['mgtype']) && in_array(1, $_GET['mgtype'])) ? 'checked' : ''; ?> value="1"/><?=UP(GAG);?></label>
-                            <label><input type="checkbox" name="mgtype[]" <?=(isset($_GET['mgtype']) && in_array(2, $_GET['mgtype'])) ? 'checked' : ''; ?> value="2"/><?=UP(SILENCE);?></label>
+                            <label><input type="checkbox" name="mgtype[]" <?=(isset($_GET['mgtype']) && in_array(0, $_GET['mgtype'])) ? 'checked' : ''; ?> value="0"/><?= _("Mute");?></label>
+                            <label><input type="checkbox" name="mgtype[]" <?=(isset($_GET['mgtype']) && in_array(1, $_GET['mgtype'])) ? 'checked' : ''; ?> value="1"/><?= _("Gag");?></label>
+                            <label><input type="checkbox" name="mgtype[]" <?=(isset($_GET['mgtype']) && in_array(2, $_GET['mgtype'])) ? 'checked' : ''; ?> value="2"/><?= _("Silence");?></label>
                         </div>
                         <?php } ?>
                         <div class="control-group">
-                            <label class="control-label"><?=UP(SERVER);?> </label>
+                            <label class="control-label"><?= _("Server");?> </label>
                             <div class="controls">
                                 <select name="server">
-                                    <option><?=ANYSERVER;?></option>
+                                    <option><?= _("Any Server");?></option>
                                     <?php foreach ((array)$GetAllServers as $server) {
                                         if($server['name'] == 'all servers')
-                                            $server['name'] = ALL.' '.NAV_SERVERS;
+                                            $server['name'] = _("All servers");
                                     ?>
                                         <option <?=(isset($_GET['server']) && $_GET['server'] == $server['id']) ? 'selected="selected" ' : '';?> value="<?=$server['id'];?>"><?=$server['name'];?></option>
                                     <?php } ?>
@@ -132,7 +132,7 @@
                             </div>
                         </div>
                         <div class="form-actions">
-                            <button type="submit" name="search" class="btn btn-success"><?=UP(SEARCH);?></button>
+                            <button type="submit" name="search" class="btn btn-success"><?= _("Search");?></button>
                         </div>
                     </form>
                 </div>
@@ -149,27 +149,27 @@
 
             <div class="widget-box">
                 <div class="widget-title"> <span class="icon"> <i class="icon-ban-circle"></i> </span>
-                    <h5><?=UP(LATEST).' '.(($b) ? BANS : MUTE.' '.GAG);?></h5>
+                    <h5><?= _("Latest").' '.(($b) ? _("bans") : _("mute gag"));?></h5>
                 </div>
                 <div class="widget-content">
 
                     <?php $results = $limit = ($CurrentPage == 1) ? '1 - '.ITEMSPERPAGE : ($CurrentPage - 1) * ITEMSPERPAGE.' - '.$CurrentPage * ITEMSPERPAGE; ;?>
-                    <p class="totalresults"><?=UP(TOTAL).' '.RESULTS;?>: <b><?=$CountAllBans['count'];?></b> | <?=SHOWINGRESULTS;?> <b><?=$results;?></b></p>
+                    <p class="totalresults"><?= _("Total results:");?> <b><?=$CountAllBans['count'];?></b> | <?= _("Showing results from");?> <b><?=$results;?></b></p>
 
                     <table class="table table-bordered table-striped">
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th><?=UP(PLAYER);?></th>
-                            <th><?=UP(SERVER);?></th>
-                            <?=(!$b) ? '<th>'.UP(TYPE).'</th>' : ''; ?>
+                            <th><?= _("Player");?></th>
+                            <th><?= _("Server");?></th>
+                            <?=(!$b) ? '<th>'._("Type").'</th>' : ''; ?>
                             <th>SteamID</th>
-                            <th><?=(($b) ? UP(BAN) : '').' '.(($b) ? LENGTH : UP(LENGTH));?></th>
-                            <th><?=UP(REASON);?></th>
-                            <th><?=UP(ADMIN);?></th>
-                            <th><?=UP(BANNED).' '.AT;?></th>
-                            <th><?=UP(ENDS);?></th>
-                            <th><?=UP(EDIT);?></th>
+                            <th><?=(($b) ? _("Ban") : '').' '.(($b) ? _("length") : _("Length"));?></th>
+                            <th><?= _("Reason");?></th>
+                            <th><?= _("Admin");?></th>
+                            <th><?= _("Banned at");?></th>
+                            <th><?= _("Ends");?></th>
+                            <th><?= _("Edit");?></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -194,7 +194,7 @@
                             $endtime    = date(TIMEFORMAT, strtotime($ban['time'] . "+".$ban['length']." minutes"));
                             $steamid    = $ban['player_steamid'];
                             $username   = (!empty($ban['player_username'])) ? htmlspecialchars($ban['player_username']) : htmlspecialchars($avatars['username-'.$steamid]);
-                            if($ban['unbanned'] > 0) $ban['banstatus'] = UNBANNED;
+                            if($ban['unbanned'] > 0) $ban['banstatus'] = _('unbanned');
 
                         ?>
 
@@ -202,14 +202,14 @@
                                 <td class="coutryrow"><img src="<?=WEBSITE;?>/img/flag/<?=$ban['country_name'];?>.png" title="<?=$ban['country_name'];?>" class="flag"></td>
                                 <td><a target="_blank" href="http://steamcommunity.com/profiles/<?=$steamid;?>"><img src="<?=$avatars[$steamid]?>" class="player-avatar"> <?=$username;?></a></td>
                                 <td class="centerrow"><?=$ban['name'];?></td>
-                                <?php if(!$b) { ?><td class="centerrow"><?=($ban['mgtype'] == 0) ? MUTE : (($ban['mgtype'] == 1) ? GAG : SILENCE);?></td><?php } ?>
+                                <?php if(!$b) { ?><td class="centerrow"><?=($ban['mgtype'] == 0) ? _('mute') : (($ban['mgtype'] == 1) ? _('gag') : _('silence'));?></td><?php } ?>
                                 <td class="steamidrow"><?=toSteamID($steamid);?> <a data-clipboard-text="<?=toSteamID($steamid);?>" title="<?=COPY;?>" class="clipboard tip-right"><i class="icon-copy"></i></a></td>
                                 <td class="centerrow"><?=convertToHoursMinsBans(intval($ban['length']));?></td>
                                 <td><?=htmlspecialchars($ban['reason']);?></td>
                                 <td class="centerrow"><a target="_blank" href="http://steamcommunity.com/profiles/<?=$ban['admin_steamid'];?>"><?=htmlspecialchars($ban['admin_username']);?></a></td>
                                 <td class="centerrow"><?=$starttime;?></td>
-                                <td class="centerrow"><?=$endtime;?>  <span class="label label-<?=($ban['banstatus'] == 'active' || ($ban['length'] == 0 && $ban['banstatus'] != UNBANNED)) ? 'success' : (($ban['banstatus'] == UNBANNED) ? 'warning' : 'important');?>"><?=($ban['length'] == 0 && $ban['banstatus'] != UNBANNED) ? PERMANENET : $ban['banstatus'];?></span></td>
-                                <td class="morerow"><a href="<?=$CurrentURL;?>edit/<?=intval($ban['bid']);?>/" class="btn btn-info btn-mini"><span class="icon"> <i class="icooo-on-edit"></i> </span><?=EDIT;?></a></td>
+                                <td class="centerrow"><?=$endtime;?>  <span class="label label-<?=($ban['banstatus'] == 'active' || ($ban['length'] == 0 && $ban['banstatus'] != UNBANNED)) ? 'success' : (($ban['banstatus'] == UNBANNED) ? 'warning' : 'important');?>"><?=($ban['length'] == 0 && $ban['banstatus'] != _("unbanned")) ? ("permanent") : $ban['banstatus'];?></span></td>
+                                <td class="morerow"><a href="<?=$CurrentURL;?>edit/<?=intval($ban['bid']);?>/" class="btn btn-info btn-mini"><span class="icon"> <i class="icooo-on-edit"></i> </span><?= _("edit");?></a></td>
                             </tr>
 
                         <?php } ?>
@@ -257,13 +257,13 @@
                     <div class="pagination">
                         <ul>
 
-                            <li<?=$prev1class;?>><a class="paginationtext" href="<?=$prev1url;?>"><?=UP(PREVIUS);?></a></li>
+                            <li<?=$prev1class;?>><a class="paginationtext" href="<?=$prev1url;?>"><?=_("Prev");?></a></li>
                             <li<?=$prev2class;?>><a href="<?=$prev2url;?>"><?=$prev2Num;?></a></li>
                             <li<?=$prev1class;?>><a href="<?=$prev1url;?>"><?=$prev1Num;?></a></li>
                             <li class="active"><a href="#"><?=$CurrentPage;?></a></li>
                             <li<?=$next1class;?>><a href="<?=$next1url;?>"><?=$next1Num;?></a></li>
                             <li<?=$next2class;?>><a href="<?=$next2url;?>"><?=$next2Num;?></a></li>
-                            <li<?=$next1class;?>><a class="paginationtext" href="<?=$next1url;?>"><?=UP(NEXT);?></a></li>
+                            <li<?=$next1class;?>><a class="paginationtext" href="<?=$next1url;?>"><?=_("Next");?></a></li>
 
                         </ul>
                     </div>

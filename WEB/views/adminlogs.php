@@ -8,7 +8,7 @@
 
             <div class="widget-box">
                 <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-                    <h5><?=UP(SEARCH).' '.ADMIN. ' ' . LOGS;?></h5>
+                    <h5><?= _("Search admin logs");?></h5>
                 </div>
                 <div class="widget-content">
                     <div class="controls controls-row">
@@ -18,13 +18,13 @@
                                 <select name="server">
                                     <?php foreach ((array)$GetAllServers as $server) {
                                         if($server['name'] == 'all servers')
-                                            $server['name'] = ALL.' '.NAV_SERVERS;
+                                            $server['name'] = _("All Servers");
                                         ?>
                                         <option <?=(isset($_GET['server']) && $_GET['server'] == $server['id']) ? 'selected="selected" ' : '';?> value="<?=$server['id'];?>"><?=$server['name'];?></option>
                                     <?php } ?>
                                 </select>
                             </div>
-                            <input type="submit" name="submit" class="btn btn-success span1" value="<?=UP(SEARCH);?>">
+                            <input type="submit" name="submit" class="btn btn-success span1" value="<?= _('Search');?>">
                         </form>
                     </div>
 
@@ -36,7 +36,7 @@
 
                 <div class="widget-box">
                     <div class="widget-title"> <span class="icon"> <i class="icon-user"></i> </span>
-                        <h5><?=UP(LATEST).' '.ADMIN.' '.LOGS;?></h5>
+                        <h5><?= _("Latest admin logs");?></h5>
                     </div>
                     <div class="widget-content">
                         <?php $results = $limit = ($CurrentPage == 1) ? '1 - '.ITEMSPERPAGE : ($CurrentPage - 1) * ITEMSPERPAGE.' - '.$CurrentPage * ITEMSPERPAGE; ;?>
@@ -45,11 +45,11 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th><?=UP(ADMIN);?></th>
+                                <th><?= _("Admin");?></th>
                                 <th>SteamID</th>
-                                <th><?=UP(COMMAND);?></th>
-                                <th><?=UP(SERVER);?></th>
-                                <th><?=UP(TIME);?></th>
+                                <th><?= _("Command");?></th>
+                                <th><?= _("Server");?></th>
+                                <th><?= _("Time");?></th>
                             </tr>
                             </thead>
                             <tbody>
@@ -124,13 +124,13 @@
                         <div class="pagination">
                             <ul>
 
-                                <li<?=$prev1class;?>><a class="paginationtext" href="<?=$prev1url;?>"><?=UP(PREVIUS);?></a></li>
+                                <li<?=$prev1class;?>><a class="paginationtext" href="<?=$prev1url;?>"><?= _("Prev");?></a></li>
                                 <li<?=$prev2class;?>><a href="<?=$prev2url;?>"><?=$prev2Num;?></a></li>
                                 <li<?=$prev1class;?>><a href="<?=$prev1url;?>"><?=$prev1Num;?></a></li>
                                 <li class="active"><a href="#"><?=$CurrentPage;?></a></li>
                                 <li<?=$next1class;?>><a href="<?=$next1url;?>"><?=$next1Num;?></a></li>
                                 <li<?=$next2class;?>><a href="<?=$next2url;?>"><?=$next2Num;?></a></li>
-                                <li<?=$next1class;?>><a class="paginationtext" href="<?=$next1url;?>"><?=UP(NEXT);?></a></li>
+                                <li<?=$next1class;?>><a class="paginationtext" href="<?=$next1url;?>"><?= _("Next");?></a></li>
 
                             </ul>
                         </div>

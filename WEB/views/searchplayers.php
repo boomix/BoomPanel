@@ -7,23 +7,22 @@
 
             <div class="widget-box">
                 <div class="widget-title"> <span class="icon"> <i class="icon-list"></i> </span>
-                    <h5><?=UP(ABOUT).' '.SEARCH;?></h5>
+                    <h5><?= _("About search");?></h5>
                 </div>
-                <div class="widget-content"> You can search users by <i>'username', 'IP', 'steamID32', 'steamID64', 'steamcommunity profile URL'</i>. Panel saves every IP and username with what player has been in the server,
-                    so it's easier to find alternative accouts or anyone who has used your username before.<br> <b>Undestand that this search is not finished and will have upgrades later!</b></div>
+                <div class="widget-content"><?= _("You can search users by <i>'username', 'IP', 'steamID32', 'steamID64', 'steamcommunity profile URL'</i>. Panel saves every IP and username with what player has been in the server, so it's easier to find alternative accouts or anyone who has used your username before.<br> <b>Undestand that this search is not finished and will have upgrades later!</b>") ?></div>
             </div>
 
 
             <div class="widget-box">
                 <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-                    <h5><?=UP(SEARCH).' '.PLAYERS;?></h5>
+                    <h5><?= _("Search Players");?></h5>
                 </div>
                 <div class="widget-content">
 
                         <div class="controls controls-row">
                             <form action="#" method="GET" class="form-horizontal">
                                 <input type="text" name="search" placeholder="..." autocomplete="off" class="span11 m-wrap" style="margin-bottom: 1rem" value="<?=(isset($_GET['search'])) ? htmlspecialchars($_GET['search']) : ''; ?>">
-                                <input type="submit" name="submit" class="btn btn-success span1" value="<?=UP(SEARCH);?>">
+                                <input type="submit" name="submit" class="btn btn-success span1" value="<?= _('Search');?>">
                             </form>
                         </div>
 
@@ -37,22 +36,22 @@
 
             <div class="widget-box">
                 <div class="widget-title"> <span class="icon"> <i class="icon-user"></i> </span>
-                    <h5><?=UP(RESULTS);?></h5>
+                    <h5><?= _("Results");?></h5>
                 </div>
                 <div class="widget-content">
                     <?php $results = $limit = ($CurrentPage == 1) ? '1 - '.ITEMSPERPAGE : ($CurrentPage - 1) * ITEMSPERPAGE.' - '.$CurrentPage * ITEMSPERPAGE; ;?>
-                    <p class="totalresults"><?=UP(TOTAL).' '.RESULTS;?>: <b><?=$CountAllUsers['count'];?></b> | <?=SHOWINGRESULTS;?> <b><?=$results;?></b></p>
+                    <p class="totalresults"><?= _("Total Results");?>: <b><?=$CountAllUsers['count'];?></b> | <?= _("Showing Results from");?> <b><?=$results;?></b></p>
                     <table class="table table-bordered table-striped">
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th><?=UP(PLAYER);?></th>
+                            <th><?= _("Player");?></th>
                             <th>SteamID</th>
-                            <th><?=UP(LAST);?> IP</th>
-                            <th><?=UP(ONLINE).' '.TIME;?></th>
-                            <th><?=UP(CONNECTIONS);?></th>
-                            <th><?=UP(FIRST).' '.ONLINE;?></th>
-                            <th><?=UP(LAST).' '.ONLINE;?></th>
+                            <th><?= _("Last");?> IP</th>
+                            <th><?= _("Online time");?></th>
+                            <th><?= _("connections");?></th>
+                            <th><?= _("First online");?></th>
+                            <th><?= _("Last online");?></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -129,13 +128,13 @@
                     <div class="pagination">
                         <ul>
 
-                            <li<?=$prev1class;?>><a class="paginationtext" href="<?=$prev1url;?>"><?=UP(PREVIUS);?></a></li>
+                            <li<?=$prev1class;?>><a class="paginationtext" href="<?=$prev1url;?>"><?=_("Prev");?></a></li>
                             <li<?=$prev2class;?>><a href="<?=$prev2url;?>"><?=$prev2Num;?></a></li>
                             <li<?=$prev1class;?>><a href="<?=$prev1url;?>"><?=$prev1Num;?></a></li>
                             <li class="active"><a href="#"><?=$CurrentPage;?></a></li>
                             <li<?=$next1class;?>><a href="<?=$next1url;?>"><?=$next1Num;?></a></li>
                             <li<?=$next2class;?>><a href="<?=$next2url;?>"><?=$next2Num;?></a></li>
-                            <li<?=$next1class;?>><a class="paginationtext" href="<?=$next1url;?>"><?=UP(NEXT);?></a></li>
+                            <li<?=$next1class;?>><a class="paginationtext" href="<?=$next1url;?>"><?=_("Next");?></a></li>
 
                         </ul>
                     </div>

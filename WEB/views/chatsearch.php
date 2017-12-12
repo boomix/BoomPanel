@@ -7,7 +7,7 @@
 
             <div class="widget-box">
                 <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-                    <h5><?=UP(CHAT).' '.SEARCH;?></h5>
+                    <h5><?=_('Chat search');?></h5>
                 </div>
                 <div class="widget-content">
 
@@ -17,7 +17,7 @@
                             <input type="submit" name="submit" class="btn btn-success span1" value="<?=UP(SEARCH);?>">
                             <div class="widget-box collapsible">
                                 <div class="widget-title"> <a href="#MoreOptions" data-toggle="collapse"> <span class="icon"><i class="icon-arrow-right"></i></span>
-                                        <h5><?=UP(MORE).' '.OPTIONS;?></h5>
+                                        <h5><?=_("More options");?></h5>
                                     </a> </div>
                                 <div class="collapse <?=(isset($_GET['server']) && $_GET['server'] != 0 || isset($_GET['date']) && $_GET['date'] != 0) ? 'in' : '';?>" id="MoreOptions">
                                     <div class="widget-content">
@@ -30,14 +30,14 @@
                                         </div>
                                         <div class="span3">
                                             <select name="date">
-                                                <option <?=(isset($_GET['date']) && $_GET['date'] == 0) ? 'selected="selected"' : '';?> value="0"><?=UP(ANY).' '.TIME;?></option>
-                                                <option <?=(isset($_GET['date']) && $_GET['date'] == 60) ? 'selected="selected"' : '';?>value="60"><?=UP(LAST).' '.HOUR;?></option>
-                                                <option <?=(isset($_GET['date']) && $_GET['date'] == 360) ? 'selected="selected"' : '';?>value="360"><?=UP(LAST).' 6 '.HOURS;?></option>
-                                                <option <?=(isset($_GET['date']) && $_GET['date'] == 1440) ? 'selected="selected"' : '';?>value="1440"><?=UP(LAST).' '.DAY;?></option>
-                                                <option <?=(isset($_GET['date']) && $_GET['date'] == 2880) ? 'selected="selected"' : '';?>value="2880"><?=UP(LAST).' 2 '.DAYS;?></option>
-                                                <option <?=(isset($_GET['date']) && $_GET['date'] == 10080) ? 'selected="selected"' : '';?>value="10080"><?=UP(LAST).' '.WEEK;?></option>
-                                                <option <?=(isset($_GET['date']) && $_GET['date'] == 20160) ? 'selected="selected"' : '';?>value="20160"><?=UP(LAST).' 2 '.WEEKS;?></option>
-                                                <option <?=(isset($_GET['date']) && $_GET['date'] == 43829) ? 'selected="selected"' : '';?>value="43829"><?=UP(LAST).' 30 '.DAYS;?></option>
+                                                <option <?=(isset($_GET['date']) && $_GET['date'] == 0) ? 'selected="selected"' : '';?> value="0"><?= _("Any Time");?></option>
+                                                <option <?=(isset($_GET['date']) && $_GET['date'] == 60) ? 'selected="selected"' : '';?>value="60"><?= _("Last hour");?></option>
+                                                <option <?=(isset($_GET['date']) && $_GET['date'] == 360) ? 'selected="selected"' : '';?>value="360"><?= _('Last 6 hours');?></option>
+                                                <option <?=(isset($_GET['date']) && $_GET['date'] == 1440) ? 'selected="selected"' : '';?>value="1440"><?= _('Last day');?></option>
+                                                <option <?=(isset($_GET['date']) && $_GET['date'] == 2880) ? 'selected="selected"' : '';?>value="2880"><?= _('Last 2 days');?></option>
+                                                <option <?=(isset($_GET['date']) && $_GET['date'] == 10080) ? 'selected="selected"' : '';?>value="10080"><?= _("Last week");?></option>
+                                                <option <?=(isset($_GET['date']) && $_GET['date'] == 20160) ? 'selected="selected"' : '';?>value="20160"><?= _("Last 2 weeks");?></option>
+                                                <option <?=(isset($_GET['date']) && $_GET['date'] == 43829) ? 'selected="selected"' : '';?>value="43829"><?= _("Last 30 days");?></option>
                                             </select>
                                         </div>
                                         <br style="clear:both;">
@@ -57,7 +57,7 @@
 
                 <div class="widget-box">
                     <div class="widget-title"> <span class="icon"> <i class="icon-user"></i> </span>
-                        <h5><?=UP(RESULTS);?></h5>
+                        <h5><?= _("Results");?></h5>
                     </div>
                     <div class="widget-content">
                         <?php $results = $limit = ($CurrentPage == 1) ? '1 - '.ITEMSPERPAGE : ($CurrentPage - 1) * ITEMSPERPAGE.' - '.$CurrentPage * ITEMSPERPAGE; ;?>
@@ -66,11 +66,11 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th><?=UP(PLAYER);?></th>
-                                <th><?=UP(MESSAGE);?></th>
+                                <th><?= _("Player");?></th>
+                                <th><?= _("Message");?></th>
                                 <th>SteamID</th>
-                                <th><?=UP(SERVER);?></th>
-                                <th><?=UP(TIME);?></th>
+                                <th><?= _("Server");?></th>
+                                <th><?= _("Time");?></th>
                             </tr>
                             </thead>
                             <tbody>
@@ -145,13 +145,13 @@
                         <div class="pagination">
                             <ul>
 
-                                <li<?=$prev1class;?>><a class="paginationtext" href="<?=$prev1url;?>"><?=UP(PREVIUS);?></a></li>
+                                <li<?=$prev1class;?>><a class="paginationtext" href="<?=$prev1url;?>"><?=_("Prev");?></a></li>
                                 <li<?=$prev2class;?>><a href="<?=$prev2url;?>"><?=$prev2Num;?></a></li>
                                 <li<?=$prev1class;?>><a href="<?=$prev1url;?>"><?=$prev1Num;?></a></li>
                                 <li class="active"><a href="#"><?=$CurrentPage;?></a></li>
                                 <li<?=$next1class;?>><a href="<?=$next1url;?>"><?=$next1Num;?></a></li>
                                 <li<?=$next2class;?>><a href="<?=$next2url;?>"><?=$next2Num;?></a></li>
-                                <li<?=$next1class;?>><a class="paginationtext" href="<?=$next1url;?>"><?=UP(NEXT);?></a></li>
+                                <li<?=$next1class;?>><a class="paginationtext" href="<?=$next1url;?>"><?=_("Next");?></a></li>
 
                             </ul>
                         </div>

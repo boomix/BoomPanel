@@ -9,19 +9,19 @@
 
             <div class="widget-box">
                 <div class="widget-title"> <span class="icon"> <i class="icon-plus"></i> </span>
-                    <h5><?=ucfirst(ADD).' '.ADMIN;?></h5>
+                    <h5><?= _("Add Server"); ?></h5>
                 </div>
                 <div class="widget-content nopadding">
                     <form action="#" method="POST" class="form-horizontal">
                         <div class="control-group">
-                            <label class="control-label"><?=UP(ADMIN);?> :</label>
+                            <label class="control-label"><?= _("Admin"); ?> :</label>
                             <div class="controls">
                                 <input type="text" name="admin" autocomplete="off" class="span11" placeholder="..." value="<?=(isset($_POST['admin'])) ? htmlspecialchars($_POST['admin']) : '';?>">
                             </div>
                         </div>
 
                         <div class="control-group">
-                            <label class="control-label"><?=SERVER;?> </label>
+                            <label class="control-label"><?= _("Server");?> </label>
                             <div class="controls">
                                 <select name="server">
                                     <?php foreach ((array)$GetAllServers as $server) { ?>
@@ -32,7 +32,7 @@
                         </div>
 
                         <div class="control-group">
-                            <label class="control-label"><?=UP(GROUP);?></label>
+                            <label class="control-label"><?= _("Group");?></label>
                             <div class="controls">
                                 <select name="group">
                                     <?php
@@ -47,9 +47,9 @@
                         </div>
 
                         <div class="form-actions">
-                            <button type="submit" name="submit" class="btn btn-success pull-right"><?=(isset($match['params']['action'])) ? UP(EDIT) : UP(ADD);?></button>
+                            <button type="submit" name="submit" class="btn btn-success pull-right"><?=(isset($match['params']['action'])) ? _("Edit") : _("Add");?></button>
                             <?php if(isset($match['params']['action']) && $match['params']['action'] == 'edit'){?>
-                                <a href="#deleteAlert" onclick="updatedeleteurl(<?=intval($admin['aid']);?>)" data-toggle="modal" class="btn btn-danger pull-left"><?=UP(DELETE);?></a>
+                                <a href="#deleteAlert" onclick="updatedeleteurl(<?=intval($admin['aid']);?>)" data-toggle="modal" class="btn btn-danger pull-left"><?= _("Delete");?></a>
                             <?php } ?>
                         </div>
                     </form>
@@ -66,18 +66,18 @@
             <hr>
             <div class="widget-box">
                 <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-                    <h5><?=UP(ALL).' '.NAV_ADMINS;?></h5>
+                    <h5><?= _("All Server Admins");?></h5>
                 </div>
                 <div class="widget-content nopadding">
                     <table class="table table-bordered table-striped">
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th><?=UP(PLAYER);?></th>
-                            <th><?=UP(GROUP).' '.NAME;?></th>
-                            <th><?=UP(SERVER);?></th>
-                            <th><?=UP(ADDED);?></th>
-                            <th><?=UP(EDIT).' '.ADMIN;?></th>
+                            <th><?= _("Player");?></th>
+                            <th><?= _("Group Name");?></th>
+                            <th><?= _("Server");?></th>
+                            <th><?= _("Added");?></th>
+                            <th><?= _("Edit Admin");?></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -103,7 +103,7 @@
                                 <td class="centerrow"><?=htmlspecialchars($admin['group_name']);?></td>
                                 <td class="centerrow"><?=htmlspecialchars($admin['server_name']);?></td>
                                 <td class="centerrow"><?=date(TIMEFORMAT, strtotime($admin['add_time']));?></td>
-                                <td class="centerrow"><a href="<?=$CurrentURL;?>edit/<?=intval($admin['aid']);?>/" class="btn btn-info btn-mini"><span class="icon"> <i class="icooo-on-edit"></i> </span><?=EDIT;?></a></td>
+                                <td class="centerrow"><a href="<?=$CurrentURL;?>edit/<?=intval($admin['aid']);?>/" class="btn btn-info btn-mini"><span class="icon"> <i class="icooo-on-edit"></i> </span><?= _("Edit");?></a></td>
                             </tr>
 
                             <?php } else {echo "<tr><td>-</td></tr>";} } ?>
@@ -123,14 +123,14 @@
 <div id="deleteAlert" class="modal hide">
     <div class="modal-header">
         <button data-dismiss="modal" class="close" type="button">×</button>
-        <h3><?=UP(DELETECONFIRM);?></h3>
+        <h3><?= _("Are you sure you want to delete?");?></h3>
     </div>
     <div class="modal-body">
-        <p><?=UP(DELETECONFIRMTXT);?></p>
+        <p><?= _("If you delete this group, all the admins with this group will also be deleted!");?></p>
     </div>
     <div class="modal-footer">
-        <a id="deleteurl" class="btn btn-primary" href="#"><?=UP(CONFIRM);?></a>
-        <a data-dismiss="modal" class="btn" href="#"><?=UP(CANCEL);?></a>
+        <a id="deleteurl" class="btn btn-primary" href="#"><?=_("Confirm");?></a>
+        <a data-dismiss="modal" class="btn" href="#"><?=_("Cancel");?></a>
     </div>
 </div>
 

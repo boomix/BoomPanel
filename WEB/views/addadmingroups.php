@@ -164,8 +164,8 @@
                                 <td class="centerrow"><b><?=$group['flags'];?></b></td>
                                 <td class="centerrow"><?=$group['immunity'];?></td>
                                 <td class="centerrow"><?=convertToHoursMinsBans(intval($group['usetime']));?></td>
-                                <td class="centerrow"><a href="<?=$CurrentURL;?>edit/<?=intval($group['gid']);?>" class="btn btn-warning btn-mini"><?= _("edit"); ?></a></td>
-                                <td class="centerrow"><a href="#deleteAlert" onclick="updatedeleteurl(<?=$group['gid'];?>)" data-toggle="modal" class="btn btn-danger btn-mini"><?=DELETE;?></a></td>
+                                <td class="centerrow"><a href="<?=$CurrentURL;?>edit/<?=intval($group['gid']);?>" class="btn btn-warning btn-mini"><?= _("Edit"); ?></a></td>
+                                <td class="centerrow"><a href="#deleteAlert" onclick="updatedeleteurl(<?= $group['gid']; ?>)" data-toggle="modal" class="btn btn-danger btn-mini"><?=DELETE;?></a></td>
                             </tr>
                             <?php } else {echo "<tr><td>-</td></tr>";} } ?>
                         </tbody>
@@ -182,14 +182,14 @@
 <div id="deleteAlert" class="modal hide">
     <div class="modal-header">
         <button data-dismiss="modal" class="close" type="button">×</button>
-        <h3><?=UP(DELETECONFIRM);?></h3>
+        <h3><?= _("Are you sure you want to delete?");?></h3>
     </div>
     <div class="modal-body">
-        <p><?=UP(DELETECONFIRMTXT);?></p>
+        <p><?=_("If you delete this group, all the admins with this group will also be deleted!");?></p>
     </div>
     <div class="modal-footer">
-        <a id="deleteurl" class="btn btn-primary" href="#"><?=UP(CONFIRM);?></a>
-        <a data-dismiss="modal" class="btn" href="#"><?=UP(CANCEL);?></a>
+        <a id="deleteurl" class="btn btn-primary" href="#"><?=_("Confirm");?></a>
+        <a data-dismiss="modal" class="btn" href="#"><?=_("Cancel");?></a>
     </div>
 </div>
 

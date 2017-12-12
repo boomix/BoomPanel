@@ -4,20 +4,20 @@
 
                 <div class="widget-box">
                     <div class="widget-title"> <span class="icon"> <i class="icon-user"></i> </span>
-                        <h5><?=UP(RESULTS);?></h5>
+                        <h5><?= _("Results");?></h5>
                     </div>
                     <div class="widget-content">
-                        <p class="totalresults"><?=UP(LAST).' '.ONLINE.' '.ONLINELASTMINUTES.' ' .MINUTES;?></p>
+                        <p class="totalresults"><?= __("Last online %i minutes", ONLINELASTMINUTES);?></p>
                         <table class="table table-bordered table-striped">
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th><?=UP(PLAYER);?></th>
+                                <th><?=_("Player");?></th>
                                 <th>SteamID</th>
-                                <th><?=UP(WAS).' '.ONLINE. ' '. BEFORE;?></th>
-                                <th><?=UP(TIME).' '.ONLINE;?></th>
-                                <th><?=UP(SERVER);?></th>
-                                <th><?=UP(ACTION);?></th>
+                                <th><?=_("Was online before");?></th>
+                                <th><?=_("Time online");?></th>
+                                <th><?=_("Server");?></th>
+                                <th><?=_("Action");?></th>
                             </tr>
                             </thead>
                             <tbody>
@@ -41,7 +41,7 @@
                                     <td class="centerrow"><?=convertToHoursMinsBans(ONLINELASTMINUTES - $result['difference'], true);?></td>
                                     <td class="centerrow"><?=convertToHoursMinsBans($result['timeonline'], true);?></td>
                                     <td class="centerrow"><?=htmlspecialchars($result['name']);?></td>
-                                    <td class="morerow"><a href="<?=WEBSITE;?>/bans/?banplayer=<?=$result['steamid'];?>" class="btn btn-danger btn-mini"><span class="icon"> <i class="icooo-on-edit"></i> </span><?=UP(BAN);?></a></td>
+                                    <td class="morerow"><a href="<?=WEBSITE;?>/bans/?banplayer=<?=$result['steamid'];?>" class="btn btn-danger btn-mini"><span class="icon"> <i class="icooo-on-edit"></i> </span><?= _("Ban");?></a></td>
                                 </tr>
                             <?php } } ?>
                             </tbody>

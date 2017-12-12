@@ -47,7 +47,7 @@ include ('steamauth/userInfo.php');
 <div id="user-nav" class="navbar navbar-inverse" style="left: unset;right: 0;">
     <ul class="nav">
         <li style="float:right;"><a href="?logout=1"><i class="icon icon-share-alt"></i> <span class="text"><?=UP(LOGOUT);?></span></a></li>
-        <li style="float:right;"><a href="#"><i class="icon icon-user"></i> <span class="text"><?=UP(WELCOME);?> <?=htmlspecialchars($steamprofile['personaname']);?></span></a></li>
+        <li style="float:right;"><a href="#"><i class="icon icon-user"></i> <span class="text"><?=_("Welcome");?> <?=htmlspecialchars($steamprofile['personaname']);?></span></a></li>
     </ul>
 </div>
 <!--close-top-Header-menu-->
@@ -57,7 +57,7 @@ include ('steamauth/userInfo.php');
     //Check if client has access
     $IsAdmin = $db->selectOne("SELECT * FROM bp_panel_admins WHERE steamid = :steamid", array("steamid" => $steamprofile['steamid']));
     if(!$IsAdmin && $steamprofile['steamid'] != MAINADMIN)
-        die("<h1 style='margin-top: 2rem;color:#fff;text-align: center'>".NOACCESS."!</h1>");
+        die("<h1 style='margin-top: 2rem;color:#fff;text-align: center'>"._("You dont have access to this page!")."</h1>");
 
 ?>
 
@@ -150,6 +150,6 @@ include ('steamauth/userInfo.php');
 
     <div id="content-header">
         <?php $title = (isset($serverName)) ? UP($serverName) : UP($currentPage); ?>
-        <div id="breadcrumb"> <a href="<?=WEBSITE;?>"><?=UP(NAV_HOME);?></a> <a href="<?=$CurrentURL;?>"><?=$title;?></a></div>
+        <div id="breadcrumb"> <a href="<?=WEBSITE;?>"><?= _("Home");?></a> <a href="<?=$CurrentURL;?>"><?=$title;?></a></div>
         <h1><?=$title;?></h1>
     </div>
