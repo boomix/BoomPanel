@@ -24,7 +24,7 @@
 
         <div class="alert alert-error alert-block" style="font-size: 13px">
             <button class="close" data-dismiss="alert">×</button>
-            <strong><?=UP(ERROR);?>!</strong> <?=$e->getMessage( );?>
+            <strong><?= _("Error");?>!</strong> <?=$e->getMessage( );?>
         </div>
 
     <?php } finally {
@@ -35,7 +35,7 @@
 
             <div class="alert alert-error alert-block" style="font-size: 13px">
                 <button class="close" data-dismiss="alert">×</button>
-                <strong><?=UP(ERROR);?>!</strong> <?=SERVER_ERROR;?> <br><b><?=UP(DATA);?>:</b> <?=(isset($data) && !empty($data)) ? $data : '-';?>
+                <strong><?= _("Error");?>!</strong> <?= _("failed to decode JSON data from server");?> <br><b><?= _("Data");?>:</b> <?=(isset($data) && !empty($data)) ? $data : '-';?>
             </div>
 
     <?php
@@ -61,7 +61,7 @@
                 <span class="icon"><i class="icon-user infoicon"></i></span>
                 <p>
                     <span class="number"><span id="onlineUsers"><?=(!$error) ? $stats->online : '-';?></span></span>
-                    <span class="title"><?=NOW.' '.ONLINE;?></span>
+                    <span class="title"><?= _("Now online");?></span>
                 </p>
             </div>
         </div>
@@ -70,7 +70,7 @@
                 <span class="icon"><i class="icon-calendar infoicon"></i></span>
                 <p>
                     <span class="number"><span id="onlineUsers"><?=CountOnlinePast($db, $serverName, 1);?></span></span>
-                    <span class="title"><?=PASTDAY;?></span>
+                    <span class="title"><?= _("Past day");?></span>
                 </p>
             </div>
         </div>
@@ -79,7 +79,7 @@
                 <span class="icon"><i class="icon-calendar infoicon"></i></span>
                 <p>
                     <span class="number"><span id="onlineUsers"><?=CountOnlinePast($db, $serverName, 30);?></span></span>
-                    <span class="title"><?=THISMONTH;?></span>
+                    <span class="title"><?= _("This month");?></span>
                 </p>
             </div>
         </div>
@@ -88,7 +88,7 @@
                 <span class="icon"><i class="icon-globe infoicon"></i></span>
                 <p>
                     <span class="number"><span id="onlineUsers"><?=CountOnlinePast($db, $serverName, -1);?></span></span>
-                    <span class="title"><?=ALL.' '.TIME;?></span>
+                    <span class="title"><?= _("All time");?></span>
                 </p>
             </div>
         </div>
@@ -97,7 +97,7 @@
                 <span class="icon"><i class="icon-globe infoicon"></i></span>
                 <p>
                     <span class="number"><span id="timeleft"> <?=(!$error) ? $stats->tl : '-';?></span></span>
-                    <span class="title"><?=TIMELEFT;?></span>
+                    <span class="title"><?= _('Time left');?></span>
                 </p>
             </div>
         </div>
@@ -106,7 +106,7 @@
                 <span class="icon"><i class="icon-globe infoicon"></i></span>
                 <p>
                     <span class="number"><span> <?=(!$error) ? '<span style="color:#d0b311" id="score1">' .$stats->s1. '</span>/<span style="color:#2461db" id="score2">' .$stats->s2.'</span>' : '-';?></span></span>
-                    <span class="title"><?=SCORE;?></span>
+                    <span class="title"><?= _("Score");?></span>
                 </p>
             </div>
         </div>
@@ -118,20 +118,20 @@
 
                 <div class="widget-box">
                     <div class="widget-title"> <span class="icon"> <i class="icon-user"></i> </span>
-                        <h5><?=UP(SEND).' '.COMMAND.' '.TO.' '.SERVER;?> </h5>
+                        <h5><?= _("Send command to server");?> </h5>
                     </div>
                     <div class="widget-content nopadding">
                         <div id="response"></div>
                         <div class="controls">
                             <form action="#" method="POST" id="SendServerCommand" class="form-horizontal">
                                 <div class="control-group">
-                                    <label class="control-label"><?=UP(COMMAND);?> :</label>
+                                    <label class="control-label"><?= _("Command");?> :</label>
                                     <div class="controls">
                                         <input type="text" name="commnad" id="ServerCmd" class="span11" placeholder="..." />
                                     </div>
                                 </div>
                                 <div class="form-actions">
-                                    <button type="submit" onclick="SendCommand();" name="submit" class="btn btn-success pull-right"><?=UP(SEND);?></button>
+                                    <button type="submit" onclick="SendCommand();" name="submit" class="btn btn-success pull-right"><?= _("Send");?></button>
                                 </div>
                             </form>
                         </div>
@@ -145,24 +145,24 @@
     <div class="row-fluid" style="margin-bottom: 15rem">
         <div class="span12">
 
-            <button onclick="UpdateOnline()" class="btn btn-info pull-right" style="margin-bottom: 10px;"><?=UP(REFRESH);?></button>
+            <button onclick="UpdateOnline()" class="btn btn-info pull-right" style="margin-bottom: 10px;"><?= _("Refresh");?></button>
             <div class="widget-box">
                 <div class="widget-title"> <span class="icon"> <i class="icon-user"></i> </span>
-                    <h5><?=UP(ONLINE).' '.PLAYERS;?> </h5>
+                    <h5><?= _("Online servers");?> </h5>
                 </div>
                 <div class="widget-content nopadding">
                     <table class="table table-bordered table-striped">
                         <thead>
                         <tr>
                             <th style="min-width:27px">#</th>
-                            <th style="min-width: 100px;"><?=UP(PLAYER);?></th>
+                            <th style="min-width: 100px;"><?= _("Player");?></th>
                             <th>SteamID</th>
                             <th>IP</th>
-                            <th style="min-width: 80px;"><?=UP(ONLINE);?></th>
-                            <th style="min-width: 80px;"><?=UP(TOTAL).' '.ONLINE;?></th>
-                            <th><?=UP(KILLS);?></th>
-                            <th><?=UP(DEATHS);?></th>
-                            <th><?=UP(ACTION);?></th>
+                            <th style="min-width: 80px;"><?= _("Online");?></th>
+                            <th style="min-width: 80px;"><?= _("Total time");?></th>
+                            <th><?= _("Kills");?></th>
+                            <th><?= _("Deaths");?></th>
+                            <th><?= _("Action");?></th>
                         </tr>
                         </thead>
                         <tbody id="OnlinePlayers">
@@ -306,11 +306,11 @@
             url: '<?=WEBSITE;?>/ajax/KickPlayer.php',
             data: data,
             error: function(xhr, status, error) {
-                new Noty({type: 'error', progressBar: true, timeout: 3000, text: '<i class="icon-remove alerticon"></i><?=UP(PLAYER)." ".NOTFOUND;?>' }).show();
+                new Noty({type: 'error', progressBar: true, timeout: 3000, text: '<i class="icon-remove alerticon"></i><?= _("Player not found");?>' }).show();
                 UpdateOnline();
             },
             success: function(data){
-                new Noty({ type: 'success', progressBar: true, timeout: 3000, text: '<i class="icon-ok alerticon"></i><?=UP(PLAYER)." ".KICKED;?>' }).show();
+                new Noty({ type: 'success', progressBar: true, timeout: 3000, text: '<i class="icon-ok alerticon"></i><?= _("Player kicked"ß);?>' }).show();
                 UpdateOnline();
             },
             dataType: 'html'
@@ -331,7 +331,7 @@
                 UpdateOnline();
             },
             success: function(data){
-                new Noty({ type: 'success', progressBar: true, timeout: 3000, text: '<i class="icon-ok alerticon"></i><?=UP(PLAYER)." ".BANNED;?>' }).show();
+                new Noty({ type: 'success', progressBar: true, timeout: 3000, text: '<i class="icon-ok alerticon"></i><?= _("Player banned");?>' }).show();
                 UpdateOnline();
             },
             dataType: 'html'
@@ -352,7 +352,7 @@
                 UpdateOnline();
             },
             success: function(data){
-                new Noty({ type: 'success', progressBar: true, timeout: 3000, text: '<i class="icon-ok alerticon"></i><?=UP(SUCCESS);?>' }).show();
+                new Noty({ type: 'success', progressBar: true, timeout: 3000, text: '<i class="icon-ok alerticon"></i><?= _("Success");?>' }).show();
                 UpdateOnline();
             },
             dataType: 'html'

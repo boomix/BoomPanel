@@ -1,0 +1,516 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-13 00:10+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: 404.php:12
+msgid "Opps, You're lost."
+msgstr ""
+
+#: 404.php:13
+msgid "We could not find the page you're looking for."
+msgstr ""
+
+#: 404.php:14
+msgid "Back to Home"
+msgstr ""
+
+#: addadmingroups.php:12
+msgid "Add Group"
+msgstr ""
+
+#: addadmingroups.php:18 addadmingroups.php:152 addserveradmins.php:77
+msgid "Group Name"
+msgstr ""
+
+#: addadmingroups.php:25 addadmingroups.php:154
+msgid "Immunity"
+msgstr ""
+
+#: addadmingroups.php:32 addadmingroups.php:155
+msgid "Use Time"
+msgstr ""
+
+#: addadmingroups.php:48
+msgid "Admin group?"
+msgstr ""
+
+#: addadmingroups.php:56 addadmingroups.php:87 addadmingroups.php:153
+msgid "Flags"
+msgstr ""
+
+#: addadmingroups.php:76 addadmingroups.php:156 addadmingroups.php:167
+#: addserver.php:42 addserver.php:71 addserveradmins.php:50
+#: addserveradmins.php:106 bans.php:77 bans.php:172
+msgid "Edit"
+msgstr ""
+
+#: addadmingroups.php:76 addserver.php:42 addserveradmins.php:50 bans.php:11
+#: bans.php:77 paneladmins.php:23
+msgid "Add"
+msgstr ""
+
+#: addadmingroups.php:93 addadmingroups.php:95 addadmingroups.php:97
+msgid "Flag"
+msgstr ""
+
+#: addadmingroups.php:94 addadmingroups.php:96 addadmingroups.php:98
+msgid "Name"
+msgstr ""
+
+#: addadmingroups.php:146
+msgid "All Groups"
+msgstr ""
+
+#: addadmingroups.php:157 addserveradmins.php:52 paneladmins.php:41
+msgid "Delete"
+msgstr ""
+
+#: addadmingroups.php:185 addserveradmins.php:126
+msgid "Are you sure you want to delete?"
+msgstr ""
+
+#: addadmingroups.php:188 addserveradmins.php:129
+msgid ""
+"If you delete this group, all the admins with this group will also be "
+"deleted!"
+msgstr ""
+
+#: addadmingroups.php:191 addserveradmins.php:132
+msgid "Confirm"
+msgstr ""
+
+#: addadmingroups.php:192 addserveradmins.php:133
+msgid "Cancel"
+msgstr ""
+
+#: addserver.php:17
+msgid "Server name"
+msgstr ""
+
+#: addserver.php:23 addserver.php:29 addserveradmins.php:24
+#: addserveradmins.php:78 adminlogs.php:51 bans.php:49 bans.php:121
+#: bans.php:164 chatsearch.php:72 justonline.php:19
+msgid "Server"
+msgstr ""
+
+#: addserver.php:35
+msgid "RCON password"
+msgstr ""
+
+#: addserver.php:53
+msgid "Currently added servers"
+msgstr ""
+
+#: addserver.php:59
+msgid "Server Name"
+msgstr ""
+
+#: addserver.php:60
+msgid "Server IP"
+msgstr ""
+
+#: addserver.php:61
+msgid "RCON Password"
+msgstr ""
+
+#: addserver.php:62
+msgid "Edit Server"
+msgstr ""
+
+#: addserveradmins.php:12
+msgid "Add Server"
+msgstr ""
+
+#: addserveradmins.php:17 adminlogs.php:48 bans.php:102 bans.php:169
+#: paneladmins.php:16 paneladmins.php:40
+msgid "Admin"
+msgstr ""
+
+#: addserveradmins.php:35
+msgid "Group"
+msgstr ""
+
+#: addserveradmins.php:69
+msgid "All Server Admins"
+msgstr ""
+
+#: addserveradmins.php:76 bans.php:96 bans.php:163 chatsearch.php:69
+#: justonline.php:15 searchplayers.php:48 servers.php:158
+msgid "Player"
+msgstr ""
+
+#: addserveradmins.php:79
+msgid "Added"
+msgstr ""
+
+#: addserveradmins.php:80
+msgid "Edit Admin"
+msgstr ""
+
+#: adminlogs.php:11
+msgid "Search admin logs"
+msgstr ""
+
+#: adminlogs.php:21
+msgid "All Servers"
+msgstr ""
+
+#: adminlogs.php:27 bans.php:91 bans.php:135 searchplayers.php:25
+msgid "Search"
+msgstr ""
+
+#: adminlogs.php:39
+msgid "Latest admin logs"
+msgstr ""
+
+#: adminlogs.php:50 servers.php:128
+msgid "Command"
+msgstr ""
+
+#: adminlogs.php:52 bans.php:60 chatsearch.php:73
+msgid "Time"
+msgstr ""
+
+#: adminlogs.php:127 bans.php:260 chatsearch.php:148 searchplayers.php:131
+msgid "Prev"
+msgstr ""
+
+#: adminlogs.php:133 bans.php:266 chatsearch.php:154 searchplayers.php:137
+msgid "Next"
+msgstr ""
+
+#: bans.php:11 bans.php:91
+msgid "ban"
+msgstr ""
+
+#: bans.php:11 bans.php:91 bans.php:152
+msgid "mute gag"
+msgstr ""
+
+#: bans.php:24 bans.php:108 bans.php:168
+msgid "Reason"
+msgstr ""
+
+#: bans.php:32 justonline.php:20 servers.php:165
+msgid "Action"
+msgstr ""
+
+#: bans.php:79
+msgid "Unban"
+msgstr ""
+
+#: bans.php:79
+msgid "Restore ban"
+msgstr ""
+
+#: bans.php:115
+msgid "Mute"
+msgstr ""
+
+#: bans.php:116
+msgid "Gag"
+msgstr ""
+
+#: bans.php:117
+msgid "Silence"
+msgstr ""
+
+#: bans.php:124
+msgid "Any Server"
+msgstr ""
+
+#: bans.php:127
+msgid "All servers"
+msgstr ""
+
+#: bans.php:152
+msgid "Latest"
+msgstr ""
+
+#: bans.php:152
+msgid "bans"
+msgstr ""
+
+#: bans.php:157
+msgid "Total results:"
+msgstr ""
+
+#: bans.php:157
+msgid "Showing results from"
+msgstr ""
+
+#: bans.php:165
+msgid "Type"
+msgstr ""
+
+#: bans.php:167 justonline.php:44
+msgid "Ban"
+msgstr ""
+
+#: bans.php:167
+msgid "length"
+msgstr ""
+
+#: bans.php:167
+msgid "Length"
+msgstr ""
+
+#: bans.php:170
+msgid "Banned at"
+msgstr ""
+
+#: bans.php:171
+msgid "Ends"
+msgstr ""
+
+#: bans.php:197 bans.php:211
+msgid "unbanned"
+msgstr ""
+
+#: bans.php:205
+msgid "mute"
+msgstr ""
+
+#: bans.php:205
+msgid "gag"
+msgstr ""
+
+#: bans.php:205
+msgid "silence"
+msgstr ""
+
+#: bans.php:212
+msgid "edit"
+msgstr ""
+
+#: chatsearch.php:10
+msgid "Chat search"
+msgstr ""
+
+#: chatsearch.php:20
+msgid "More options"
+msgstr ""
+
+#: chatsearch.php:33
+msgid "Any Time"
+msgstr ""
+
+#: chatsearch.php:34
+msgid "Last hour"
+msgstr ""
+
+#: chatsearch.php:35
+msgid "Last 6 hours"
+msgstr ""
+
+#: chatsearch.php:36
+msgid "Last day"
+msgstr ""
+
+#: chatsearch.php:37
+msgid "Last 2 days"
+msgstr ""
+
+#: chatsearch.php:38
+msgid "Last week"
+msgstr ""
+
+#: chatsearch.php:39
+msgid "Last 2 weeks"
+msgstr ""
+
+#: chatsearch.php:40
+msgid "Last 30 days"
+msgstr ""
+
+#: chatsearch.php:60 justonline.php:7 searchplayers.php:39
+msgid "Results"
+msgstr ""
+
+#: chatsearch.php:70
+msgid "Message"
+msgstr ""
+
+#: home.php:12
+msgid "The home page is not finished, so for now use other pages!"
+msgstr ""
+
+#: home.php:21
+msgid "Now Online"
+msgstr ""
+
+#: home.php:30
+msgid "Past day online"
+msgstr ""
+
+#: home.php:39
+msgid "This month online"
+msgstr ""
+
+#: home.php:48
+msgid "All time online"
+msgstr ""
+
+#: justonline.php:17
+msgid "Was online before"
+msgstr ""
+
+#: justonline.php:18
+msgid "Time online"
+msgstr ""
+
+#: paneladmins.php:11
+msgid "Add panel admins"
+msgstr ""
+
+#: paneladmins.php:34
+msgid "All panel admins"
+msgstr ""
+
+#: paneladmins.php:72
+msgid "delete"
+msgstr ""
+
+#: searchplayers.php:10
+msgid "About search"
+msgstr ""
+
+#: searchplayers.php:12
+msgid ""
+"You can search users by <i>'username', 'IP', 'steamID32', 'steamID64', "
+"'steamcommunity profile URL'</i>. Panel saves every IP and username with "
+"what player has been in the server, so it's easier to find alternative "
+"accouts or anyone who has used your username before.<br> <b>Undestand that "
+"this search is not finished and will have upgrades later!</b>"
+msgstr ""
+
+#: searchplayers.php:18
+msgid "Search Players"
+msgstr ""
+
+#: searchplayers.php:43
+msgid "Total Results"
+msgstr ""
+
+#: searchplayers.php:43
+msgid "Showing Results from"
+msgstr ""
+
+#: searchplayers.php:50
+msgid "Last"
+msgstr ""
+
+#: searchplayers.php:51
+msgid "Online time"
+msgstr ""
+
+#: searchplayers.php:52
+msgid "connections"
+msgstr ""
+
+#: searchplayers.php:53
+msgid "First online"
+msgstr ""
+
+#: searchplayers.php:54
+msgid "Last online"
+msgstr ""
+
+#: servers.php:27 servers.php:38
+msgid "Error"
+msgstr ""
+
+#: servers.php:38
+msgid "failed to decode JSON data from server"
+msgstr ""
+
+#: servers.php:38
+msgid "Data"
+msgstr ""
+
+#: servers.php:64
+msgid "Now online"
+msgstr ""
+
+#: servers.php:73
+msgid "Past day"
+msgstr ""
+
+#: servers.php:82
+msgid "This month"
+msgstr ""
+
+#: servers.php:91
+msgid "All time"
+msgstr ""
+
+#: servers.php:100
+msgid "Time left"
+msgstr ""
+
+#: servers.php:109
+msgid "Score"
+msgstr ""
+
+#: servers.php:121
+msgid "Send command to server"
+msgstr ""
+
+#: servers.php:134
+msgid "Send"
+msgstr ""
+
+#: servers.php:148
+msgid "Refresh"
+msgstr ""
+
+#: servers.php:151
+msgid "Online servers"
+msgstr ""
+
+#: servers.php:161
+msgid "Online"
+msgstr ""
+
+#: servers.php:162
+msgid "Total time"
+msgstr ""
+
+#: servers.php:163
+msgid "Kills"
+msgstr ""
+
+#: servers.php:164
+msgid "Deaths"
+msgstr ""
+
+#: servers.php:309
+msgid "Player not found"
+msgstr ""
+
+#: servers.php:313
+msgid "Player kicked"
+msgstr ""
+
+#: servers.php:334
+msgid "Player banned"
+msgstr ""
+
+#: servers.php:355
+msgid "Success"
+msgstr ""

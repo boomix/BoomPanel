@@ -16,9 +16,14 @@ include 'includes.php';
 
 require_once('./class/i18n.php');
 I18N::init('boompanel', './lang', 'en_US', array(
-    '/^de((-|_).*?)?$/i' => 'de_DE',
     '/^en((-|_).*?)?$/i' => 'en_US',
-    '/^es((-|_).*?)?$/i' => 'es_ES'
+    '/^de((-|_).*?)?$/i' => 'de_DE',
+    '/^fr((-|_).*?)?$/i' => 'fr_FR',
+    '/^it((-|_).*?)?$/i' => 'it_IT',
+    '/^pl((-|_).*?)?$/i' => 'pl_PL',
+    '/^ru((-|_).*?)?$/i' => 'ru_RU',
+    '/^tr((-|_).*?)?$/i' => 'tr_TR',
+    '/^zh((-|_).*?)?$/i' => 'zh_HC',
 ));
 
 if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
