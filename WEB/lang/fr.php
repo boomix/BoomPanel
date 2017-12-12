@@ -2,9 +2,9 @@
     //LANGUAGE FILE
     //--FRENCH
     //Made by Cripix
-    
-    
-    
+
+
+
     //NAVIGATION
     define("NAV_HOME", 					        "Accueil");
     define("NAV_SETTINGS",              "Page des réglages");
@@ -24,8 +24,8 @@
     define("NAV_ADDSADMINGROUPS",       "Ajouter un groupe d'admin");
     define("NAV_JUST_ONLINE",           "Juste en connnecté");
     define("NAV_MOSTACTIVE",            "Les plus en connecté");
-    
-    
+
+
     define("WELCOME",                   "Bienvenue");
     define("WAS",                       "à");
     define("YOU",                       "Toi"); //not sure
@@ -143,7 +143,7 @@
     define("SELECT",                    "Sélectionner");
     define("UNKNOWN",                   "Inconnu");
     define("MESSAGE",                   "Message");
-    
+
     //Errors
     define("SERVER_ERROR",              "Impossible de décoder les données JSON du serveur");
 ?>

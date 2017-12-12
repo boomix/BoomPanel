@@ -9,9 +9,9 @@
                 <div class="widget-content">
                     <div class="error_ex">
                         <h1>404</h1>
-                        <h3>Opps, You're lost.</h3>
-                        <p>We could not find the page you're looking for.</p>
-                        <a class="btn btn-warning btn-big"  href="<?=WEBSITE;?>">Back to Home</a> </div>
+                        <h3><?= _("Opps, You're lost."); ?></h3>
+                        <p><?= _("We could not find the page you're looking for."); ?></p>
+                        <a class="btn btn-warning btn-big"  href="<?=WEBSITE;?>"><?= _("Back to Home") ?></a> </div>
                 </div>
             </div>
         </div>
