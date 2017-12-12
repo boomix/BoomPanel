@@ -9,27 +9,27 @@
 
             <div class="widget-box">
                 <div class="widget-title"> <span class="icon"> <i class="icon-plus"></i> </span>
-                    <h5><?=ucfirst(ADD).' '.GROUP;?></h5>
+                    <h5><?= _("Add Group") ?></h5>
                 </div>
                 <div class="widget-content nopadding">
                     <form action="#" method="POST" class="form-horizontal">
 
                         <div class="control-group">
-                            <label class="control-label"><?=UP(GROUP).' '.NAME;?> :</label>
+                            <label class="control-label"><?= _("Group Name") ?> :</label>
                             <div class="controls">
                                 <input type="text" name="groupName" autocomplete="off" class="span11" placeholder="..." value="<?=(isset($_POST['groupName'])) ? htmlspecialchars($_POST['groupName']) : '';?>">
                             </div>
                         </div>
 
                         <div class="control-group">
-                            <label class="control-label"><?=UP(IMMUNITY);?>:</label>
+                            <label class="control-label"><?= _("Immunity");?>:</label>
                             <div class="controls">
                                 <input type="number" min="0" name="immunity" autocomplete="off" class="span11" value="<?=(isset($_POST['immunity'])) ? htmlspecialchars($_POST['immunity']) : '0';?>">
                             </div>
                         </div>
 
                         <div class="control-group">
-                            <label class="control-label"><?=UP(USE1).' '.TIME;?></label>
+                            <label class="control-label"><?= _("Use Time");?></label>
                             <div class="controls">
                                 <div class="input-prepend span4"> <span class="add-on"><?=DAYS[0];?></span>
                                     <input type="number" min="0" name="days" autocomplete="off" class="span5" value="<?=isset($_POST['days']) ? intval($_POST['days']) : 0;?>">
@@ -45,7 +45,7 @@
                         </div>
 
                         <div class="control-group">
-                            <label class="control-label">Admin group?</label>
+                            <label class="control-label"><?= _("Admin group?"); ?></label>
                             <div class="controls">
                                 <label><input type="radio" value="1" <?php if(isset($_POST['radios']) && $_POST['radios'] == 1) echo "checked"; else if(!isset($_POST['radios'])) echo "checked"; ?> name="radios" />Yes</label>
                                 <label><input type="radio" value="0" <?php if(isset($_POST['radios']) && $_POST['radios'] == 0) echo "checked";?> name="radios" />No</label>
@@ -53,7 +53,7 @@
                         </div>
 
                         <div class="control-group">
-                            <label class="control-label"><?=UP(FLAGS);?></label>
+                            <label class="control-label"><?= _("Flags");?></label>
                             <div class="controls">
                                 <select multiple name="flags[]">
                                     <?php
@@ -73,7 +73,7 @@
                         </div>
 
                         <div class="form-actions">
-                            <button type="submit" name="submit" class="btn btn-success pull-right"><?=(isset($match['params']['action'])) ? UP(EDIT) : UP(ADD);?></button>
+                            <button type="submit" name="submit" class="btn btn-success pull-right"><?=(isset($match['params']['action'])) ? _("Edit") : _("Add");?></button>
                         </div>
                     </form>
                 </div>
@@ -84,18 +84,18 @@
 
             <div class="widget-box">
                 <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
-                    <h5><?=UP(FLAGS);?></h5>
+                    <h5><?= _("Flags");?></h5>
                 </div>
                 <div class="widget-content nopadding">
                     <table class="table table-bordered table-striped">
                         <thead>
                         <tr>
-                            <th><?=UP(FLAG);?></th>
-                            <th><?=UP(NAME);?></th>
-                            <th><?=UP(FLAG);?></th>
-                            <th><?=UP(NAME);?></th>
-                            <th><?=UP(FLAG);?></th>
-                            <th><?=UP(NAME);?></th>
+                            <th><?= _("Flag");?></th>
+                            <th><?= _("Name");?></th>
+                            <th><?= _("Flag");?></th>
+                            <th><?= _("Name");?></th>
+                            <th><?= _("Flag");?></th>
+                            <th><?= _("Name");?></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -143,18 +143,18 @@
 
             <div class="widget-box">
                 <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
-                    <h5><?=UP(ALL).' '.GROUP;?></h5>
+                    <h5><?= _("All Groups") ?></h5>
                 </div>
                 <div class="widget-content nopadding">
                     <table class="table table-bordered table-striped">
                         <thead>
                         <tr>
-                            <th><?=UP(GROUP).' '.NAME;?></th>
-                            <th><?=UP(FLAGS);?></th>
-                            <th><?=UP(IMMUNITY);?></th>
-                            <th><?=UP(USE1).' '.TIME;?></th>
-                            <th><?=UP(EDIT);?></th>
-                            <th><?=UP(DELETE);?></th>
+                            <th><?= _("Group Name"); ?></th>
+                            <th><?= _("Flags"); ?></th>
+                            <th><?= _("Immunity"); ?></th>
+                            <th><?= _("Use Time"); ?></th>
+                            <th><?= _("Edit"); ?></th>
+                            <th><?= _("Delete"); ?></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -164,7 +164,7 @@
                                 <td class="centerrow"><b><?=$group['flags'];?></b></td>
                                 <td class="centerrow"><?=$group['immunity'];?></td>
                                 <td class="centerrow"><?=convertToHoursMinsBans(intval($group['usetime']));?></td>
-                                <td class="centerrow"><a href="<?=$CurrentURL;?>edit/<?=intval($group['gid']);?>" class="btn btn-warning btn-mini"><?=EDIT;?></a></td>
+                                <td class="centerrow"><a href="<?=$CurrentURL;?>edit/<?=intval($group['gid']);?>" class="btn btn-warning btn-mini"><?= _("edit"); ?></a></td>
                                 <td class="centerrow"><a href="#deleteAlert" onclick="updatedeleteurl(<?=$group['gid'];?>)" data-toggle="modal" class="btn btn-danger btn-mini"><?=DELETE;?></a></td>
                             </tr>
                             <?php } else {echo "<tr><td>-</td></tr>";} } ?>

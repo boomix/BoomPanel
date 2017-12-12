@@ -7,12 +7,23 @@ ob_start();
 //Redirect to url with slash if there is no slash
 if( strlen($_SERVER['REQUEST_URI']) > 1 && substr($_SERVER['REQUEST_URI'], -1) != '/' && strpos($_SERVER['REQUEST_URI'], '?') != true) {
      $url = $_SERVER['REQUEST_URI']."/";
-     header("Location: $url"); 
+     header("Location: $url");
      exit;
 }
 
 include 'config.php';
 include 'includes.php';
+
+require_once('./class/i18n.php');
+I18N::init('boompanel', './lang', 'en_US', array(
+    '/^de((-|_).*?)?$/i' => 'de_DE',
+    '/^en((-|_).*?)?$/i' => 'en_US',
+    '/^es((-|_).*?)?$/i' => 'es_ES'
+));
+
+if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+    I18N::changeLanguage(substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2));
+}
 
 //Show errors | disable when live
 if(DEVELOPERMOD == 1) {
