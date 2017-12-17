@@ -7,7 +7,6 @@ pipeline:
       - eval `ssh-agent -s`
       - mkdir -p /ssh
       - echo "$GIT_PUSH_SSH_KEY" > /ssh/key
-      - cat /ssh/key
       - chmod 600 /ssh/key
       - ssh-add /ssh/key
       - cd WEB/lang
@@ -17,7 +16,7 @@ pipeline:
       - git config --global push.default simple
       - git add -A
       - git commit -m "[skip ci] translation webhook"
-      - git remote set-url origin "https://git@github.com/boomix/BoomPanel.git"
+      - git remote set-url origin "git@github.com:boomix/BoomPanel.git"
       - git push --set-upstream origin HEAD
       - git push
     secrets: [ git_push_ssh_key ]
