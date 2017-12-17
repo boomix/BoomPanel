@@ -20,7 +20,7 @@ pipeline:
       - git remote set-url origin ${GIT_USERNAME}@github.com:boomix/BoomPanel.git
       - git push --set-upstream origin HEAD
       - git push
-    secrets: [ git_push_ssh_key, git_username, git_password]
+    secrets: [ git_push_ssh_key, git_username ]
 
   # git_push:
   #   image: appleboy/drone-git-push
