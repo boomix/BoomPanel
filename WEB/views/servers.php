@@ -310,7 +310,7 @@
                 UpdateOnline();
             },
             success: function(data){
-                new Noty({ type: 'success', progressBar: true, timeout: 3000, text: '<i class="icon-ok alerticon"></i><?= _("Player kicked"ß);?>' }).show();
+                new Noty({ type: 'success', progressBar: true, timeout: 3000, text: '<i class="icon-ok alerticon"></i><?= _("Player kicked");?>' }).show();
                 UpdateOnline();
             },
             dataType: 'html'
