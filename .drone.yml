@@ -11,7 +11,7 @@ pipeline:
       - git config --global push.default simple
       - git add -A
       - git commit -m '[skip ci] translation webhook'
-      - git push origin dev
+      - git push -u origin dev
 
   publish:
     image: plugins/docker
