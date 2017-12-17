@@ -45,7 +45,7 @@ class I18N {
         }
         // set up gettext for the given configuration
         putenv('LANG='.$language.'.utf8');
-        setlocale(LC_MESSAGES, $language.'.utf8');
+        setlocale(LC_ALL, $language.'.utf8');
         bindtextdomain($domain, $directory);
         bind_textdomain_codeset($domain, 'UTF-8');
         textdomain($domain);
