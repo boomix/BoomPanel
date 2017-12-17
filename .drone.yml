@@ -6,6 +6,7 @@ pipeline:
       - apt-get install -y gettext bash python python-dev git
       - cd WEB/lang
       - bash export.bash
+      - git remote set-url origin https://github.com/boomix/BoomPanel.git
       - git config --global user.email "bilalmahmoud@posteo.net"
       - git config --global user.name "indietyp"
       - git config --global push.default simple
