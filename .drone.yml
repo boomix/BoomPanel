@@ -2,10 +2,10 @@ pipeline:
   language:
     image: ubuntu
     commands:
+      - apt-get update
+      - apt-get install -y gettext bash python python-dev git ssh-agent
       - eval `ssh-agent -s`
       - ssh-add $GIT_PUSH_SSH_KEY
-      - apt-get update
-      - apt-get install -y gettext bash python python-dev git
       - cd WEB/lang
       - bash export.bash
       - git config --global user.email "bilalmahmoud@posteo.net"
