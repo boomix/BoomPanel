@@ -6,7 +6,7 @@ pipeline:
       - apt-get install -y gettext bash python python-dev git openssh-client
       - eval `ssh-agent -s`
       - mkdir -p /ssh
-      - $GIT_PUSH_SSH_KEY > /ssh/key
+      - "${GIT_PUSH_SSH_KEY}" > /ssh/key
       - ssh-add /ssh/key
       - cd WEB/lang
       - bash export.bash
