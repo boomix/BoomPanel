@@ -7,6 +7,7 @@ pipeline:
       - eval `ssh-agent -s`
       - mkdir -p /ssh
       - echo "$GIT_PUSH_SSH_KEY" > /ssh/key
+      - cat /ssh/key
       - chmod 600 /ssh/key
       - ssh-add /ssh/key
       - cd WEB/lang
