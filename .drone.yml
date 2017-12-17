@@ -3,7 +3,7 @@ pipeline:
     image: ubuntu
     commands:
       - apt-get update
-      - apt-get install -y gettext bash python python-dev git ssh-agent
+      - apt-get install -y gettext bash python python-dev git openssh-client
       - eval `ssh-agent -s`
       - ssh-add $GIT_PUSH_SSH_KEY
       - cd WEB/lang
