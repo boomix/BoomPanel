@@ -5,7 +5,6 @@ pipeline:
     repo: registry.indietyp.com/boom/BoomPanel
     secrets: [ docker_username, docker_password ]
     tags: latest
-    dockerfile: flask/Dockerfile
 
   language:
     image: ubuntu
