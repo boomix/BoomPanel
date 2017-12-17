@@ -45,7 +45,7 @@ echo "cgi.fix_pathinfo: 0;" >> /etc/php/7.0/fpm/php.ini
 
 #### Installation
 ```bash
-docker pull registry.indietyp.com/BoomPanel
+docker pull registry.indietyp.com/boom/boompanel
 docker run BoomPanel
 ```
 

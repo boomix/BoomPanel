@@ -1,17 +1,18 @@
 pipeline:
+  language:
+    image: ubuntu
+    commands:
+      - apt-get update
+      - apt-get install -y gettext bash python python-dev git
+      - cd WEB/lang
+      - bash export.bash
+      - git add -A
+      - git commit -m 'translation webhook'
+      - git push
+
   publish:
     image: plugins/docker
     registry: registry.indietyp.com
     repo: registry.indietyp.com/boom/boompanel
     secrets: [ docker_username, docker_password ]
     tags: latest
-
-  language:
-    image: ubuntu
-    commands:
-      - apt install -y gettext bash python python-dev git
-      - cd WEB/lang
-      - bash export.bash
-      - git add -A
-      - git commit -m 'translation webhook'
-      - git push
