@@ -3,11 +3,12 @@ pipeline:
     image: ubuntu
     commands:
       - apt-get update
-      - apt-get install -y gettext bash python python-dev git openssh-client
-      - eval `ssh-agent -s`
-      - mkdir -p /ssh
-      - echo "$GIT_PUSH_SSH_KEY" > /ssh/key
-      - cat /ssh/key
+      - apt-get install -y gettext bash python python-dev
+      # git openssh-client
+      # - eval `ssh-agent -s`
+      # - mkdir -p /ssh
+      # - echo "$GIT_PUSH_SSH_KEY" > /ssh/key
+      # - cat /ssh/key
       - chmod 600 /ssh/key
       - ssh-add /ssh/key
       - cd WEB/lang
