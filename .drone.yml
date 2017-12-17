@@ -9,8 +9,8 @@ pipeline:
       # - mkdir -p /ssh
       # - echo "$GIT_PUSH_SSH_KEY" > /ssh/key
       # - cat /ssh/key
-      - chmod 600 /ssh/key
-      - ssh-add /ssh/key
+      # - chmod 600 /ssh/key
+      # - ssh-add /ssh/key
       - cd WEB/lang
       - bash export.bash
       # - git config --global user.email "bilalmahmoud@posteo.net"
