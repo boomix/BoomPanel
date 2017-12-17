@@ -7,6 +7,7 @@ LANG=(`curl -X POST https://api.poeditor.com/v2/languages/list \
 
 for l in "${LANG[@]}"
 do
+  mkdir -p "${DIR}/${l}/LC_ALL"
   curl -o "${DIR}/${l}/LC_ALL/boompanel.po" `curl -X POST https://api.poeditor.com/v2/projects/export \
                                            -d api_token="28569c58e5865d530ed1f410c113a96f" \
                                            -d id="151217" \
@@ -24,7 +25,6 @@ find "${DIR}/.." -iname "*.php" | xargs xgettext --from-code=UTF-8 --default-dom
 sed -i'' -e "s/Content-Type: text/plain; charset=CHARSET/Content-Type: text/plain; charset=UTF-8/g" "${DIR}/boompanel.pot"
 
 while read p; do
-  mkdir -p "${p}/LC_ALL"
   if [ ! -f "${p}/LC_ALL/boompanel.po" ]; then
     cp boompanel.pot "${p}/LC_ALL/boompanel.po"
     sed -i'' -e "s/Language: /Language: ${p}/g" "${p}/LC_ALL/boompanel.po"
