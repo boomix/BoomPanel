@@ -11,8 +11,7 @@ pipeline:
       - git config --global push.default simple
       - git add -A
       - git commit -m 'translation webhook'
-      - git remote add origin https://github.com/boomix/BoomPanel.git
-      - git push --set-upstream origin dev
+      - git push origin dev
       - git push
 
   publish:
