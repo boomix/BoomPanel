@@ -35,6 +35,7 @@ echo "cgi.fix_pathinfo: 0;" >> /etc/php/7.0/fpm/php.ini
 
 #### Additional action required
 * You need to enable the mysql pdo
+* You need to enable the intl pdo
 
 ### Docker image (**WIP**)
 #### Prerequisites:
@@ -42,7 +43,7 @@ echo "cgi.fix_pathinfo: 0;" >> /etc/php/7.0/fpm/php.ini
   * (docker-compose)
 
 #### Installation
-```shell
+```bash
 docker pull registry.indietyp.com/BoomPanel
 docker run BoomPanel
 ```
