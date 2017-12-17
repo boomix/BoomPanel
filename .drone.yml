@@ -16,8 +16,8 @@ pipeline:
       - git config --global push.default simple
       - git add -A
       - git commit -m "[skip ci] translation webhook"
-      - echo "$GIT_USERNAME"
-      - git remote set-url origin "${GIT_USERNAME}\@github.com:boomix/BoomPanel.git"
+      # - echo "$GIT_USERNAME"
+      - git remote set-url origin "${GIT_USERNAME}@github.com:boomix/BoomPanel.git"
       - git push --set-upstream origin HEAD
       - git push
     secrets: [ git_push_ssh_key, git_username, git_password]
