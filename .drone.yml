@@ -3,18 +3,21 @@ pipeline:
     image: ubuntu
     commands:
       - apt-get update
-      - apt-get install -y gettext bash python
+      - apt-get install -y gettext bash python python-dev git
       - cd WEB/lang
       - bash export.bash
+      - git config --global user.email "bilalmahmoud@posteo.net"
+      - git config --global user.name "indietyp"
+      - git add -A
+      - git commit -m "[skip ci] translation webhook"
+      - git push
 
-  git_push:
-    image: appleboy/drone-git-push
-    branch: dev
-    remote: git@github.com:boomix/BoomPanel.git
-    force: false
-    commit: true
-    commit_message: "[skip ci] translation change"
-    secrets: [ GIT_PUSH_SSH_KEY ]
+  # git_push:
+  #   image: appleboy/drone-git-push
+  #   branch: dev
+  #   remote: https://github.com/boomix/BoomPanel.git
+  #   force: false
+  #   commit: true
 
   publish:
     image: plugins/docker
