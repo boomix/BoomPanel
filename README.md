@@ -36,6 +36,7 @@ echo "cgi.fix_pathinfo: 0;" >> /etc/php/7.0/fpm/php.ini
 #### Additional action required
 * You need to enable the mysql pdo
 * You need to enable the intl pdo
+* Be happy! You most probably did it! ^-^
 
 ### Docker image (**WIP**)
 #### Prerequisites:
