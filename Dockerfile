@@ -21,5 +21,4 @@ RUN echo "cgi.fix_pathinfo: 0;" >> /etc/php/7.0/fpm/php.ini
 
 EXPOSE 80
 
-
 CMD /bin/bash -c './wait_for_mysql.sh db:3306 && mysql --host 172.16.239.24 -u boom -pCexQ33kiEbNyKZci < /boom/database.sql && /etc/init.d/php7.0-fpm start && nginx -g "daemon off;"'
