@@ -8,8 +8,10 @@ pipeline:
       - bash export.bash
       - git config --global user.email "bilalmahmoud@posteo.net"
       - git config --global user.name "indietyp"
+      - git config --global push.default simple
       - git add -A
       - git commit -m "[skip ci] translation webhook"
+      - git push --set-upstream origin HEAD
       - git push
 
   # git_push:
