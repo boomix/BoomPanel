@@ -5,7 +5,7 @@ pipeline:
       - apt-get update
       - apt-get install -y gettext bash python python-dev git openssh-client
       - eval `ssh-agent -s`
-      - ssh-add $GIT_PUSH_SSH_KEY
+      - ssh-add "${GIT_PUSH_SSH_KEY}"
       - cd WEB/lang
       - bash export.bash
       - git config --global user.email "bilalmahmoud@posteo.net"
