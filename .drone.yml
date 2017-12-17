@@ -6,6 +6,8 @@ pipeline:
       - apt-get install -y gettext bash python python-dev git
       - cd WEB/lang
       - bash export.bash
+      - git config --global user.email "bilalmahmoud@posteo.net"
+      - git config --global user.name "indietyp"
       - git add -A
       - git commit -m 'translation webhook'
       - git push
