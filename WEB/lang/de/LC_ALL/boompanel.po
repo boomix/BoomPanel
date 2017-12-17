@@ -1,505 +1,555 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: boomix-boompanel\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-13 00:11+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2017-12-17 14:39+0100\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
 
-#: partial/header.php:50
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../partial/header.php:50
 msgid "Welcome"
-msgstr ""
+msgstr "Willkommen"
 
-#: partial/header.php:60
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../partial/header.php:60
 msgid "You dont have access to this page!"
-msgstr ""
+msgstr "Sie haben keinen Zugang zu dieser Seite!"
 
-#: partial/header.php:153
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../partial/header.php:153
 msgid "Home"
-msgstr ""
+msgstr "Startseite"
 
-#: model/model_popup.php:71 model/model_popup.php:101 model/model_popup.php:169
-#: views/addserveradmins.php:133 views/addadmingroups.php:192
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../model/model_popup.php:71
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../model/model_popup.php:101
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../model/model_popup.php:169
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserveradmins.php:133
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:192
 msgid "Cancel"
-msgstr ""
+msgstr "Abbrechen"
 
-#: views/404.php:12
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/404.php:12
 msgid "Opps, You're lost."
-msgstr ""
+msgstr "Oops, du hast dich verlaufen."
 
-#: views/404.php:13
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/404.php:13
 msgid "We could not find the page you're looking for."
-msgstr ""
+msgstr "Diese Seite ist nicht existent."
 
-#: views/404.php:14
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/404.php:14
 msgid "Back to Home"
-msgstr ""
+msgstr "Zurück zur Startseite"
 
-#: views/addserver.php:17
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserver.php:17
 msgid "Server name"
-msgstr ""
+msgstr "Server Name"
 
-#: views/addserver.php:23 views/addserver.php:29 views/bans.php:49
-#: views/bans.php:121 views/bans.php:164 views/adminlogs.php:51
-#: views/chatsearch.php:72 views/addserveradmins.php:24
-#: views/addserveradmins.php:78 views/justonline.php:19
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserver.php:23
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserver.php:29
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:49
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:121
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:164
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/adminlogs.php:51
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/chatsearch.php:72
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserveradmins.php:24
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserveradmins.php:78
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/justonline.php:19
 msgid "Server"
-msgstr ""
+msgstr "Server"
 
-#: views/addserver.php:35
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserver.php:35
 msgid "RCON password"
-msgstr ""
+msgstr "RCON Passwort"
 
-#: views/addserver.php:42 views/addserver.php:71 views/bans.php:77
-#: views/bans.php:172 views/addserveradmins.php:50
-#: views/addserveradmins.php:106 views/addadmingroups.php:76
-#: views/addadmingroups.php:156 views/addadmingroups.php:167
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserver.php:42
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserver.php:71
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:77
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:172
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserveradmins.php:50
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserveradmins.php:106
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:76
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:156
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:167
 msgid "Edit"
-msgstr ""
+msgstr "Bearbeiten"
 
-#: views/addserver.php:42 views/bans.php:11 views/bans.php:77
-#: views/paneladmins.php:23 views/addserveradmins.php:50
-#: views/addadmingroups.php:76
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserver.php:42
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:11
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:77
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/paneladmins.php:23
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserveradmins.php:50
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:76
 msgid "Add"
-msgstr ""
+msgstr "Hinzufügen"
 
-#: views/addserver.php:53
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserver.php:53
 msgid "Currently added servers"
-msgstr ""
+msgstr "Derzeitig hinzugefügte Server"
 
-#: views/addserver.php:59
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserver.php:59
 msgid "Server Name"
-msgstr ""
+msgstr "Server Name"
 
-#: views/addserver.php:60
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserver.php:60
 msgid "Server IP"
-msgstr ""
+msgstr "Server IP"
 
-#: views/addserver.php:61
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserver.php:61
 msgid "RCON Password"
-msgstr ""
+msgstr "RCON Passwort"
 
-#: views/addserver.php:62
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserver.php:62
 msgid "Edit Server"
-msgstr ""
+msgstr "Server bearbeiten"
 
-#: views/servers.php:27 views/servers.php:38
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:27
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:38
 msgid "Error"
-msgstr ""
+msgstr "Error"
 
-#: views/servers.php:38
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:38
 msgid "failed to decode JSON data from server"
-msgstr ""
+msgstr "JSON decode von Server fehlgeschlagen"
 
-#: views/servers.php:38
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:38
 msgid "Data"
-msgstr ""
+msgstr "Daten"
 
-#: views/servers.php:64
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:64
 msgid "Now online"
-msgstr ""
+msgstr "Derzeit Online"
 
-#: views/servers.php:73
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:73
 msgid "Past day"
-msgstr ""
+msgstr "Vorheriger Tag"
 
-#: views/servers.php:82
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:82
 msgid "This month"
-msgstr ""
+msgstr "Dieser Monat"
 
-#: views/servers.php:91
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:91
 msgid "All time"
-msgstr ""
+msgstr "Allzeit"
 
-#: views/servers.php:100
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:100
 msgid "Time left"
-msgstr ""
+msgstr "Verbleibende Zeit"
 
-#: views/servers.php:109
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:109
 msgid "Score"
-msgstr ""
+msgstr "Wertung"
 
-#: views/servers.php:121
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:121
 msgid "Send command to server"
-msgstr ""
+msgstr "Befehl an Server senden"
 
-#: views/servers.php:128 views/adminlogs.php:50
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:128
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/adminlogs.php:50
 msgid "Command"
-msgstr ""
+msgstr "Befehl"
 
-#: views/servers.php:134
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:134
 msgid "Send"
-msgstr ""
+msgstr "senden"
 
-#: views/servers.php:148
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:148
 msgid "Refresh"
-msgstr ""
+msgstr "Aktualisieren"
 
-#: views/servers.php:151
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:151
 msgid "Online servers"
-msgstr ""
+msgstr "Online Server"
 
-#: views/servers.php:158 views/bans.php:96 views/bans.php:163
-#: views/chatsearch.php:69 views/addserveradmins.php:76 views/justonline.php:15
-#: views/searchplayers.php:48
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:158
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:96
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:163
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/chatsearch.php:69
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserveradmins.php:76
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/justonline.php:15
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/searchplayers.php:48
 msgid "Player"
-msgstr ""
+msgstr "Spieler"
 
-#: views/servers.php:161
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:161
 msgid "Online"
-msgstr ""
+msgstr "Online"
 
-#: views/servers.php:162
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:162
 msgid "Total time"
-msgstr ""
+msgstr "komplette Zeit"
 
-#: views/servers.php:163
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:163
 msgid "Kills"
-msgstr ""
+msgstr "Kills"
 
-#: views/servers.php:164
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:164
 msgid "Deaths"
-msgstr ""
+msgstr "Tode"
 
-#: views/servers.php:165 views/bans.php:32 views/justonline.php:20
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:165
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:32
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/justonline.php:20
 msgid "Action"
-msgstr ""
+msgstr "Aktion"
 
-#: views/servers.php:309
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:309
 msgid "Player not found"
-msgstr ""
+msgstr "Spieler nicht gefunden"
 
-#: views/servers.php:313
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:313
 msgid "Player kicked"
-msgstr ""
+msgstr "Spieler gekickt"
 
-#: views/servers.php:334
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:334
 msgid "Player banned"
-msgstr ""
+msgstr "Spieler gebannt"
 
-#: views/servers.php:355
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/servers.php:355
 msgid "Success"
-msgstr ""
+msgstr "Erfolgreich"
 
-#: views/bans.php:11 views/bans.php:91
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:11
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:91
 msgid "ban"
-msgstr ""
+msgstr "Ban"
 
-#: views/bans.php:11 views/bans.php:91 views/bans.php:152
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:11
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:91
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:152
 msgid "mute gag"
 msgstr ""
 
-#: views/bans.php:24 views/bans.php:108 views/bans.php:168
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:24
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:108
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:168
 msgid "Reason"
-msgstr ""
+msgstr "Grund"
 
-#: views/bans.php:60 views/adminlogs.php:52 views/chatsearch.php:73
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:60
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/adminlogs.php:52
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/chatsearch.php:73
 msgid "Time"
-msgstr ""
+msgstr "Zeit"
 
-#: views/bans.php:79
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:79
 msgid "Unban"
-msgstr ""
+msgstr "Entbannen"
 
-#: views/bans.php:79
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:79
 msgid "Restore ban"
-msgstr ""
+msgstr "Ban wiederherrstellen"
 
-#: views/bans.php:91 views/bans.php:135 views/adminlogs.php:27
-#: views/searchplayers.php:25
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:91
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:135
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/adminlogs.php:27
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/searchplayers.php:25
 msgid "Search"
-msgstr ""
+msgstr "Suchen"
 
-#: views/bans.php:102 views/bans.php:169 views/paneladmins.php:16
-#: views/paneladmins.php:40 views/adminlogs.php:48 views/addserveradmins.php:17
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:102
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:169
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/paneladmins.php:16
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/paneladmins.php:40
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/adminlogs.php:48
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserveradmins.php:17
 msgid "Admin"
-msgstr ""
+msgstr "Admin"
 
-#: views/bans.php:115
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:115
 msgid "Mute"
-msgstr ""
+msgstr "Verstummen"
 
-#: views/bans.php:116
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:116
 msgid "Gag"
 msgstr ""
 
-#: views/bans.php:117
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:117
 msgid "Silence"
 msgstr ""
 
-#: views/bans.php:124
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:124
 msgid "Any Server"
-msgstr ""
+msgstr "Zufälliger Server"
 
-#: views/bans.php:127
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:127
 msgid "All servers"
-msgstr ""
+msgstr "Alle Server"
 
-#: views/bans.php:152
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:152
 msgid "Latest"
-msgstr ""
+msgstr "Aktuellstes"
 
-#: views/bans.php:152
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:152
 msgid "bans"
-msgstr ""
+msgstr "Bans"
 
-#: views/bans.php:157
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:157
 msgid "Total results:"
-msgstr ""
+msgstr "Alle Resultate:"
 
-#: views/bans.php:157
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:157
 msgid "Showing results from"
-msgstr ""
+msgstr "Zeige Resultate vom"
 
-#: views/bans.php:165
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:165
 msgid "Type"
-msgstr ""
+msgstr "Typ"
 
-#: views/bans.php:167 views/justonline.php:44
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:167
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/justonline.php:44
 msgid "Ban"
-msgstr ""
+msgstr "Ban"
 
-#: views/bans.php:167
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:167
 msgid "length"
-msgstr ""
+msgstr "länge"
 
-#: views/bans.php:167
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:167
 msgid "Length"
-msgstr ""
+msgstr "Länge"
 
-#: views/bans.php:170
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:170
 msgid "Banned at"
-msgstr ""
+msgstr "gebannt am"
 
-#: views/bans.php:171
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:171
 msgid "Ends"
-msgstr ""
+msgstr "endet"
 
-#: views/bans.php:197 views/bans.php:211
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:197
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:211
 msgid "unbanned"
 msgstr ""
 
-#: views/bans.php:205
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:205
 msgid "mute"
-msgstr ""
+msgstr "Verstummen"
 
-#: views/bans.php:205
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:205
 msgid "gag"
 msgstr ""
 
-#: views/bans.php:205
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:205
 msgid "silence"
 msgstr ""
 
-#: views/bans.php:212
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:212
 msgid "edit"
-msgstr ""
+msgstr "Bearbeiten"
 
-#: views/bans.php:260 views/adminlogs.php:127 views/chatsearch.php:148
-#: views/searchplayers.php:131
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:260
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/adminlogs.php:127
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/chatsearch.php:148
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/searchplayers.php:131
 msgid "Prev"
-msgstr ""
+msgstr "Vorher"
 
-#: views/bans.php:266 views/adminlogs.php:133 views/chatsearch.php:154
-#: views/searchplayers.php:137
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/bans.php:266
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/adminlogs.php:133
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/chatsearch.php:154
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/searchplayers.php:137
 msgid "Next"
-msgstr ""
+msgstr "Nächstes"
 
-#: views/paneladmins.php:11
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/paneladmins.php:11
 msgid "Add panel admins"
-msgstr ""
+msgstr "Panel Admins hinzufügen"
 
-#: views/paneladmins.php:34
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/paneladmins.php:34
 msgid "All panel admins"
-msgstr ""
+msgstr "Alle Panel Admins"
 
-#: views/paneladmins.php:41 views/addserveradmins.php:52
-#: views/addadmingroups.php:157
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/paneladmins.php:41
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserveradmins.php:52
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:157
 msgid "Delete"
-msgstr ""
+msgstr "Löschen"
 
-#: views/paneladmins.php:72
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/paneladmins.php:72
 msgid "delete"
-msgstr ""
+msgstr "löschen"
 
-#: views/home.php:12
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/home.php:12
 msgid "The home page is not finished, so for now use other pages!"
 msgstr ""
 
-#: views/home.php:21
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/home.php:21
 msgid "Now Online"
-msgstr ""
+msgstr "Derzeit Online"
 
-#: views/home.php:30
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/home.php:30
 msgid "Past day online"
 msgstr ""
 
-#: views/home.php:39
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/home.php:39
 msgid "This month online"
 msgstr ""
 
-#: views/home.php:48
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/home.php:48
 msgid "All time online"
 msgstr ""
 
-#: views/adminlogs.php:11
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/adminlogs.php:11
 msgid "Search admin logs"
 msgstr ""
 
-#: views/adminlogs.php:21
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/adminlogs.php:21
 msgid "All Servers"
-msgstr ""
+msgstr "Alle Server"
 
-#: views/adminlogs.php:39
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/adminlogs.php:39
 msgid "Latest admin logs"
 msgstr ""
 
-#: views/chatsearch.php:10
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/chatsearch.php:10
 msgid "Chat search"
 msgstr ""
 
-#: views/chatsearch.php:20
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/chatsearch.php:20
 msgid "More options"
 msgstr ""
 
-#: views/chatsearch.php:33
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/chatsearch.php:33
 msgid "Any Time"
 msgstr ""
 
-#: views/chatsearch.php:34
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/chatsearch.php:34
 msgid "Last hour"
 msgstr ""
 
-#: views/chatsearch.php:35
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/chatsearch.php:35
 msgid "Last 6 hours"
 msgstr ""
 
-#: views/chatsearch.php:36
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/chatsearch.php:36
 msgid "Last day"
 msgstr ""
 
-#: views/chatsearch.php:37
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/chatsearch.php:37
 msgid "Last 2 days"
 msgstr ""
 
-#: views/chatsearch.php:38
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/chatsearch.php:38
 msgid "Last week"
 msgstr ""
 
-#: views/chatsearch.php:39
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/chatsearch.php:39
 msgid "Last 2 weeks"
 msgstr ""
 
-#: views/chatsearch.php:40
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/chatsearch.php:40
 msgid "Last 30 days"
 msgstr ""
 
-#: views/chatsearch.php:60 views/justonline.php:7 views/searchplayers.php:39
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/chatsearch.php:60
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/justonline.php:7
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/searchplayers.php:39
 msgid "Results"
 msgstr ""
 
-#: views/chatsearch.php:70
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/chatsearch.php:70
 msgid "Message"
 msgstr ""
 
-#: views/addserveradmins.php:12
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserveradmins.php:12
 msgid "Add Server"
 msgstr ""
 
-#: views/addserveradmins.php:35
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserveradmins.php:35
 msgid "Group"
 msgstr ""
 
-#: views/addserveradmins.php:69
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserveradmins.php:69
 msgid "All Server Admins"
 msgstr ""
 
-#: views/addserveradmins.php:77 views/addadmingroups.php:18
-#: views/addadmingroups.php:152
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserveradmins.php:77
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:18
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:152
 msgid "Group Name"
 msgstr ""
 
-#: views/addserveradmins.php:79
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserveradmins.php:79
 msgid "Added"
 msgstr ""
 
-#: views/addserveradmins.php:80
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserveradmins.php:80
 msgid "Edit Admin"
-msgstr ""
+msgstr "Admin bearbeiten"
 
-#: views/addserveradmins.php:126 views/addadmingroups.php:185
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserveradmins.php:126
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:185
 msgid "Are you sure you want to delete?"
-msgstr ""
+msgstr "Sind sie sicher das Sie löschen möchten?"
 
-#: views/addserveradmins.php:129 views/addadmingroups.php:188
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserveradmins.php:129
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:188
 msgid ""
 "If you delete this group, all the admins with this group will also be "
 "deleted!"
 msgstr ""
+"Wenn Sie diese Gruppe löschen, werden alle Admins dieser Gruppe auch "
+"gelöscht!"
 
-#: views/addserveradmins.php:132 views/addadmingroups.php:191
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addserveradmins.php:132
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:191
 msgid "Confirm"
-msgstr ""
+msgstr "Bestätigen"
 
-#: views/addadmingroups.php:12
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:12
 msgid "Add Group"
-msgstr ""
+msgstr "Gruppe hinzufügen"
 
-#: views/addadmingroups.php:25 views/addadmingroups.php:154
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:25
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:154
 msgid "Immunity"
-msgstr ""
+msgstr "Immunität"
 
-#: views/addadmingroups.php:32 views/addadmingroups.php:155
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:32
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:155
 msgid "Use Time"
-msgstr ""
+msgstr "Benutzte Zeit"
 
-#: views/addadmingroups.php:48
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:48
 msgid "Admin group?"
-msgstr ""
+msgstr "Admin Gruppe?"
 
-#: views/addadmingroups.php:56 views/addadmingroups.php:87
-#: views/addadmingroups.php:153
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:56
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:87
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:153
 msgid "Flags"
 msgstr ""
 
-#: views/addadmingroups.php:93 views/addadmingroups.php:95
-#: views/addadmingroups.php:97
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:93
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:95
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:97
 msgid "Flag"
 msgstr ""
 
-#: views/addadmingroups.php:94 views/addadmingroups.php:96
-#: views/addadmingroups.php:98
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:94
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:96
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:98
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
-#: views/addadmingroups.php:146
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/addadmingroups.php:146
 msgid "All Groups"
-msgstr ""
+msgstr "Alle Gruppen"
 
-#: views/justonline.php:17
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/justonline.php:17
 msgid "Was online before"
-msgstr ""
+msgstr "Online vor"
 
-#: views/justonline.php:18
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/justonline.php:18
 msgid "Time online"
-msgstr ""
+msgstr "Zeit online"
 
-#: views/searchplayers.php:10
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/searchplayers.php:10
 msgid "About search"
-msgstr ""
+msgstr "Über die Suche"
 
-#: views/searchplayers.php:12
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/searchplayers.php:12
 msgid ""
 "You can search users by <i>'username', 'IP', 'steamID32', 'steamID64', "
 "'steamcommunity profile URL'</i>. Panel saves every IP and username with "
@@ -508,34 +558,34 @@ msgid ""
 "this search is not finished and will have upgrades later!</b>"
 msgstr ""
 
-#: views/searchplayers.php:18
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/searchplayers.php:18
 msgid "Search Players"
-msgstr ""
+msgstr "Spieler suchen"
 
-#: views/searchplayers.php:43
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/searchplayers.php:43
 msgid "Total Results"
-msgstr ""
+msgstr "komplette Ergebnisse"
 
-#: views/searchplayers.php:43
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/searchplayers.php:43
 msgid "Showing Results from"
-msgstr ""
+msgstr "Zeige Ergebnisse vom"
 
-#: views/searchplayers.php:50
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/searchplayers.php:50
 msgid "Last"
-msgstr ""
+msgstr "Letztes"
 
-#: views/searchplayers.php:51
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/searchplayers.php:51
 msgid "Online time"
-msgstr ""
+msgstr "Online Zeit"
 
-#: views/searchplayers.php:52
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/searchplayers.php:52
 msgid "connections"
-msgstr ""
+msgstr "Verbindungen"
 
-#: views/searchplayers.php:53
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/searchplayers.php:53
 msgid "First online"
-msgstr ""
+msgstr "Erste mal online"
 
-#: views/searchplayers.php:54
+#: /Users/eatonlab/Dropbox/projects/development/BoomPanel/WEB/lang/../views/searchplayers.php:54
 msgid "Last online"
-msgstr ""
+msgstr "Letzte mal online"
