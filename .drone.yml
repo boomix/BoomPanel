@@ -10,9 +10,11 @@ pipeline:
   git_push:
     image: appleboy/drone-git-push
     branch: dev
-    remote: https://github.com/boomix/BoomPanel.git
+    remote: git@github.com:boomix/BoomPanel.git
     force: false
     commit: true
+    commit_message: "[skip ci] translation change"
+    secrets: [ GIT_PUSH_SSH_KEY ]
 
   publish:
     image: plugins/docker
