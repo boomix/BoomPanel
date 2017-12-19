@@ -22,6 +22,8 @@ Not every feature is yet ready for release and has probably some bugs. Please he
 Help is appreciated in any way, but most appreciated in the [Discord](https://discord.gg/6x3xBjx) or through [translating](https://poeditor.com/join/project/2ND2NCRiK7).
 Other ways that are super helpful are: **pull requests** and **issues** on the GitHub.
 
+If there is a bug that needs immediate attention, or you think that we are ignoring you (we probably do not, we are sometimes really lazy in answering people), shoot me a Discord direct message at indietyp#5629 or write me an email at me@indietyp.com. A detailed description, logs and screenshots are very appreciated. We will work something out.<sup>TM</sup>
+
 ***
 
 ## Installation Guide
