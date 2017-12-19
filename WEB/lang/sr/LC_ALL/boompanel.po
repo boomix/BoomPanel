@@ -1,33 +1,25 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: boomix-boompanel\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-17 18:31+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2017-12-18 23:25+0000\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../partial/header.php:50
 msgid "Welcome"
-msgstr ""
+msgstr "Dobrodosli"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../partial/header.php:60
 msgid "You dont have access to this page!"
-msgstr ""
+msgstr "Nemate pristup ovoj stranici"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../partial/header.php:153
 msgid "Home"
-msgstr ""
+msgstr "Pocetna"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../model/model_popup.php:71
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../model/model_popup.php:101
@@ -35,49 +27,49 @@ msgstr ""
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:192
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:133
 msgid "Cancel"
-msgstr ""
+msgstr "Otkaži"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/404.php:12
 msgid "Opps, You're lost."
-msgstr ""
+msgstr "Ups. Izgubio si se."
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/404.php:13
 msgid "We could not find the page you're looking for."
-msgstr ""
+msgstr "Ne mozemo naci stranicu koju trazite"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/404.php:14
 msgid "Back to Home"
-msgstr ""
+msgstr "Nazad na pocetnu"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:12
 msgid "Add Group"
-msgstr ""
+msgstr "Dodaj grupu"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:18
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:152
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:77
 msgid "Group Name"
-msgstr ""
+msgstr "Ime grupe"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:25
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:154
 msgid "Immunity"
-msgstr ""
+msgstr "Imunitet"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:32
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:155
 msgid "Use Time"
-msgstr ""
+msgstr "Koristi vreme"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:48
 msgid "Admin group?"
-msgstr ""
+msgstr "Admin grupa?"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:56
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:87
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:153
 msgid "Flags"
-msgstr ""
+msgstr "Flagovi"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:76
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:156
@@ -89,7 +81,7 @@ msgstr ""
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:50
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:106
 msgid "Edit"
-msgstr ""
+msgstr "Edituj"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:76
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:11
@@ -98,52 +90,52 @@ msgstr ""
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserver.php:42
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:50
 msgid "Add"
-msgstr ""
+msgstr "Dodaj"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:93
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:95
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:97
 msgid "Flag"
-msgstr ""
+msgstr "Flag"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:94
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:96
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:98
 msgid "Name"
-msgstr ""
+msgstr "Ime"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:146
 msgid "All Groups"
-msgstr ""
+msgstr "Sve grupe"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:157
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:41
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:52
 msgid "Delete"
-msgstr ""
+msgstr "Obrisi"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:185
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:126
 msgid "Are you sure you want to delete?"
-msgstr ""
+msgstr "Da li ste sigurni da zelite obrisati?"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:188
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:129
 msgid ""
 "If you delete this group, all the admins with this group will also be "
 "deleted!"
-msgstr ""
+msgstr "Ako obrisete ovu grupu, svi admini sa ovom grupom ce biti obrisani !"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:191
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:132
 msgid "Confirm"
-msgstr ""
+msgstr "Potvrdi"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/justonline.php:7
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:60
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:39
 msgid "Results"
-msgstr ""
+msgstr "Rezultati"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/justonline.php:15
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:69
@@ -153,15 +145,15 @@ msgstr ""
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:76
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:48
 msgid "Player"
-msgstr ""
+msgstr "Igrac"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/justonline.php:17
 msgid "Was online before"
-msgstr ""
+msgstr "Bio je online prije"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/justonline.php:18
 msgid "Time online"
-msgstr ""
+msgstr "Vrijeme online"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/justonline.php:19
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:72
@@ -174,114 +166,114 @@ msgstr ""
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:24
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:78
 msgid "Server"
-msgstr ""
+msgstr "Server"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/justonline.php:20
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:32
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:165
 msgid "Action"
-msgstr ""
+msgstr "Akcije"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/justonline.php:44
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:167
 msgid "Ban"
-msgstr ""
+msgstr "Ban"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:10
 msgid "Chat search"
-msgstr ""
+msgstr "Pretrazi chat"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:20
 msgid "More options"
-msgstr ""
+msgstr "Vise opcija"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:33
 msgid "Any Time"
-msgstr ""
+msgstr "Bilo koje vreme"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:34
 msgid "Last hour"
-msgstr ""
+msgstr "Zadnji sat"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:35
 msgid "Last 6 hours"
-msgstr ""
+msgstr "Zadnjih 6 sati"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:36
 msgid "Last day"
-msgstr ""
+msgstr "Zadnji dan"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:37
 msgid "Last 2 days"
-msgstr ""
+msgstr "Zadnja 2 dana"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:38
 msgid "Last week"
-msgstr ""
+msgstr "Prosla sedmica"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:39
 msgid "Last 2 weeks"
-msgstr ""
+msgstr "Prosle 2 sedmice"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:40
 msgid "Last 30 days"
-msgstr ""
+msgstr "Zadnjih 30 dana"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:70
 msgid "Message"
-msgstr ""
+msgstr "Poruka"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:73
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:60
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:52
 msgid "Time"
-msgstr ""
+msgstr "Vreme"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:148
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:260
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:127
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:131
 msgid "Prev"
-msgstr ""
+msgstr "Predhodna"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:154
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:266
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:133
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:137
 msgid "Next"
-msgstr ""
+msgstr "Sledeca"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:11
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:91
 msgid "ban"
-msgstr ""
+msgstr "banuj"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:11
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:91
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:152
 msgid "mute gag"
-msgstr ""
+msgstr "mjutuj gag"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:24
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:108
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:168
 msgid "Reason"
-msgstr ""
+msgstr "Razlog"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:79
 msgid "Unban"
-msgstr ""
+msgstr "Unbanuj"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:79
 msgid "Restore ban"
-msgstr ""
+msgstr "Obnovi ban"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:91
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:135
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:27
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:25
 msgid "Search"
-msgstr ""
+msgstr "Pretrazi"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:102
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:169
@@ -290,270 +282,270 @@ msgstr ""
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:48
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:17
 msgid "Admin"
-msgstr ""
+msgstr "Admin"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:115
 msgid "Mute"
-msgstr ""
+msgstr "Mjutuj"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:116
 msgid "Gag"
-msgstr ""
+msgstr "Gaguj"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:117
 msgid "Silence"
-msgstr ""
+msgstr "Tisina"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:124
 msgid "Any Server"
-msgstr ""
+msgstr "Bilo koji server"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:127
 msgid "All servers"
-msgstr ""
+msgstr "Svi serveri"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:152
 msgid "Latest"
-msgstr ""
+msgstr "Zadnji"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:152
 msgid "bans"
-msgstr ""
+msgstr "banovi"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:157
 msgid "Total results:"
-msgstr ""
+msgstr "Ukupni rezultati:"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:157
 msgid "Showing results from"
-msgstr ""
+msgstr "Pokazi rezultate iz"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:165
 msgid "Type"
-msgstr ""
+msgstr "Tip"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:167
 msgid "length"
-msgstr ""
+msgstr "duzina"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:167
 msgid "Length"
-msgstr ""
+msgstr "Duzina"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:170
 msgid "Banned at"
-msgstr ""
+msgstr "Banovan u"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:171
 msgid "Ends"
-msgstr ""
+msgstr "Zavrsava"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:197
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:211
 msgid "unbanned"
-msgstr ""
+msgstr "unbanovan"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:205
 msgid "mute"
-msgstr ""
+msgstr "mutovan"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:205
 msgid "gag"
-msgstr ""
+msgstr "gagovan"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:205
 msgid "silence"
-msgstr ""
+msgstr "tisina"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:212
 msgid "edit"
-msgstr ""
+msgstr "edituj"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:11
 msgid "Add panel admins"
-msgstr ""
+msgstr "Dodaj panel admina"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:34
 msgid "All panel admins"
-msgstr ""
+msgstr "Svi panel admini"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:72
 msgid "delete"
-msgstr ""
+msgstr "obrisi"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:12
 msgid "The home page is not finished, so for now use other pages!"
-msgstr ""
+msgstr "Pocetna stranica nije zavrsena. za sada koristite druge stranice"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:21
 msgid "Now Online"
-msgstr ""
+msgstr "Trenutno Online"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:30
 msgid "Past day online"
-msgstr ""
+msgstr "Prosli dan online"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:39
 msgid "This month online"
-msgstr ""
+msgstr "Ovaj mjesec online"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:48
 msgid "All time online"
-msgstr ""
+msgstr "Sve vrijeme online"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserver.php:17
 msgid "Server name"
-msgstr ""
+msgstr "Ime servera"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserver.php:35
 msgid "RCON password"
-msgstr ""
+msgstr "RCON Sifra"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserver.php:53
 msgid "Currently added servers"
-msgstr ""
+msgstr "Dodani serveri"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserver.php:59
 msgid "Server Name"
-msgstr ""
+msgstr "Ime servera"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserver.php:60
 msgid "Server IP"
-msgstr ""
+msgstr "IP servera"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserver.php:61
 msgid "RCON Password"
-msgstr ""
+msgstr "RCON sifra"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserver.php:62
 msgid "Edit Server"
-msgstr ""
+msgstr "Edituj server"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:11
 msgid "Search admin logs"
-msgstr ""
+msgstr "Pretrazi admin logove"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:21
 msgid "All Servers"
-msgstr ""
+msgstr "Svi serveri"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:39
 msgid "Latest admin logs"
-msgstr ""
+msgstr "Zadnji admin logovi"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:50
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:128
 msgid "Command"
-msgstr ""
+msgstr "Komanda"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:27
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:38
 msgid "Error"
-msgstr ""
+msgstr "Greska"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:38
 msgid "failed to decode JSON data from server"
-msgstr ""
+msgstr "neuspjesno dekodiranje JSON podataka sa servera"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:38
 msgid "Data"
-msgstr ""
+msgstr "Podatak"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:64
 msgid "Now online"
-msgstr ""
+msgstr "Trenutno onlajn"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:73
 msgid "Past day"
-msgstr ""
+msgstr "Prosli dan"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:82
 msgid "This month"
-msgstr ""
+msgstr "Ovaj mjesec"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:91
 msgid "All time"
-msgstr ""
+msgstr "Oduvjek"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:100
 msgid "Time left"
-msgstr ""
+msgstr "Preostalo vreme"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:109
 msgid "Score"
-msgstr ""
+msgstr "Skor"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:121
 msgid "Send command to server"
-msgstr ""
+msgstr "Pošalji komandu na server"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:134
 msgid "Send"
-msgstr ""
+msgstr "Posalji"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:148
 msgid "Refresh"
-msgstr ""
+msgstr "Refresuj"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:151
 msgid "Online servers"
-msgstr ""
+msgstr "Onlajn serveri"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:161
 msgid "Online"
-msgstr ""
+msgstr "Onlajn"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:162
 msgid "Total time"
-msgstr ""
+msgstr "Ukupno vreme"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:163
 msgid "Kills"
-msgstr ""
+msgstr "Ubistva"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:164
 msgid "Deaths"
-msgstr ""
+msgstr "Smrti"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:309
 msgid "Player not found"
-msgstr ""
+msgstr "Igrac nije nadjen"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:313
 msgid "Player kicked"
-msgstr ""
+msgstr "Igrac izbacen"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:334
 msgid "Player banned"
-msgstr ""
+msgstr "Igrac banovan"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:355
 msgid "Success"
-msgstr ""
+msgstr "Uspjesno"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:12
 msgid "Add Server"
-msgstr ""
+msgstr "Dodaj server"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:35
 msgid "Group"
-msgstr ""
+msgstr "Grupa"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:69
 msgid "All Server Admins"
-msgstr ""
+msgstr "Svi admini servera"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:79
 msgid "Added"
-msgstr ""
+msgstr "Dodan"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:80
 msgid "Edit Admin"
-msgstr ""
+msgstr "Edituj admina"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:10
 msgid "About search"
-msgstr ""
+msgstr "O pretrazivanju"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:12
 msgid ""
@@ -563,35 +555,40 @@ msgid ""
 "accouts or anyone who has used your username before.<br> <b>Undestand that "
 "this search is not finished and will have upgrades later!</b>"
 msgstr ""
+"Mozete pretrazivati korisnike po <i>'username', 'IP', 'steamID32', "
+"'steamID64', 'steamcommunity profile URL'</i>. Panel snima svaku ip i "
+"korisniko ime igraca koji je bio na serveru, tako da je lakse naci "
+"alternativne naloge ili bilo koga ko je koristio tvoje korisnicko ime <br> "
+"<b>Ova pretraga nije jos zavrsena i bice nadograđivana posle</b>"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:18
 msgid "Search Players"
-msgstr ""
+msgstr "Pretrazi igraca"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:43
 msgid "Total Results"
-msgstr ""
+msgstr "Ukupni rezultati"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:43
 msgid "Showing Results from"
-msgstr ""
+msgstr "Pokazi rezultat od"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:50
 msgid "Last"
-msgstr ""
+msgstr "Zadnji"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:51
 msgid "Online time"
-msgstr ""
+msgstr "Online vrijeme"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:52
 msgid "connections"
-msgstr ""
+msgstr "konekcije"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:53
 msgid "First online"
-msgstr ""
+msgstr "Prvi online"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:54
 msgid "Last online"
-msgstr ""
+msgstr "Zadnji online"

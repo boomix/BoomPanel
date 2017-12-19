@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: boomix-boompanel\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-17 18:37+0000\n"
+"POT-Creation-Date: 2017-12-18 23:25+0000\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,18 +43,18 @@ msgstr "terug naar start"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:12
 msgid "Add Group"
-msgstr ""
+msgstr "Groep toevoegen"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:18
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:152
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:77
 msgid "Group Name"
-msgstr ""
+msgstr "Groep naam"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:25
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:154
 msgid "Immunity"
-msgstr ""
+msgstr "Immuniteit"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:32
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:155
@@ -63,7 +63,7 @@ msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:48
 msgid "Admin group?"
-msgstr ""
+msgstr "Admin groep?"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:56
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:87
@@ -102,22 +102,22 @@ msgstr ""
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:96
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:98
 msgid "Name"
-msgstr ""
+msgstr "Naam"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:146
 msgid "All Groups"
-msgstr ""
+msgstr "Alle groepen"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:157
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:41
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:52
 msgid "Delete"
-msgstr ""
+msgstr "Verwijderen"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:185
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:126
 msgid "Are you sure you want to delete?"
-msgstr ""
+msgstr "Weet je zeker dat je dit wilt verwijderen?"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:188
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:129
@@ -125,17 +125,18 @@ msgid ""
 "If you delete this group, all the admins with this group will also be "
 "deleted!"
 msgstr ""
+"Als je deze groep delete, worden alle admins in deze groep ook verwijderd!"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:191
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:132
 msgid "Confirm"
-msgstr ""
+msgstr "Bevestigen"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/justonline.php:7
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:60
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:39
 msgid "Results"
-msgstr ""
+msgstr "Resultaten"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/justonline.php:15
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:69
@@ -145,7 +146,7 @@ msgstr ""
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:76
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:48
 msgid "Player"
-msgstr ""
+msgstr "Speler"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/justonline.php:17
 msgid "Was online before"
@@ -153,7 +154,7 @@ msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/justonline.php:18
 msgid "Time online"
-msgstr ""
+msgstr "Tijd online"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/justonline.php:19
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:72
@@ -172,7 +173,7 @@ msgstr "server"
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:32
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:165
 msgid "Action"
-msgstr ""
+msgstr "Actie"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/justonline.php:44
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:167
@@ -185,7 +186,7 @@ msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:20
 msgid "More options"
-msgstr ""
+msgstr "Meer opties"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:33
 msgid "Any Time"
@@ -193,55 +194,55 @@ msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:34
 msgid "Last hour"
-msgstr ""
+msgstr "Laatste uur"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:35
 msgid "Last 6 hours"
-msgstr ""
+msgstr "Laatste 6 uur"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:36
 msgid "Last day"
-msgstr ""
+msgstr "Laatste dag"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:37
 msgid "Last 2 days"
-msgstr ""
+msgstr "Laatste 2 dagen"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:38
 msgid "Last week"
-msgstr ""
+msgstr "Laatste week"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:39
 msgid "Last 2 weeks"
-msgstr ""
+msgstr "Laatste 2 weken"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:40
 msgid "Last 30 days"
-msgstr ""
+msgstr "Laatste 30 dagen"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:70
 msgid "Message"
-msgstr ""
+msgstr "Bericht"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:73
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:60
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:52
 msgid "Time"
-msgstr ""
+msgstr "Tijd"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:148
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:260
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:127
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:131
 msgid "Prev"
-msgstr ""
+msgstr "Vorige"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:154
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:266
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:133
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:137
 msgid "Next"
-msgstr ""
+msgstr "Volgende"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:11
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:91
@@ -258,7 +259,7 @@ msgstr ""
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:108
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:168
 msgid "Reason"
-msgstr ""
+msgstr "Rede"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:79
 msgid "Unban"
@@ -273,7 +274,7 @@ msgstr ""
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:27
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:25
 msgid "Search"
-msgstr ""
+msgstr "Zoeken"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:102
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:169
@@ -282,7 +283,7 @@ msgstr ""
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:48
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:17
 msgid "Admin"
-msgstr ""
+msgstr "Admin"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:115
 msgid "Mute"
@@ -302,11 +303,11 @@ msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:127
 msgid "All servers"
-msgstr ""
+msgstr "Alle servers"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:152
 msgid "Latest"
-msgstr ""
+msgstr "Laatste"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:152
 msgid "bans"
@@ -314,7 +315,7 @@ msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:157
 msgid "Total results:"
-msgstr ""
+msgstr "Totale aantal resultaten"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:157
 msgid "Showing results from"
@@ -322,15 +323,15 @@ msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:165
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:167
 msgid "length"
-msgstr ""
+msgstr "Lengte"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:167
 msgid "Length"
-msgstr ""
+msgstr "Lengte"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:170
 msgid "Banned at"
@@ -338,7 +339,7 @@ msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:171
 msgid "Ends"
-msgstr ""
+msgstr "Eindigt"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:197
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:211
@@ -359,7 +360,7 @@ msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:212
 msgid "edit"
-msgstr ""
+msgstr "Aanpassen"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:11
 msgid "Add panel admins"
@@ -371,15 +372,15 @@ msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:72
 msgid "delete"
-msgstr ""
+msgstr "Verwijder"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:12
 msgid "The home page is not finished, so for now use other pages!"
-msgstr ""
+msgstr "De startpagina is nog niet af, dus gebruik voor nu de andere pagina's!"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:21
 msgid "Now Online"
-msgstr ""
+msgstr "Nu online"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:30
 msgid "Past day online"
@@ -387,7 +388,7 @@ msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:39
 msgid "This month online"
-msgstr ""
+msgstr "Deze maand online"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:48
 msgid "All time online"
@@ -427,7 +428,7 @@ msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:21
 msgid "All Servers"
-msgstr ""
+msgstr "Alle servers"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:39
 msgid "Latest admin logs"
@@ -453,7 +454,7 @@ msgstr "data"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:64
 msgid "Now online"
-msgstr ""
+msgstr "Nu online"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:73
 msgid "Past day"
@@ -469,35 +470,35 @@ msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:100
 msgid "Time left"
-msgstr ""
+msgstr "Tijd over"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:109
 msgid "Score"
-msgstr ""
+msgstr "Score"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:121
 msgid "Send command to server"
-msgstr ""
+msgstr "Verstuur command naar server"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:134
 msgid "Send"
-msgstr ""
+msgstr "Verstuur"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:148
 msgid "Refresh"
-msgstr ""
+msgstr "Vernieuwen"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:151
 msgid "Online servers"
-msgstr ""
+msgstr "Online servers"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:161
 msgid "Online"
-msgstr ""
+msgstr "Online"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:162
 msgid "Total time"
-msgstr ""
+msgstr "Totale tijd"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:163
 msgid "Kills"
@@ -509,7 +510,7 @@ msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:309
 msgid "Player not found"
-msgstr ""
+msgstr "Speler niet gevonden"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:313
 msgid "Player kicked"
@@ -525,23 +526,23 @@ msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:12
 msgid "Add Server"
-msgstr ""
+msgstr "Server toevoegen"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:35
 msgid "Group"
-msgstr ""
+msgstr "Groep"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:69
 msgid "All Server Admins"
-msgstr ""
+msgstr "Alle server admins"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:79
 msgid "Added"
-msgstr ""
+msgstr "Toegevoegd"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:80
 msgid "Edit Admin"
-msgstr ""
+msgstr "Admin aanpassen"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:10
 msgid "About search"
@@ -558,11 +559,11 @@ msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:18
 msgid "Search Players"
-msgstr ""
+msgstr "Zoek spelers"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:43
 msgid "Total Results"
-msgstr ""
+msgstr "Totale aantal resultaten"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:43
 msgid "Showing Results from"
@@ -570,20 +571,20 @@ msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:50
 msgid "Last"
-msgstr ""
+msgstr "Laatste"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:51
 msgid "Online time"
-msgstr ""
+msgstr "Tijd online"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:52
 msgid "connections"
-msgstr ""
+msgstr "Verbindingen"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:53
 msgid "First online"
-msgstr ""
+msgstr "Eerste keer online"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:54
 msgid "Last online"
-msgstr ""
+msgstr "Laatste keer online"
