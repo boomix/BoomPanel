@@ -10,18 +10,18 @@ $database = ($b) ? "bp_bans" : "bp_mutegag";
 $CurrentPage = (isset($match['params']['action']) && $match['params']['action'] == 'page') ? $match['params']['id'] : 1;
 $limit = ($CurrentPage == 1) ? ITEMSPERPAGE : ($CurrentPage - 1) * ITEMSPERPAGE.','.ITEMSPERPAGE;
 
-$defaultSelect = "SELECT *, 
-                p.steamid player_steamid, 
-                p2.steamid admin_steamid, 
+$defaultSelect = "SELECT *,
+                p.steamid player_steamid,
+                p2.steamid admin_steamid,
                 pu.username player_username,
-                pu2.username admin_username, 
-                IF(TIMESTAMPDIFF(MINUTE, b.time, now()) < b.length, '" . htmlspecialchars(ACTIVE) . "', '" . htmlspecialchars(EXPIRED) . "') as banstatus 
-                FROM ".$database." b 
-                LEFT JOIN bp_servers s ON b.sid = s.id 
-                LEFT JOIN bp_players p ON b.pid = p.id 
-                LEFT JOIN bp_players p2 ON b.aid = p2.id 
-                LEFT JOIN bp_players_username pu ON b.pid = pu.pid 
-                LEFT JOIN bp_players_username pu2 ON b.aid = pu2.pid 
+                pu2.username admin_username,
+                IF(TIMESTAMPDIFF(MINUTE, b.time, now()) < b.length, '" . htmlspecialchars(ACTIVE) . "', '" . htmlspecialchars(EXPIRED) . "') as banstatus
+                FROM ".$database." b
+                LEFT JOIN bp_servers s ON b.sid = s.id
+                LEFT JOIN bp_players p ON b.pid = p.id
+                LEFT JOIN bp_players p2 ON b.aid = p2.id
+                LEFT JOIN bp_players_username pu ON b.pid = pu.pid
+                LEFT JOIN bp_players_username pu2 ON b.aid = pu2.pid
                 LEFT JOIN bp_countries c ON c.country_code = p.country";
 
 

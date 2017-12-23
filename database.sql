@@ -477,7 +477,7 @@ CREATE TABLE `bp_players_online` (
 	`pid` INT(11) NOT NULL,
 	`sid` INT(11) NOT NULL,
 	`connected` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-	`disconnected` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	`disconnected` TIMESTAMP NOT NULL DEFAULT 0,
 	INDEX `server_id` (`sid`),
 	INDEX `player_id` (`pid`),
 	CONSTRAINT `bp_players_online_ibfk_1` FOREIGN KEY (`sid`) REFERENCES `bp_servers` (`id`) ON UPDATE CASCADE,
