@@ -2,10 +2,14 @@ FROM php:latest
 VOLUME /boom/SERVER/cfg/sourcemod
 
 RUN apt-get update
-RUN apt-get install -y nginx php7.0-fpm php7.0-mysql php7.0-bcm mysql-server mysql-client
+RUN apt-get upgrade -y
+RUN apt-get install -y nginx php7.0-fpm php7.0-mysql php7.0-bcm g++ libicu-dev mysql-client
 RUN docker-php-ext-configure pdo_mysql
+RUN docker-php-ext-configure intl
 RUN docker-php-ext-install pdo_mysql
-RUN docker-php-ext-enable pdo_mysql
+RUN docker-php-ext-install intl
+# RUN docker-php-ext-enable pdo_mysql
+# RUN docker-php-ext-enable pdo_intl
 
 COPY . /boom
 COPY ./DOCKER/nginx_boom_panel.conf /etc/nginx/sites-available/default
