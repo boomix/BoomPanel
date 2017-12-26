@@ -6,7 +6,7 @@ class DataBase {
     private $DB_USER = DBUSER;
     private $DB_PASS = DBPASS;
     private $PDO;
- 
+
     public function __construct() {
         $this->PDO = new PDO("mysql:host=".$this->DB_HOST."; dbname=".$this->DB_NAME, $this->DB_USER, $this->DB_PASS, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
     }

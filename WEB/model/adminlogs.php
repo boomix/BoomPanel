@@ -12,11 +12,11 @@
 
 
 
-    $MainQuery = "FROM bp_chat c 
-                LEFT JOIN bp_players p ON c.pid = p.id 
-                LEFT JOIN bp_countries co ON p.country = co.country_code 
+    $MainQuery = "FROM bp_chat c
+                LEFT JOIN bp_players p ON c.pid = p.id
+                LEFT JOIN bp_countries co ON p.country = co.country_code
                 LEFT JOIN bp_players_username u ON p.id = u.pid
-                LEFT JOIN bp_servers s ON c.sid = s.id 
+                LEFT JOIN bp_servers s ON c.sid = s.id
                 WHERE type = 1 ";
 
     $CountAllLogs = 0;

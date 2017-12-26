@@ -1,0 +1,67 @@
+version: '3'
+services:
+  boompanel:
+    image: registry.indietyp.com/boom/boompanel
+    environment:
+      APIKEY: "74BAE66A95B0AB6E9E4443EB23596993"
+      OWNER: "76561198056527492"
+      TIMEZONE: "+2"
+      DEBUG: "0"
+      WEBROOT: "http://example.com/boompanel"
+      LANG: "en"
+      DBHOST: "172.16.239.24"
+      DBNAME: "boompanel"
+      DBUSER: "root"
+      DBPASS: "IAMAPASSWORD"
+
+    volumes:
+      - "/docker/boom:/boom/SERVER/cfg/sourcemod"
+    ports:
+      - 80:80
+
+    tty: true
+    stdin_open: true
+
+    networks:
+      - ndb
+
+  db:
+    image: "mariadb:latest"
+    environment:
+      # secrets should be used
+      MYSQL_ROOT_PASSWORD: IAMAPASSWORD
+
+    command: [mysqld,
+              --character-set-server=utf8mb4,
+              --collation-server=utf8mb4_unicode_ci,
+              --wait-timeout=7200,
+              --interactive-timeout=7200,
+              --key-buffer-size=64M,
+              --query-cache-size=32M,
+              --query-cache-limit=8M,
+              --max-allowed-packet=64M]
+
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure
+
+
+    ports:
+      - "3306:3306"
+
+    volumes:
+      - "/docker/database:/var/lib/mysql"
+
+    restart: always
+    networks:
+      ndb:
+        ipv4_address: 172.16.239.24
+
+networks:
+  ndb:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.239.0/24

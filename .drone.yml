@@ -1,0 +1,25 @@
+pipeline:
+  language:
+    image: ubuntu
+    commands:
+      - apt-get update
+      - apt-get install -y gettext bash python python-dev
+      - cd WEB/lang
+      - bash export.bash
+
+  git_push:
+    image: appleboy/drone-git-push
+    branch: dev
+    remote: git@github.com:boomix/BoomPanel.git
+    force: false
+    commit: true
+    commit_message: "[skip ci] translations added"
+    secrets: [ git_push_ssh_key ]
+
+
+  publish:
+    image: plugins/docker
+    registry: registry.indietyp.com
+    repo: registry.indietyp.com/boom/boompanel
+    secrets: [ docker_username, docker_password ]
+    tags: latest

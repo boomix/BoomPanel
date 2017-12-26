@@ -28,6 +28,9 @@ I18N::init('boompanel', './lang', 'en_US', array(
 
 if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
     I18N::changeLanguage(substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2));
+} else {
+    I18N::changeLanguage(LANGUAGE);
+    // totally not a retrigger
 }
 
 //Show errors | disable when live

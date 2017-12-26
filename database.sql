@@ -462,7 +462,7 @@ CREATE TABLE IF NOT EXISTS `bp_players_ip` (
   `pid` int(11) NOT NULL,
   `ip` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `connections` int(6) NOT NULL DEFAULT '1',
-  `last_used` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `last_used` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   UNIQUE KEY `unique_index` (`pid`,`ip`),
   CONSTRAINT `bp_players_ip_ibfk_1` FOREIGN KEY (`pid`) REFERENCES `bp_players` (`id`) ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -477,7 +477,7 @@ CREATE TABLE `bp_players_online` (
 	`pid` INT(11) NOT NULL,
 	`sid` INT(11) NOT NULL,
 	`connected` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-	`disconnected` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	`disconnected` TIMESTAMP NOT NULL DEFAULT 0,
 	INDEX `server_id` (`sid`),
 	INDEX `player_id` (`pid`),
 	CONSTRAINT `bp_players_online_ibfk_1` FOREIGN KEY (`sid`) REFERENCES `bp_servers` (`id`) ON UPDATE CASCADE,
@@ -497,11 +497,12 @@ CREATE TABLE IF NOT EXISTS `bp_players_username` (
   `pid` int(11) NOT NULL,
   `username` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
   `connections` int(6) NOT NULL DEFAULT '1',
-  `last_used` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `last_used` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   UNIQUE KEY `unique_index` (`username`,`pid`),
   KEY `player_id` (`pid`),
   CONSTRAINT `bp_players_username_ibfk_1` FOREIGN KEY (`pid`) REFERENCES `bp_players` (`id`) ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+-- last_used ON UPDATE CURRENT_TIMESTAMP
 
 -- Dumping data for table boompanel.bp_players_username: ~1 rows (approximately)
 /*!40000 ALTER TABLE `bp_players_username` DISABLE KEYS */;
