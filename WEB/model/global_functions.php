@@ -196,11 +196,9 @@ function CommandToPlayer($Query, $pid, $command)
 
     //Check in which server player is online *UPDATE SHOULD GET LATEST SERVER ONLINE*
     $online = $db->selectOne("
-        SELECT `steamid`, `ip`, `port`, `rcon_pw` FROM bp_players_online o 
-        LEFT JOIN bp_servers s ON o.sid = s.id 
-        LEFT JOIN bp_players p ON o.pid = p.id 
-        WHERE pid = :pid AND connected = disconnected 
-        ORDER BY connected DESC LIMIT 1
+        SELECT `steamid`, `ip`, `port`, `rcon_pw` FROM bp_servers s
+		LEFT JOIN bp_players p ON s.id = p.online
+		WHERE p.id = :pid AND online > 0
     ", array("pid" => intval($pid)));
 
     if($online) {

@@ -29,8 +29,8 @@ $defaultSelect = "SELECT *,
                 LEFT JOIN bp_servers s ON b.sid = s.id
                 LEFT JOIN bp_players p ON b.pid = p.id
                 LEFT JOIN bp_players p2 ON b.aid = p2.id
-                LEFT JOIN bp_players_username pu ON b.pid = pu.pid
-                LEFT JOIN bp_players_username pu2 ON b.aid = pu2.pid
+                LEFT JOIN (SELECT `username`, `pid` FROM bp_players_username WHERE active = 1 GROUP BY pid) pu ON b.pid = pu.pid
+                LEFT JOIN (SELECT `username`, `pid` FROM bp_players_username WHERE active = 1 GROUP BY pid) pu2 ON b.aid = pu2.pid
                 LEFT JOIN bp_countries c ON c.country_code = p.country";
 
 
