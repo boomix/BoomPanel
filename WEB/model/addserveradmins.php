@@ -1,5 +1,8 @@
 <?php
 
+if(!HasPermission("Access add server admins page"))
+    header('Location: '.WEBSITE);
+
 if(!isset($db)) die();
 $GetAllServers  = $db->select("SELECT * FROM bp_servers ORDER BY id ASC");
 $GetAllGroups   = $db->select("SELECT * FROM bp_admin_groups ORDER BY id");

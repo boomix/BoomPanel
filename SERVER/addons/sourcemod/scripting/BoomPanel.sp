@@ -15,7 +15,7 @@
 #include "BoomPanel/BP_Players.sp"
 #include "BoomPanel/BP_PlayersIP.sp"
 #include "BoomPanel/BP_PlayersUsername.sp"
-#include "BoomPanel/BP_PlayersOnline.sp"
+#include "BoomPanel/BP_PlayersOnline2.sp"
 #include "BoomPanel/BP_Chat.sp"
 #include "BoomPanel/BP_Bans.sp"
 #include "BoomPanel/BP_Admins.sp"
@@ -70,7 +70,8 @@ public void OnPluginStart()
 	RegAdminCmd("sm_pmute", 	CMD_PermaMuteGag, 	ADMFLAG_CHAT);
 	RegAdminCmd("sm_pgag", 		CMD_PermaMuteGag, 	ADMFLAG_CHAT);
 	RegAdminCmd("sm_psilence", 	CMD_PermaMuteGag, 	ADMFLAG_CHAT);
-
+	
+	//RegConsoleCmd("sm_online", CMD_Online);
 
 	BP_OnPluginStart();
 	

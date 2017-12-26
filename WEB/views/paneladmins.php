@@ -12,12 +12,25 @@
                 </div>
                 <div class="widget-content nopadding">
                     <form action="#" method="POST" class="form-horizontal">
+
+
                         <div class="control-group">
                             <label class="control-label"><?= _("Admin");?> :</label>
                             <div class="controls">
                                 <input type="text" name="admin" value="<?=isset($_POST['admin']) ? htmlspecialchars($_POST['admin']) : '';?>" autocomplete="off" class="span11" placeholder="..." value="">
                             </div>
                         </div>
+
+                        <?php if(isset($match['params']['action']) && $match['params']['action'] == 'edit'){ ?>
+                        <div class="control-group">
+                            <label class="control-label"><?=_("Page access");?>:</label>
+                            <?php foreach ((array)$GetAllPermissions as $permission) { ?>
+                            <div class="controls">
+                                <label><input class="check" type="checkbox" <?=isset($_POST['checkboxes'][$permission['permissionid']]) ? 'checked' : "";?> name="checkboxes[]" value="<?=intval($permission['permissionid']);?>" /><?=_($permission['name']);?></label>
+                            </div>
+                            <?php } ?>
+                        </div>
+                        <?php } ?>
 
                         <div class="form-actions">
                             <button type="submit" name="submit" class="btn btn-success pull-right"><?= _("Add");?></button>
@@ -38,6 +51,7 @@
                         <thead>
                         <tr>
                             <th><?= _("Admin");?></th>
+                            <th><?= _("Edit");?></th>
                             <th><?= _("Delete");?></th>
                         </tr>
                         </thead>
@@ -53,6 +67,7 @@
                                     </a>
                                 </td>
                                 <td> </td>
+                                <td> </td>
                             </tr>
 
                             <!-- Shows the rest of the admins -->
@@ -67,6 +82,9 @@
                                         <img src="<?=$data['avatar'];?>" class="player-avatar">
                                         <?=$data['username'];?>
                                     </a>
+                                </td>
+                                <td style="text-align: center">
+                                    <a href="<?=$CurrentURL;?>edit/<?=$admin["id"];?>" class="btn btn-warning btn-mini"><?=_("edit");?></a>
                                 </td>
                                 <td style="text-align: center">
                                     <a href="<?=$CurrentURL;?>delete/<?=$admin["id"];?>" class="btn btn-danger btn-mini"><?=_("delete");?></a>
@@ -85,4 +103,3 @@
 
     </div>
 </div>
-

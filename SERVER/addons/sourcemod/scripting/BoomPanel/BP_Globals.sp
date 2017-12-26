@@ -17,10 +17,12 @@ iClientID[MAXPLAYERS + 1],
 iLastMuteGagTime[MAXPLAYERS + 1], 
 iLastTargetID[MAXPLAYERS + 1],
 iLastCommandType[MAXPLAYERS + 1],
+iClientOnlineID[MAXPLAYERS + 1],
 iMuteGagTimeleft[MAXPLAYERS + 1][3],
 iAdminUpdateTimeleft[MAXPLAYERS + 1];
 Handle hMuteGagTimer[MAXPLAYERS+1],
 g_OnDatabaseReady,
+g_OnClientIDRecived,
 hAdminTimer[MAXPLAYERS + 1];
 ConVar g_cvServerIP, 
 g_cvServerPORT, 

@@ -4,8 +4,8 @@ void CreateNatives()
 	CreateNative("BoomPanel_GetServerID", 	Native_GetServerID);
 	CreateNative("BoomPanel_GetClientID", 	Native_GetClientID);
 	
-	
-	g_OnDatabaseReady = CreateGlobalForward("BoomPanel_DatabaseReady", ET_Ignore);
+	g_OnClientIDRecived = CreateGlobalForward("BoomPanel_OnClientIDRecived", ET_Ignore, Param_Cell, Param_Cell);
+	g_OnDatabaseReady 	= CreateGlobalForward("BoomPanel_DatabaseReady", ET_Ignore);
 	
 }
 
@@ -26,5 +26,5 @@ public int Native_GetServerID(Handle plugin, int numParams)
 public int Native_GetClientID(Handle plugin, int numParams)
 {
 	int client = GetNativeCell(1);
-	return (IsClientInGame(client) && !IsFakeClient(client)) ? iClientID[client] : -1;
+	return (!IsFakeClient(client)) ? iClientID[client] : -1;
 }

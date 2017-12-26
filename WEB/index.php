@@ -65,6 +65,13 @@ for ( $i = 0; $i < count( $navigation ); $i ++ ) {
 
 }
 
+//Hidden router
+for ( $i = 0; $i < count( $hidden ); $i ++ ) {
+
+    $router->map( $hidden[$i]['method'], $hidden[$i]['url'], $hidden[$i]['target'], $hidden[$i]['name']);
+
+}
+
 $match = $router->match();
 $result = substr($match['name'], 0, 3);
 

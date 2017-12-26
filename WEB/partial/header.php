@@ -54,10 +54,29 @@ include ('steamauth/userInfo.php');
 
 <?php
 
+    $isOwner = ($steamprofile['steamid'] == MAINADMIN) ? true : false;
+
     //Check if client has access
     $IsAdmin = $db->selectOne("SELECT * FROM bp_panel_admins WHERE steamid = :steamid", array("steamid" => $steamprofile['steamid']));
-    if(!$IsAdmin && $steamprofile['steamid'] != MAINADMIN)
+    if(!$IsAdmin && !$isOwner)
         die("<h1 style='margin-top: 2rem;color:#fff;text-align: center'>"._("You dont have access to this page!")."</h1>");
+
+
+    $adminID = (!$isOwner) ? intval($IsAdmin['id']) : -1;
+
+    //Get all admin permissions
+    if($adminID >= 0) {
+        $permissions = $db->select(
+            "SELECT `name` FROM bp_panel_admin_permissions ap 
+            LEFT JOIN bp_panel_permissions p ON ap.permissionid = p.permissionid 
+            WHERE paneladmin = :adminID",
+            array("adminID" => $adminID)
+        );
+    } else {
+        //If owner, give him all the permissions
+        $permissions = $db->select("SELECT `name` FROM bp_panel_permissions");
+    }
+
 
 ?>
 
@@ -81,59 +100,88 @@ include ('steamauth/userInfo.php');
             $url    = (isset($navigation[$i]['overrideurl'])) ? $navigation[$i]['overrideurl'] : $navigation[$i]['url'];
 
             if($i == 0) { ?>
-                <nav><div id="sidebar" style=""><a href="#" class="visible-phone"><i class="icon icon-home"></i> <?=UP($match['name']);?></a><ul>
-            <?php } ?>
+                <nav><div id="sidebar" style=""><a href="#" class="visible-phone"><i class="icon icon-home"></i> <?=($match['name'] != '{SERVER_NAME}') ? UP($match['name']) : UP($match['params']['server']);?></a><ul>
+            <?php }
+                if(isset($navigation[$i]['permissions']) && !empty($navigation[$i]['permissions']) && HasPermission($navigation[$i]['permissions']) || !isset($navigation[$i]['permissions'])) {
+
+                    //Count subitems with allowed permissions
+                    $count2 = 0;$count3 = 0;
+                    if(isset($navigation[$i]['submenu']))
+                        foreach ((array)$navigation[$i]['submenu'] as $subnavigation) {
+                            $count3++;
+                            if (isset($subnavigation['permissions']) && !empty($subnavigation['permissions']) && HasPermission($subnavigation['permissions']) || !isset($subnavigation['permissions']))
+                                $count2++;
+
+                        }
+                    //echo $count2. ' '.$count3.' | ';
+                    if($count3 != 0 && $count2 > 0 || $count3 == 0)
+                    {
+
+            ?>
+
+                            <li <?= $class; ?>>
+                                <a href="<?= WEBSITE . $url; ?>">
+                                    <i class="icon <?= $navigation[$i]['icon']; ?>"></i>
+                                    <span class="navitem"><?= UP($navigation[$i]['name']); ?></span>
+                                </a>
+
+            <?php
+                    }
 
 
-            <li <?=$class;?>>
-                <a href="<?=WEBSITE.$url;?>">
-                    <i class="icon <?=$navigation[$i]['icon'];?>"></i>
-                    <span class="navitem"><?=UP($navigation[$i]['name']);?></span>
-                </a>
 
-                <?php
+            }
+
                 if(!empty($submenu)) {
 
                     $class3 = "";
-                    if(!empty($submenu))
-                        foreach ($navigation[$i]['submenu'] as $subnavigation)
-                            if($subnavigation['name'] == $match['name'])
-                                $class3 = 'style="display:block"';
-
-                    echo '<ul '.$class3.'>';
                     foreach ($navigation[$i]['submenu'] as $subnavigation)
-                    {
-                        $class2 = ($subnavigation['name'] == $match['name']) ? 'class="active"' : '';
-                        $url = (isset($subnavigation['overrideurl'])) ? $subnavigation['overrideurl'] : $subnavigation['url'];
+                        if($subnavigation['name'] == $match['name'])
+                            $class3 = 'style="display:block"';
 
-                        if(strpos($url, "{SERVER_NAME}") !== false){
+                    $count = 0;
+                    foreach ($navigation[$i]['submenu'] as $subnavigation) {
+
+                        //Check for permissions
+                        if (isset($subnavigation['permissions']) && !empty($subnavigation['permissions']) && HasPermission($subnavigation['permissions']) || !isset($subnavigation['permissions'])) {
+                            $count++;
+
+                            if($count == 1)
+                                echo '<ul '.$class3.'>';
+
+                            $class2 = ($subnavigation['name'] == $match['name']) ? 'class="active"' : '';
+                            $url = (isset($subnavigation['overrideurl'])) ? $subnavigation['overrideurl'] : $subnavigation['url'];
+
+                            if (strpos($url, "{SERVER_NAME}") !== false) {
 
                                 //foreach all servers
                                 $results = $db->select("SELECT `name`, `id` FROM bp_servers");
                                 foreach ($results as $result) {
 
-                                    if($result['id'] != 0)
-                                    {
+                                    if ($result['id'] != 0) {
                                         $class2 = (isset($match['params']['server']) && $result['name'] == $match['params']['server']) ? 'class="active"' : '';
                                         $newurl = str_replace("{SERVER_NAME}", $result['name'], $url);
 
-                                        if(isset($match['params']['server']) && $result['name'] == $match['params']['server']) {
+                                        if (isset($match['params']['server']) && $result['name'] == $match['params']['server']) {
                                             $serverName = str_replace("{SERVER_NAME}", $result['name'], $currentPage);
                                         }
 
-
-                                        echo ' <li '.$class2.'><a href="'.WEBSITE.$newurl.'" class="navlink">'.UP($result['name']).'</a></li>';
+                                        echo ' <li ' . $class2 . '><a href="' . WEBSITE . $newurl . '" class="navlink">' . UP($result['name']) . '</a></li>';
                                     }
 
                                 }
 
-                        } else {
+                            } else {
 
-                            echo ' <li ' . $class2 . '><a class="navlink" href="' . WEBSITE . $url . '">' . UP($subnavigation['name']) . '</a></li>';
+                                echo ' <li ' . $class2 . '><a class="navlink" href="' . WEBSITE . $url . '">' . UP($subnavigation['name']) . '</a></li>';
 
+                            }
                         }
+
                     }
-                    echo '</ul>';
+
+                    if($count > 0)
+                        echo '</ul>';
                 }
                 ?>
 

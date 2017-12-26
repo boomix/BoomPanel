@@ -178,6 +178,18 @@ function echo_dev($data)
 
 }
 
+function HasPermission($searching)
+{
+    global $permissions;
+    foreach ((array)$permissions as $perms)
+    {
+        if($perms['name'] == $searching)
+            return true;
+    }
+
+    return false;
+}
+
 function CommandToPlayer($Query, $pid, $command)
 {
     $db = new DataBase();
@@ -206,6 +218,17 @@ function CommandToPlayer($Query, $pid, $command)
         finally { $Query->Disconnect(); }
 
     }
+}
+
+function TimeAgo($unix)
+{
+    $datetime1 = new DateTime(date("Y-m-d H:i:s", $unix));
+    $datetime2 = new DateTime();
+    $interval = $datetime1->diff($datetime2);
+    if($interval->d != 0 && $interval->h != 0)
+        return $interval->format('%a '.DAYS.', %H '.HOURS);
+    else
+        return $interval->format('%I '.MINUTES);
 }
 
 

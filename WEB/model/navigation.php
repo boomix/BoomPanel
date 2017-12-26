@@ -1,5 +1,18 @@
 <?php
 
+//Pages that are not in navigation
+$hidden = array(
+
+    array(
+        "name"  => ONLINE.' '.TIME,
+        "url"   => "/onlinetime/[i:pid]?/",
+        "overrideurl" => "/onlinetime/",
+        "target"    => "views/onlinetime.php",
+        "method"    => "GET"
+    )
+
+);
+
 //Main page navigation
 $navigation = array(
 
@@ -23,15 +36,17 @@ $navigation = array(
                 "overrideurl" => "/addserver/", //we use override because we have optinional parameters for url
                 "url"         => "/addserver/[delete|edit:action]?/[i:id]?/",
                 "method"      => "GET|POST",
-                "target"      => "views/addserver.php"
+                "target"      => "views/addserver.php",
+                "permissions"  => "Access add server page"
             ),
 
             array(
                 "name"          => NAV_ADDPANELADMINS,
                 "overrideurl"   => "/addpaneladmins/",
-                "url"           => "/addpaneladmins/[delete:action]?/[i:id]?/",
+                "url"           => "/addpaneladmins/[delete|edit:action]?/[i:id]?/",
                 "method"        => "GET|POST",
-                "target"        => "views/paneladmins.php"
+                "target"        => "views/paneladmins.php",
+                "permissions"    => "Access add panel admins page"
             )
         )
 
@@ -50,7 +65,8 @@ $navigation = array(
                 "overrideurl" => "/admins/addserveradmins/", //we use override because we have optinional parameters for url
                 "url"         => "/admins/addserveradmins/[delete|edit:action]?/[i:id]?/",
                 "method"  => "GET|POST",
-                "target"  => "views/addserveradmins.php"
+                "target"  => "views/addserveradmins.php",
+                "permissions"    => "Access add server admins page"
             ),
             array(
                 "name"    => NAV_ADDSADMINGROUPS,
@@ -58,20 +74,23 @@ $navigation = array(
                 "overrideurl" => "/admins/addadmingroups/", //we use override because we have optinional parameters for url
                 "url"         => "/admins/addadmingroups/[delete|edit:action]?/[i:id]?/",
                 "method"  => "GET|POST",
-                "target"  => "views/addadmingroups.php"
+                "target"  => "views/addadmingroups.php",
+                "permissions"    => "Access add admin group page"
             ),
             array(
                 "name"    => NAV_ADMINONLINETIME,
                 "url"     => "/admins/onlinetime/",
                 "method"  => "GET",
-                "target"  => "views/adminonlinetime.php"
+                "target"  => "views/adminonlinetime.php",
+                "permissions"    => "Access admin online time page"
             ),
             array(
                 "name"    => NAV_ADMINCOMMANDS,
                 "overrideurl" => "/admins/adminlogs/",
                 "url"     => "/admins/adminlogs/[page:action]?/[i:id]?/",
                 "method"  => "GET",
-                "target"  => "views/adminlogs.php"
+                "target"  => "views/adminlogs.php",
+                "permissions"    => "Access admin logs"
             )
 
         )
@@ -89,14 +108,16 @@ $navigation = array(
                 "overrideurl" => "/bans/", //we use override because we have optinional parameters for url
                 "url"         => "/bans/[delete|edit|unban|page:action]?/[i:id]?/",
                 "method"      => "GET|POST",
-                "target"      => "views/bans.php"
+                "target"      => "views/bans.php",
+                "permissions"    => "Access server bans"
             ),
 
             array(
                 "name"    => NAV_COMMUNITYBANS,
                 "url"     => "/bans/communitybans/",
                 "method"  => "GET|POST",
-                "target"  => "views/communitybans.php"
+                "target"  => "views/communitybans.php",
+                "permissions"    => "Access community bans"
             )
         )
     ),
@@ -110,6 +131,7 @@ $navigation = array(
         "icon"          => "icon-volume-off",
         "method"        => "GET|POST",
         "target"        => "views/bans.php",
+        "permissions"    => "Access mute gag page"
     ),
 
 
@@ -119,6 +141,7 @@ $navigation = array(
         "icon"      => "icon-bell",
         "method"    => "GET|POST",
         "target"    => "views/announcements.php",
+        "permissions"    => "Access annoncements page"
     ),
 
     array(
@@ -135,6 +158,7 @@ $navigation = array(
                 "url"         => "/searchplayers/[page:action]?/[i:id]?/",
                 "method"      => "GET",
                 "target"      => "views/searchplayers.php",
+                "permissions"    => "Access player search page"
             ),
 
             array(
@@ -143,6 +167,7 @@ $navigation = array(
                 "url"         => "/justonline/[page:action]?/[i:id]?/",
                 "method"      => "GET",
                 "target"      => "views/justonline.php",
+                "permissions"    => "Access just online page"
             ),
 
             array(
@@ -151,6 +176,7 @@ $navigation = array(
                 "url"         => "/mostactive/[page:action]?/[i:id]?/",
                 "method"      => "GET",
                 "target"      => "views/mostactive.php",
+                "permissions"    => "Access most active page"
             )
 
         )
@@ -170,7 +196,8 @@ $navigation = array(
                 "overrideurl"  => "/server/{SERVER_NAME}/", //we use override because we have optinional parameters for url
                 "url"          => "/server/[:server]/",
                 "method"       => "GET",
-                "target"       => "views/servers.php"
+                "target"       => "views/servers.php",
+                "permissions"    => "Access servers page"
             )
 
         )
@@ -184,6 +211,8 @@ $navigation = array(
         "icon"      => "icon-list-ul",
         "method"    => "GET",
         "target"    => "views/chatsearch.php",
+        "permissions"    => "Access chat search"
+
     ),
 
 

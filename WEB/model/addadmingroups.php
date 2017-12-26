@@ -1,6 +1,10 @@
 <?php
 
     if(!isset($db)) die();
+
+    if(!HasPermission("Access add admin group page"))
+        header('Location: '.WEBSITE);
+
     $GetAllFlags    = $db->select("SELECT * FROM bp_flags");
     $GetAllGroups   = $db->select("SELECT *, g.name AS groupName, g.id AS gid FROM bp_admin_groups g ORDER BY immunity DESC");
 

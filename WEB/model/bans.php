@@ -6,6 +6,15 @@ if(!isset($db)) die();
 $b = (strtolower($title) == strtolower(NAV_MUTEGAG)) ? false : true;
 $database = ($b) ? "bp_bans" : "bp_mutegag";
 
+//Check for permissions
+if($database == 'bp_bans') {
+    if(!HasPermission("Access server bans"))
+        header('Location: '.WEBSITE);
+} else if($database == 'bp_mutegag') {
+    if(!HasPermission("Access mute gag page"))
+        header('Location: '.WEBSITE);
+}
+
 //Pagination
 $CurrentPage = (isset($match['params']['action']) && $match['params']['action'] == 'page') ? $match['params']['id'] : 1;
 $limit = ($CurrentPage == 1) ? ITEMSPERPAGE : ($CurrentPage - 1) * ITEMSPERPAGE.','.ITEMSPERPAGE;

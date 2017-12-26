@@ -113,6 +113,7 @@
     </div>
 
     <hr>
+    <?php if(HasPermission("Can send rcon command")) { ?>
         <div class="row-fluid">
             <div class="span12">
 
@@ -141,6 +142,7 @@
             </div>
         </div>
     <hr>
+    <?php } ?>
 
     <div class="row-fluid" style="margin-bottom: 15rem">
         <div class="span12">

@@ -1,5 +1,9 @@
 <?php
     if(!isset($db)) die();
+
+    if(!HasPermission("Access servers page"))
+        header('Location: '.WEBSITE);
+
     //Check if server exists
     if(!$db->selectOne("SELECT * FROM bp_servers WHERE name = :serverName", array("serverName" => htmlspecialchars($match['params']['server'])))) {
         die(SERVER.' '.NOTFOUND);

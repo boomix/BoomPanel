@@ -1,5 +1,9 @@
 <?php
     if(!isset($db)) die();
+
+    if(!HasPermission("Access player search page"))
+        header('Location: '.WEBSITE);
+
     //Pagination
     $CurrentPage = (isset($match['params']['action']) && $match['params']['action'] == 'page') ? $match['params']['id'] : 1;
     $limit = ($CurrentPage == 1) ? ITEMSPERPAGE : ($CurrentPage - 1) * ITEMSPERPAGE.','.ITEMSPERPAGE;

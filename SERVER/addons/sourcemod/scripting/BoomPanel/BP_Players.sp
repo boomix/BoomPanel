@@ -1,10 +1,7 @@
-void Players_OnClientPutInServer(int client)
+void Players_OnClientAuthorized(int client)
 {
 	iClientID[client] = -1;
-}
-
-void Players_OnClientPostAdminCheck(int client)
-{
+	
 	char steamid[20];
 	GetClientAuthId(client, AuthId_SteamID64, steamid, sizeof(steamid));
 	
@@ -15,7 +12,11 @@ void Players_OnClientPostAdminCheck(int client)
 	char query[255];
 	Format(query, sizeof(query), "INSERT IGNORE INTO bp_players (steamid, country) VALUES('%s', '%s') ON DUPLICATE KEY UPDATE country = '%s'", steamid, CountrCode, CountrCode);
 	DB.Query(OnClientIsInDatabase, query, GetClientUserId(client));
-	
+}
+
+void Players_OnClientDisconnect(int client)
+{
+	iClientID[client] = -1;
 }
 
 public void OnClientIsInDatabase(Database db, DBResultSet results, const char[] error, any userID)

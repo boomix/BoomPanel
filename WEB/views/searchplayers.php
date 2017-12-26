@@ -47,7 +47,9 @@
                             <th>#</th>
                             <th><?= _("Player");?></th>
                             <th>SteamID</th>
+                            <?php if(HasPermission("Show player search IP")) { ?>
                             <th><?= _("Last");?> IP</th>
+                            <?php } ?>
                             <th><?= _("Online time");?></th>
                             <th><?= _("connections");?></th>
                             <th><?= _("First online");?></th>
@@ -76,8 +78,10 @@
                                 <td class="coutryrow"><img src="<?=WEBSITE;?>/img/flag/<?=$result['country_name'];?>.png" title="<?=$result['country_name'];?>" class="flag"></td>
                                 <td><a target="_blank" href="http://steamcommunity.com/profiles/<?=$result['steamid'];?>"><img src="<?=$avatars[$result['steamid']]?>" class="player-avatar"> <?=htmlspecialchars($result['username']);?></a></td>
                                 <td class="steamidrow"><?=toSteamID($result['steamid']);?> <a data-clipboard-text="<?=toSteamID($result['steamid']);?>" title="<?=COPY;?>" class="clipboard tip-right"><i class="icon-copy"></i></a></td>
+                                <?php if(HasPermission("Show player search IP")) { ?>
                                 <td class="centerrow"><?=$result['ip'];?> <a data-clipboard-text="<?=$result['ip'];?>" title="<?=COPY;?>" class="clipboard tip-right"><i class="icon-copy"></i></a></td>
-                                <td class="centerrow"><?=convertToHoursMinsBans($result['timeonline'], true);?></td>
+                                 <?php } ?>
+                                <td class="centerrow"><a href="<?=WEBSITE;?>/onlinetime/<?=$result['pid'];?>"><?=convertToHoursMinsBans($result['timeonline'], true);?></a></td>
                                 <td class="centerrow"><?=intval($result['connections']);?></td>
                                 <td class="centerrow"><?=date(TIMEFORMAT, strtotime($result['first_online']));?></td>
                                 <td class="centerrow"><?=date(TIMEFORMAT, strtotime($result['last_online']));?></td>

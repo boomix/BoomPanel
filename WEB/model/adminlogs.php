@@ -2,6 +2,10 @@
 
     if(!isset($db)) die();
 
+    //Check if has access to this page
+    if(!HasPermission("Access admin logs"))
+        header('Location: '.WEBSITE);
+
     $CurrentPage = (isset($match['params']['action']) && $match['params']['action'] == 'page') ? $match['params']['id'] : 1;
     $limit = ($CurrentPage == 1) ? ITEMSPERPAGE : ($CurrentPage - 1) * ITEMSPERPAGE.','.$CurrentPage * ITEMSPERPAGE;
     $GetAllServers = $db->select("SELECT name, id FROM bp_servers");

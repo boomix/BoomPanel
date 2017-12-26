@@ -2,6 +2,8 @@
 
     $GetAllServers  = $db->select("SELECT * FROM bp_servers ORDER BY id ASC");
 
+    if(!HasPermission("Access chat search"))
+        header('Location: '.WEBSITE);
 
     $ItemsToSelect = "`message`, `time`, `name`, `steamid`, `country_name`, `username`";
     $defaultQuery = "SELECT ".$ItemsToSelect." FROM bp_chat c 

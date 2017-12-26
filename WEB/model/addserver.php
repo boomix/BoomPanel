@@ -1,5 +1,9 @@
 <?php
     if(!isset($db)) die();
+
+    if(!HasPermission("Access add server page"))
+        header('Location: '.WEBSITE);
+
     $GetAllServers = $db->select("SELECT * FROM bp_servers WHERE id != 0");
 
 

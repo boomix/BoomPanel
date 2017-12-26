@@ -2,6 +2,9 @@
 
     if(!isset($db)) die();
 
+    if(!HasPermission("Access just online page"))
+        header('Location: '.WEBSITE);
+
     $FindAllUsers = $db->select("
             SELECT `bid`, `steamid`, `country_name`, `username`, `name`,  
             (TIMESTAMPDIFF(MINUTE, DATE_SUB(now(), INTERVAL ".ONLINELASTMINUTES." MINUTE), disconnected) + 1) difference,
