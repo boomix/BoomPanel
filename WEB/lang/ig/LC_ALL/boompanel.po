@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-26 00:43+0000\n"
+"POT-Creation-Date: 2017-12-26 22:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -415,8 +415,25 @@ msgstr ""
 msgid "All time online"
 msgstr ""
 
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:63
+msgid "Server stats"
+msgstr ""
+
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:70
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserver.php:17
 msgid "Server name"
+msgstr ""
+
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:71
+msgid "Online now"
+msgstr ""
+
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:72
+msgid "Online today"
+msgstr ""
+
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:73
+msgid "Online all time"
 msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserver.php:35
