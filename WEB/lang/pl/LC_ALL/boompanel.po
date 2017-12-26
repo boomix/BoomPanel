@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: boomix-boompanel\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-17 18:31+0000\n"
+"POT-Creation-Date: 2017-12-26 00:43+0000\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,11 +13,11 @@ msgstr ""
 msgid "Welcome"
 msgstr ""
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../partial/header.php:60
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../partial/header.php:62
 msgid "You dont have access to this page!"
 msgstr ""
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../partial/header.php:153
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../partial/header.php:201
 msgid "Home"
 msgstr ""
 
@@ -27,6 +27,14 @@ msgstr ""
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:192
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:133
 msgid "Cancel"
+msgstr ""
+
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../model/paneladmins.php:43
+msgid "Panel admin edited!"
+msgstr ""
+
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../model/paneladmins.php:62
+msgid "You are now editing panel admin!"
 msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/404.php:12
@@ -76,6 +84,7 @@ msgstr ""
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:167
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:77
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:172
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:54
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserver.php:42
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserver.php:71
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:50
@@ -86,7 +95,7 @@ msgstr ""
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:76
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:11
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:77
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:23
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:36
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserver.php:42
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:50
 msgid "Add"
@@ -109,7 +118,7 @@ msgid "All Groups"
 msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:157
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:41
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:55
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:52
 msgid "Delete"
 msgstr ""
@@ -141,7 +150,7 @@ msgstr ""
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:69
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:96
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:163
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:158
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:160
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:76
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:48
 msgid "Player"
@@ -170,7 +179,7 @@ msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/justonline.php:20
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:32
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:165
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:167
 msgid "Action"
 msgstr ""
 
@@ -232,14 +241,14 @@ msgstr ""
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:148
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:260
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:127
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:131
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:135
 msgid "Prev"
 msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:154
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:266
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:133
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:137
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:141
 msgid "Next"
 msgstr ""
 
@@ -277,8 +286,8 @@ msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:102
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:169
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:16
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:40
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:18
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:53
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:48
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:17
 msgid "Admin"
@@ -358,6 +367,7 @@ msgid "silence"
 msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:212
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:87
 msgid "edit"
 msgstr ""
 
@@ -365,11 +375,15 @@ msgstr ""
 msgid "Add panel admins"
 msgstr ""
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:34
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:26
+msgid "Page access"
+msgstr ""
+
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:47
 msgid "All panel admins"
 msgstr ""
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:72
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:90
 msgid "delete"
 msgstr ""
 
@@ -434,7 +448,7 @@ msgid "Latest admin logs"
 msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:50
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:128
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:129
 msgid "Command"
 msgstr ""
 
@@ -475,51 +489,51 @@ msgstr ""
 msgid "Score"
 msgstr ""
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:121
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:122
 msgid "Send command to server"
 msgstr ""
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:134
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:135
 msgid "Send"
 msgstr ""
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:148
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:150
 msgid "Refresh"
 msgstr ""
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:151
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:153
 msgid "Online servers"
 msgstr ""
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:161
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:163
 msgid "Online"
 msgstr ""
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:162
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:164
 msgid "Total time"
 msgstr ""
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:163
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:165
 msgid "Kills"
 msgstr ""
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:164
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:166
 msgid "Deaths"
 msgstr ""
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:309
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:311
 msgid "Player not found"
 msgstr ""
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:313
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:315
 msgid "Player kicked"
 msgstr ""
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:334
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:336
 msgid "Player banned"
 msgstr ""
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:355
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:357
 msgid "Success"
 msgstr ""
 
@@ -568,22 +582,22 @@ msgstr ""
 msgid "Showing Results from"
 msgstr ""
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:50
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:51
 msgid "Last"
 msgstr ""
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:51
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:53
 msgid "Online time"
 msgstr ""
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:52
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:54
 msgid "connections"
 msgstr ""
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:53
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:55
 msgid "First online"
 msgstr ""
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:54
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:56
 msgid "Last online"
 msgstr ""
