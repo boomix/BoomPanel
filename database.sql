@@ -428,11 +428,16 @@ CREATE TABLE IF NOT EXISTS `bp_mutegag` (
 
 
 -- Dumping structure for table boompanel.bp_panel_admins
-CREATE TABLE IF NOT EXISTS `bp_panel_admins` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `steamid` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE `bp_panel_admins` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`steamid` VARCHAR(20) NULL DEFAULT NULL COLLATE 'utf8mb4_unicode_ci',
+	PRIMARY KEY (`id`),
+	UNIQUE INDEX `steamid` (`steamid`)
+)
+COLLATE='utf8mb4_unicode_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=10
+;
 
 -- Dumping data for table boompanel.bp_panel_admins: ~0 rows (approximately)
 /*!40000 ALTER TABLE `bp_panel_admins` DISABLE KEYS */;
@@ -521,6 +526,35 @@ CREATE TABLE IF NOT EXISTS `bp_servers` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `fullIP` (`ip`,`port`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+CREATE TABLE `bp_panel_permissions` (
+	`permissionid` INT(11) NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(40) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	PRIMARY KEY (`permissionid`),
+	UNIQUE INDEX `name` (`name`)
+)
+COLLATE='utf8mb4_unicode_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=34
+;
+
+
+CREATE TABLE `bp_panel_admin_permissions` (
+	`paneladmin` INT(11) NULL DEFAULT NULL,
+	`permissionid` INT(11) NULL DEFAULT NULL,
+	UNIQUE INDEX `paneladmin` (`paneladmin`, `permissionid`),
+	INDEX `pid` (`paneladmin`),
+	INDEX `permissionid` (`permissionid`),
+	CONSTRAINT `bp_panel_admin_permissions_ibfk_2` FOREIGN KEY (`permissionid`) REFERENCES `bp_panel_permissions` (`permissionid`) ON DELETE CASCADE,
+	CONSTRAINT `bp_panel_admin_permissions_ibfk_3` FOREIGN KEY (`paneladmin`) REFERENCES `bp_panel_admins` (`id`) ON DELETE CASCADE
+)
+COLLATE='utf8mb4_unicode_ci'
+ENGINE=InnoDB
+;
+
+
+
 
 -- Dumping data for table boompanel.bp_servers: ~1 rows (approximately)
 /*!40000 ALTER TABLE `bp_servers` DISABLE KEYS */;
