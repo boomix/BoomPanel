@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: boomix-boompanel\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-26 00:43+0000\n"
+"POT-Creation-Date: 2017-12-26 22:42+0000\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -407,8 +407,25 @@ msgstr ""
 msgid "All time online"
 msgstr ""
 
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:63
+msgid "Server stats"
+msgstr ""
+
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:70
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserver.php:17
 msgid "Server name"
+msgstr ""
+
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:71
+msgid "Online now"
+msgstr ""
+
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:72
+msgid "Online today"
+msgstr ""
+
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:73
+msgid "Online all time"
 msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserver.php:35

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: boomix-boompanel\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-26 00:51+0000\n"
+"POT-Creation-Date: 2017-12-26 22:42+0000\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -408,9 +408,30 @@ msgstr "Deze maand online"
 msgid "All time online"
 msgstr ""
 
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:63
+#, fuzzy
+msgid "Server stats"
+msgstr "server naam"
+
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:70
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserver.php:17
 msgid "Server name"
 msgstr "server naam"
+
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:71
+#, fuzzy
+msgid "Online now"
+msgstr "Online"
+
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:72
+#, fuzzy
+msgid "Online today"
+msgstr "Tijd online"
+
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:73
+#, fuzzy
+msgid "Online all time"
+msgstr "Tijd online"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserver.php:35
 msgid "RCON password"
