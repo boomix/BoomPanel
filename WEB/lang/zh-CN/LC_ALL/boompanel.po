@@ -39,6 +39,7 @@ msgstr "我们找不到你需要的页面"
 msgid "Back to Home"
 msgstr "回到首页"
 
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/home.php:70
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserver.php:17
 msgid "Server name"
 msgstr "服务器名称"

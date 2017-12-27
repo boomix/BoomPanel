@@ -1,4 +1,4 @@
-FROM php:latest
+FROM php:alpine
 VOLUME /boom/SERVER/cfg/sourcemod
 
 RUN apt-get update
