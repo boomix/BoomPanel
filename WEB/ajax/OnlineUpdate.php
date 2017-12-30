@@ -62,8 +62,8 @@ foreach ((array)$players as $player)
 $PlayerDataFromDB = $db->select(
     "SELECT * FROM bp_players p 
             LEFT JOIN bp_countries c ON p.country = c.country_code 
-            LEFT JOIN (SELECT * FROM bp_players_ip GROUP BY pid DESC) ip2 ON p.id = ip2.pid
-            LEFT JOIN (SELECT * FROM bp_players_username GROUP BY pid ORDER BY last_used DESC) u2 ON p.id = u2.pid
+            LEFT JOIN (SELECT `ip`, `pid` FROM bp_players_ip WHERE active = 1 GROUP BY pid) ip2 ON p.id = ip2.pid
+            LEFT JOIN (SELECT `username`, `pid` FROM bp_players_username WHERE active = 1 GROUP BY pid) u2 ON p.id = u2.pid
             LEFT JOIN (SELECT `pid`, SUM(TIMESTAMPDIFF(MINUTE, connected, disconnected)) summa FROM bp_players_online WHERE sid = :sid GROUP BY pid) o ON p.id = o.pid
             WHERE `id` IN (".$AllClientIDs.") 
             GROUP BY steamid",

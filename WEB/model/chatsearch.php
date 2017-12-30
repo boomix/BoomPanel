@@ -10,7 +10,7 @@
             LEFT JOIN bp_servers s ON c.sid = s.id
             LEFT JOIN bp_players p ON c.pid = p.id 
             LEFT JOIN bp_countries cnt ON p.country = cnt.country_code 
-            LEFT JOIN (SELECT `username`, `pid` FROM bp_players_username GROUP BY pid ORDER BY last_used DESC) u ON u.pid = c.pid ";
+            LEFT JOIN (SELECT `username`, `pid` FROM bp_players_username WHERE active = 1 GROUP BY pid) u ON u.pid = c.pid ";
 
     $defaultQueryEnd = "ORDER BY time DESC LIMIT ";
 
@@ -22,10 +22,9 @@
     //If player is not searching anything, show latest chat messages
     if(!isset($_GET['submit'])) {
 
-        $ChatSearch         = $db->select($defaultQuery.'WHERE type = 0 '.$defaultQueryEnd);
-        echo_dev($defaultQuery.'WHERE type = 0 '.$defaultQueryEnd);
-        $CountChatSearch    = $db->selectOne(str_replace($ItemsToSelect, "COUNT(DISTINCT lid) AS count", explode("LIMIT", $defaultQuery.'WHERE type = 0 '.$defaultQueryEnd)[0]));
-        $MaxPages           = ceil($CountChatSearch['count'] / ITEMSPERPAGE);
+        //echo_dev($defaultQuery.'WHERE type = 0 '.$defaultQueryEnd);
+        //$CountChatSearch    = $db->selectOne(str_replace($ItemsToSelect, "COUNT(DISTINCT lid) AS count", explode("LIMIT", $defaultQuery.'WHERE type = 0 '.$defaultQueryEnd)[0]));
+        //$MaxPages           = ceil($CountChatSearch['count'] / ITEMSPERPAGE);
 
     } else {
 

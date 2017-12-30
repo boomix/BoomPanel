@@ -27,7 +27,7 @@
                                 <td style="text-align:center"><?=convertToHoursMinsBans($data['sum'], true);?></td>
                                 <td style="text-align:center">-</td>
                                 <td style="text-align:center"><?=$data['con'];?></td>
-                                <td style="text-align:center"><?=TimeAgo(strtotime($data['disconnected']));?></td>
+                                <td style="text-align:center"><?=convertToHoursMinsBans($data['last_online'], true, true);?> <?=_('ago');?></td>
                             </tr>
                         <?php } ?>
                         </tbody>

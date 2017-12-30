@@ -2,6 +2,23 @@ void Players_OnClientAuthorized(int client)
 {
 	iClientID[client] = -1;
 	
+	if(DB != null)
+		InsertClientInDB(client);
+	else
+		CreateTimer(1.0, TryToInsertAgain, GetClientUserId(client));
+}
+
+public Action TryToInsertAgain(Handle tmr, any userID)
+{
+	int client = GetClientOfUserId(userID);
+	if(client > 0 && DB != null)
+		InsertClientInDB(client);
+	else if(client > 0 && DB == null)
+		CreateTimer(1.0, TryToInsertAgain, GetClientUserId(client));
+}
+
+void InsertClientInDB(int client)
+{
 	char steamid[20];
 	GetClientAuthId(client, AuthId_SteamID64, steamid, sizeof(steamid));
 	

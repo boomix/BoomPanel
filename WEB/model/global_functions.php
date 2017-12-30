@@ -124,24 +124,55 @@ function toSteamID($id) {
     return 'STEAM_1:' . $y . ':' . floor($z);
 }
 
-function convertToHoursMinsBans($time, $allowzero = false)
+function convertToHoursMinsBans($time, $allowzero = false, $shortdate = false)
 {
     if (!$allowzero && (empty($time) || $time < 1))
         return PERMANENET;
     else if($allowzero && (empty($time) || $time < 1))
-        return '0m';
+        return (!$shortdate) ? '0m' : '0 minutes';
 
     $format = null;
     $params = array();
 
-    $days       = floor($time / 1440);
-    if($days > 0) {$format .= "%01dd ";array_push($params, $days);};
+    if(!$shortdate) {
+        $days = floor($time / 1440);
+        if ($days > 0) {
+            $format .= "%01dd ";
+            array_push($params, $days);
+        };
 
-    $hours      = floor($time / 60);
-    if($hours > 0 && ($hours % 24) != 0) {$format .= "%01dh ";array_push($params, $hours - ($days * 24));};
+        $hours = floor($time / 60);
+        if ($hours > 0 && ($hours % 24) != 0) {
+            $format .= "%01dh ";
+            array_push($params, $hours - ($days * 24));
+        };
 
-    $minutes    = ($time % 60);
-    if($minutes > 0) {$format .= "%01dm";array_push($params, $minutes);};
+        $minutes = ($time % 60);
+        if ($minutes > 0) {
+            $format .= "%01dm";
+            array_push($params, $minutes);
+        };
+    } else {
+
+        $days = floor($time / 1440);
+        if ($days > 0) {
+            $format .= "%01d days";
+            array_push($params, $days);
+        };
+
+        $hours = floor($time / 60);
+        if ($hours > 0 && $days == 0 && ($hours % 24) != 0) {
+            $format .= "%01d hours";
+            array_push($params, $hours - ($days * 24));
+        };
+
+        $minutes = ($time % 60);
+        if ($minutes > 0 && $days && $hours == 0) {
+            $format .= "%01d minutes";
+            array_push($params, $minutes);
+        };
+
+    }
 
     if($format != null)
         return vsprintf($format, $params);
@@ -180,6 +211,11 @@ function echo_dev($data)
 
 function HasPermission($searching)
 {
+
+    //Check if main
+    if($_SESSION['steamid'] == MAINADMIN)
+        return true;
+
     global $permissions;
     foreach ((array)$permissions as $perms)
     {

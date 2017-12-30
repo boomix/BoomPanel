@@ -52,7 +52,7 @@ if(isset($url['path'])) {
     $explode    = explode('/', $url['path']);
     $basepath   = (!empty($explode[1])) ? "/".$explode[1] : '';
 
-    for($i = 1;$i <= count($explode);$i++)
+    for($i = 2;$i <= count($explode);$i++)
         $basepath .= (!empty($explode[$i])) ? "/".$explode[$i] : '';
 
 } else {
