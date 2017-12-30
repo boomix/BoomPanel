@@ -537,7 +537,7 @@ CREATE TABLE IF NOT EXISTS `bp_panel_admin_permissions` (
   KEY `permissionid` (`permissionid`),
   CONSTRAINT `bp_panel_admin_permissions_ibfk_2` FOREIGN KEY (`permissionid`) REFERENCES `bp_panel_permissions` (`permissionid`) ON DELETE CASCADE,
   CONSTRAINT `bp_panel_admin_permissions_ibfk_3` FOREIGN KEY (`paneladmin`) REFERENCES `bp_panel_admins` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Dumping data for table boompanel.bp_panel_admin_permissions: ~34 rows (approximately)
 /*!40000 ALTER TABLE `bp_panel_admin_permissions` DISABLE KEYS */;
@@ -585,7 +585,7 @@ CREATE TABLE IF NOT EXISTS `bp_panel_permissions` (
   `name` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`permissionid`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Dumping data for table boompanel.bp_panel_permissions: ~17 rows (approximately)
 /*!40000 ALTER TABLE `bp_panel_permissions` DISABLE KEYS */;
