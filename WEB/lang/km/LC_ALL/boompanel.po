@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: boomix-boompanel\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-26 22:42+0000\n"
+"POT-Creation-Date: 2017-12-30 01:31+0000\n"
 "Language: km\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -450,6 +450,10 @@ msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserver.php:62
 msgid "Edit Server"
+msgstr ""
+
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/onlinetime.php:30
+msgid "ago"
 msgstr ""
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:11
