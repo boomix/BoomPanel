@@ -94,13 +94,31 @@ function GetPlayerData($steamid)
 
 function GetPlayersAvatars($steamids)
 {
+
+    global $c;
+
     $url = 'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key='.APIKEY.'&steamids=';
-    foreach ($steamids as $steamid)
-        $url .= $steamid.",%20";
+    foreach ($steamids as $steamid) {
+        if($c->retrieve($steamid) && $c->retrieve('username-'.$steamid)) {
+            $data[$steamid] = $c->retrieve($steamid);
+            $data['username-'.$steamid] = $c->retrieve('username-'.$steamid);
+        }
+        else
+            $url .= $steamid . ",%20";
+    }
+
+    $c->eraseExpired();
+
+    if(substr($url, -1) == '=')
+        return $data;
 
     $parsed = json_decode(file_get_contents($url));
     foreach($parsed->response->players as $player) {
         $data[$player->steamid] = $player->avatar;
+
+        $c->store($player->steamid, $player->avatar, 86400);
+        $c->store('username-'.$player->steamid, $player->personaname, 86400);
+
         //Add also username to get usernames if they are not in database
         $data["username-".$player->steamid] = $player->personaname;
     }
@@ -167,7 +185,7 @@ function convertToHoursMinsBans($time, $allowzero = false, $shortdate = false)
         };
 
         $minutes = ($time % 60);
-        if ($minutes > 0 && $days && $hours == 0) {
+        if ($minutes > 0 && $days == 0 && $hours == 0) {
             $format .= "%01d minutes";
             array_push($params, $minutes);
         };
@@ -211,11 +229,6 @@ function echo_dev($data)
 
 function HasPermission($searching)
 {
-
-    //Check if main
-    if($_SESSION['steamid'] == MAINADMIN)
-        return true;
-
     global $permissions;
     foreach ((array)$permissions as $perms)
     {

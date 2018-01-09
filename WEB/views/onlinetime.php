@@ -23,7 +23,7 @@
                         <tbody>
                         <?php foreach ((array)$data as $data) { if(empty($data['name'])) return; ?>
                             <tr class="odd gradeX">
-                                <td><?=$data['name'];?></td>
+                                <td <?php if($data['online'] == $data['sid']) echo 'style="border-left: solid 3px #3CCC08"';?>><?=$data['name'];?></td>
                                 <td style="text-align:center"><?=convertToHoursMinsBans($data['sum'], true);?></td>
                                 <td style="text-align:center">-</td>
                                 <td style="text-align:center"><?=$data['con'];?></td>

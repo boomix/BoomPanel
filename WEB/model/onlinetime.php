@@ -1,5 +1,8 @@
 <?php
 
+if(!isset($match['params']['pid']))
+    $match['params']['pid'] = -1;
+
 $pid = intval($match['params']['pid']);
 
 //Get username
@@ -7,7 +10,7 @@ $GetUsername = $db->selectOne("SELECT `username` FROM bp_players_username WHERE 
 $username = ($GetUsername['username']) ?: PLAYER.' '.NOTFOUND;
 
     //Check if is in DB
-$data = $db->select("SELECT IF(online > 0 AND s.id = online, 0, TIMESTAMPDIFF(MINUTE, MAX(disconnected), NOW())) AS `last_online`, `name`, SUM(TIMESTAMPDIFF(MINUTE, connected, disconnected)) AS `sum`, `con` FROM bp_players_online o 
+$data = $db->select("SELECT IF(online > 0 AND s.id = online, 0, TIMESTAMPDIFF(MINUTE, MAX(disconnected), NOW())) AS `last_online`, `name`, SUM(TIMESTAMPDIFF(MINUTE, connected, disconnected)) AS `sum`, `con`, `online`, s.id `sid` FROM bp_players_online o 
 LEFT JOIN bp_servers s ON s.id = o.sid 
 LEFT JOIN (SELECT `username`, `pid` FROM bp_players_username WHERE active = 1 GROUP BY pid) u ON u.pid = o.pid 
 LEFT JOIN bp_players pl ON pl.id = o.pid

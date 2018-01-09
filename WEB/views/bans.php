@@ -76,6 +76,7 @@
                         <div class="form-actions">
                             <button type="submit" name="submit" class="btn btn-success"><?=($editing) ?  _("Edit") : _("Add");?></button>
                             <?php if($editing) { ?>
+                                <a href="<?=$CurrentURL;?>delete/<?=intval($match['params']['id']);?>/" onclick="return confirm('Are you sure you want to delete it?')" class="btn btn-danger pull-right" style="margin-left: 0.5rem"><?=_("Delete");?></a>
                                 <a href="<?=$CurrentURL;?>unban/<?=intval($match['params']['id']);?>/" class="btn btn-warning pull-right"><?=(isset($ban) && $ban['unbanned'] == 0) ? _("Unban") : _("Restore ban");?></a>
                             <?php } ?>
                         </div>
@@ -153,6 +154,30 @@
                 </div>
                 <div class="widget-content">
 
+                    <div class="pagination">
+                        <ul>
+
+                            <li<?=$prev1class;?>><a class="paginationtext" href="<?=$prev1url;?>"><?=_("Prev");?></a></li>
+
+                            <?php if($CurrentPage > 3) { ?>
+                                <li<?=$prev2class;?>><a href="<?=$firstpageurl;?>">1</a></li>
+                            <?php } ?>
+
+                            <li<?=$prev2class;?>><a href="<?=$prev2url;?>"><?=$prev2Num;?></a></li>
+                            <li<?=$prev1class;?>><a href="<?=$prev1url;?>"><?=$prev1Num;?></a></li>
+                            <li class="active"><a href="#"><?=$CurrentPage;?></a></li>
+                            <li<?=$next1class;?>><a href="<?=$next1url;?>"><?=$next1Num;?></a></li>
+                            <li<?=$next2class;?>><a href="<?=$next2url;?>"><?=$next2Num;?></a></li>
+
+                            <?php if($MaxPages > 3 && $CurrentPage + 3 <= $MaxPages) { ?>
+                            <li<?=$next2class;?>><a href="<?=$maxpageurl;?>"><?=$MaxPages;?></a></li>
+                            <?php } ?>
+
+                            <li<?=$next1class;?>><a class="paginationtext" href="<?=$next1url;?>"><?=_("Next");?></a></li>
+
+                        </ul>
+                    </div>
+
                     <?php $results = $limit = ($CurrentPage == 1) ? '1 - '.ITEMSPERPAGE : ($CurrentPage - 1) * ITEMSPERPAGE.' - '.$CurrentPage * ITEMSPERPAGE; ;?>
                     <p class="totalresults"><?= _("Total results:");?> <b><?=$CountAllBans['count'];?></b> | <?= _("Showing results from");?> <b><?=$results;?></b></p>
 
@@ -182,6 +207,8 @@
                                     array_push($Players, $ban['player_steamid']);
                             $avatars = GetPlayersAvatars($Players);
 
+
+
                         ?>
 
 
@@ -196,11 +223,13 @@
                             $username   = (!empty($ban['player_username'])) ? htmlspecialchars($ban['player_username']) : htmlspecialchars($avatars['username-'.$steamid]);
                             if($ban['unbanned'] > 0) $ban['banstatus'] = _('unbanned');
 
+                            $trstyle = (isset($match['params']['action']) && $match['params']['action'] == 'edit' && intval($match['params']['id']) == $ban['bid']) ? 'style="outline:solid 1px #6d6d6d !important"' : '';
+
                         ?>
 
-                            <tr class="odd gradeX">
+                            <tr class="odd gradeX" <?=$trstyle;?>>
                                 <td class="coutryrow"><img src="<?=WEBSITE;?>/img/flag/<?=$ban['country_name'];?>.png" title="<?=$ban['country_name'];?>" class="flag"></td>
-                                <td><a target="_blank" href="http://steamcommunity.com/profiles/<?=$steamid;?>"><img src="<?=$avatars[$steamid]?>" class="player-avatar"> <?=$username;?></a></td>
+                                <td><a target="_blank" href="http://steamcommunity.com/profiles/<?=$steamid;?>"><img src="<?=$avatars[$steamid]?>" class="player-avatar lazy"> <?=$username;?></a></td>
                                 <td class="centerrow"><?=$ban['name'];?></td>
                                 <?php if(!$b) { ?><td class="centerrow"><?=($ban['mgtype'] == 0) ? _('mute') : (($ban['mgtype'] == 1) ? _('gag') : _('silence'));?></td><?php } ?>
                                 <td class="steamidrow"><?=toSteamID($steamid);?> <a data-clipboard-text="<?=toSteamID($steamid);?>" title="<?=COPY;?>" class="clipboard tip-right"><i class="icon-copy"></i></a></td>
@@ -216,53 +245,26 @@
                         </tbody>
                     </table>
 
-                    <?php
-
-                        /* PAGINATION:
-                           Just set
-                              * $CurrentPage = ?
-                              * $MaxPages    = ?
-                           and it should work fine, hope you will understand the code :D
-                        */
-
-                        //Allowed - true or false
-                        $prev2 = ($CurrentPage - 2 >= 1) ? true : false;
-                        $prev1 = ($CurrentPage - 1 >= 1) ? true : false;
-                        $next1 = ($CurrentPage + 1 <= $MaxPages) ? true : false;
-                        $next2 = ($CurrentPage + 2 <= $MaxPages) ? true : false;
-
-                        //Numbers
-                        $prev2Num = ($prev2) ? $CurrentPage - 2 : '-';
-                        $prev1Num = ($prev1) ? $CurrentPage - 1 : '-';
-                        $next1Num = ($next1) ? $CurrentPage + 1 : '-';
-                        $next2Num = ($next2) ? $CurrentPage + 2 : '-';
-
-                        //URLs
-                        $prev2url = ($prev2) ? ($CurrentURL.'page/'.$prev2Num.'/?'.http_build_query($_GET)) : '#';
-                        $prev1url = ($prev1) ? ($CurrentURL.'page/'.$prev1Num.'/?'.http_build_query($_GET)) : '#';
-                        $next1url = ($next1) ? ($CurrentURL.'page/'.$next1Num.'/?'.http_build_query($_GET)) : '#';
-                        $next2url = ($next2) ? ($CurrentURL.'page/'.$next2Num.'/?'.http_build_query($_GET)) : '#';
-
-                        //LI class
-                        $disabled = ' class="disabled"';
-                        $prev2class = (!$prev2) ? $disabled : '';
-                        $prev1class = (!$prev1) ? $disabled : '';
-                        $next1class = (!$next1) ? $disabled : '';
-                        $next2class = (!$next2) ? $disabled : '';
-
-
-                    ?>
-
 
                     <div class="pagination">
                         <ul>
 
                             <li<?=$prev1class;?>><a class="paginationtext" href="<?=$prev1url;?>"><?=_("Prev");?></a></li>
+
+                            <?php if($CurrentPage > 3) { ?>
+                                <li<?=$prev2class;?>><a href="<?=$firstpageurl;?>">1</a></li>
+                            <?php } ?>
+
                             <li<?=$prev2class;?>><a href="<?=$prev2url;?>"><?=$prev2Num;?></a></li>
                             <li<?=$prev1class;?>><a href="<?=$prev1url;?>"><?=$prev1Num;?></a></li>
                             <li class="active"><a href="#"><?=$CurrentPage;?></a></li>
                             <li<?=$next1class;?>><a href="<?=$next1url;?>"><?=$next1Num;?></a></li>
                             <li<?=$next2class;?>><a href="<?=$next2url;?>"><?=$next2Num;?></a></li>
+
+                            <?php if($MaxPages > 3 && $CurrentPage + 3 <= $MaxPages) { ?>
+                                <li<?=$next2class;?>><a href="<?=$maxpageurl;?>"><?=$MaxPages;?></a></li>
+                            <?php } ?>
+
                             <li<?=$next1class;?>><a class="paginationtext" href="<?=$next1url;?>"><?=_("Next");?></a></li>
 
                         </ul>

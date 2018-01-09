@@ -258,14 +258,18 @@
                 $('#error').html(xhr.responseText);
             },
             success: function(data){
-                var split = data.split('||', 6);
+					
+				var front = data.split('<tr class="empty"');
+				console.log(front[0]);
+				var split = front[0].split('||', 5);
 
                 //$('#OnlinePlayers').html(data.replace(split[0]+'||'+split[1]+'||', ""));
                 $('.overlay').html(split[0]);
                 $('#timeleft').html(split[2]);
                 $('#score1').html(split[3]);
                 $('#score2').html(split[4]);
-                $('#OnlinePlayers').html(split[5]);
+                $('#OnlinePlayers').html(data.replace(front[0], ''));
+
 
                 var mapurl = '<?=WEBSITE;?>/img/maps/'+split[0]+'.jpg';
 
@@ -287,6 +291,7 @@
     function OpenActionMenu(steamid)
     {
         lastSteamID = steamid;
+        $('#playerUsername').html($('#' + lastSteamID).find('#username').text());
     }
 
     function OpenSecondMenuOpen(type)
