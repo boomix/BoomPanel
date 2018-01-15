@@ -47,8 +47,8 @@ msgstr "服务器名称"
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/justonline.php:19
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:72
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:49
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:121
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:164
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:122
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:189
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserver.php:23
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserver.php:29
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:51
@@ -65,7 +65,7 @@ msgstr "RCON 密码"
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:156
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:167
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:77
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:172
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:197
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:54
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserver.php:42
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserver.php:71
@@ -163,8 +163,8 @@ msgstr "在线服务器"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/justonline.php:15
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:69
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:96
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:163
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:97
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:188
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:160
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:76
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:48
@@ -193,36 +193,36 @@ msgstr "死亡"
 msgid "Action"
 msgstr "动作"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:311
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:316
 msgid "Player not found"
 msgstr "该玩家未找到"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:315
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:320
 msgid "Player kicked"
 msgstr "玩家已被踢出"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:336
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:341
 msgid "Player banned"
 msgstr "玩家已被封禁"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:357
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/servers.php:362
 msgid "Success"
 msgstr "成功"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:11
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:91
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:92
 msgid "ban"
 msgstr "封禁"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:11
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:91
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:152
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:92
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:153
 msgid "mute gag"
 msgstr "禁言 恶搞"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:24
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:108
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:168
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:109
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:193
 msgid "Reason"
 msgstr "理由"
 
@@ -232,23 +232,23 @@ msgstr "理由"
 msgid "Time"
 msgstr "时间"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:79
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:80
 msgid "Unban"
 msgstr "解封"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:79
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:80
 msgid "Restore ban"
 msgstr "重置封禁"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:91
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:135
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:92
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:136
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:27
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:25
 msgid "Search"
 msgstr "搜索"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:102
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:169
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:103
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:194
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:18
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:53
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:48
@@ -256,98 +256,100 @@ msgstr "搜索"
 msgid "Admin"
 msgstr "管理员"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:115
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:116
 msgid "Mute"
 msgstr "禁言"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:116
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:117
 msgid "Gag"
 msgstr "恶搞"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:117
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:118
 msgid "Silence"
 msgstr "消声"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:124
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:125
 msgid "Any Server"
 msgstr "任意服务器"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:127
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:128
 msgid "All servers"
 msgstr "所有服务器"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:152
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:153
 msgid "Latest"
 msgstr "最新的"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:152
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:153
 msgid "bans"
 msgstr "封禁"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:157
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:182
 msgid "Total results:"
 msgstr "全部结果"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:157
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:182
 msgid "Showing results from"
 msgstr "正在展示结果"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:165
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:190
 msgid "Type"
 msgstr "类型"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/justonline.php:44
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:167
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:192
 msgid "Ban"
 msgstr "封禁"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:167
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:192
 msgid "length"
 msgstr "长度"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:167
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:192
 msgid "Length"
 msgstr "长度"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:170
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:195
 msgid "Banned at"
 msgstr "封禁日期"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:171
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:196
 msgid "Ends"
 msgstr "结束"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:197
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:211
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:224
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:240
 msgid "unbanned"
 msgstr "被解封"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:205
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:234
 msgid "mute"
 msgstr "禁言"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:205
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:234
 msgid "gag"
 msgstr "恶搞"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:205
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:234
 msgid "silence"
 msgstr "消声"
 
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:212
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:241
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:87
 msgid "edit"
 msgstr "编辑"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:148
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:260
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:160
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:252
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:127
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:135
 msgid "Prev"
 msgstr "上一页"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/chatsearch.php:154
-#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:266
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:176
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:268
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/adminlogs.php:133
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/searchplayers.php:141
 msgid "Next"
@@ -362,6 +364,7 @@ msgid "All panel admins"
 msgstr "所有面板管理员"
 
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addadmingroups.php:157
+#: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/bans.php:79
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/paneladmins.php:55
 #: /drone/src/github.com/boomix/BoomPanel/WEB/lang/../views/addserveradmins.php:52
 msgid "Delete"
