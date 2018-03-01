@@ -22,14 +22,14 @@
                         </div>
 
                         <?php if(isset($match['params']['action']) && $match['params']['action'] == 'edit'){ ?>
-                        <div class="control-group">
-                            <label class="control-label"><?=_("Page access");?>:</label>
-                            <?php foreach ((array)$GetAllPermissions as $permission) { ?>
-                            <div class="controls">
-                                <label><input class="check" type="checkbox" <?=isset($_POST['checkboxes'][$permission['permissionid']]) ? 'checked' : "";?> name="checkboxes[]" value="<?=intval($permission['permissionid']);?>" /><?=_($permission['name']);?></label>
+                            <div class="control-group">
+                                <label class="control-label"><?=_("Page access");?>:</label>
+                                <?php foreach ((array)$GetAllPermissions as $permission) { ?>
+                                    <div class="controls">
+                                        <label><input class="check" type="checkbox" <?=isset($_POST['checkboxes'][$permission['permissionid']]) ? 'checked' : "";?> name="checkboxes[]" value="<?=intval($permission['permissionid']);?>" /><?=_($permission['name']);?></label>
+                                    </div>
+                                <?php } ?>
                             </div>
-                            <?php } ?>
-                        </div>
                         <?php } ?>
 
                         <div class="form-actions">
@@ -57,43 +57,53 @@
                         </thead>
                         <tbody>
 
-                            <!-- Shows main admin without option to delete -->
-                            <tr>
-                                <td>
-                                    <?php $data = GetPlayerData(MAINADMIN);?>
-                                    <a target="_blank" href="http://steamcommunity.com/profiles/<?=MAINADMIN;?>">
-                                        <img src="<?=$data['avatar'];?>" class="player-avatar">
-                                        <?=$data['username'];?>
-                                    </a>
-                                </td>
-                                <td> </td>
-                                <td> </td>
-                            </tr>
+                        <!-- Shows main admin without option to delete -->
+                        <tr>
+                            <td>
+                                <?php $data = GetPlayerData(MAINADMIN);?>
+                                <a target="_blank" href="http://steamcommunity.com/profiles/<?=MAINADMIN;?>">
+                                    <img src="<?=$data['avatar'];?>" class="player-avatar">
+                                    <?=$data['username'];?>
+                                </a>
+                            </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
 
-                            <!-- Shows the rest of the admins -->
-                            <?php
-                                foreach ((array)$GetAllPanelAdmins as $admin) {
-                                    if(!empty($admin['id'])) {
-                                        $data = GetPlayerData($admin['steamid']);
-                            ?>
-                            <tr>
-                                <td>
-                                    <a target="_blank" href="http://steamcommunity.com/profiles/<?=$admin['steamid'];?>">
-                                        <img src="<?=$data['avatar'];?>" class="player-avatar">
-                                        <?=$data['username'];?>
-                                    </a>
-                                </td>
-                                <td style="text-align: center">
-                                    <a href="<?=$CurrentURL;?>edit/<?=$admin["id"];?>" class="btn btn-warning btn-mini"><?=_("edit");?></a>
-                                </td>
-                                <td style="text-align: center">
-                                    <a href="<?=$CurrentURL;?>delete/<?=$admin["id"];?>" class="btn btn-danger btn-mini"><?=_("delete");?></a>
-                                </td>
-                            </tr>
-                            <?php
-                                    }
-                                }
-                            ?>
+                        <?php
+
+                        //Load all player avatars with 1 request to steam
+                        $Players = array();
+                        foreach ((array)$GetAllPanelAdmins as $admin)
+                            if($admin['steamid'] != 0 && !in_array($admin['steamid'], $Players))
+                                array_push($Players, $admin['steamid']);
+                        $playerdata = GetPlayersAvatars($Players);
+
+                        ?>
+
+                        <!-- Shows the rest of the admins -->
+                        <?php
+                        foreach ((array)$GetAllPanelAdmins as $admin) {
+                            if(!empty($admin['id'])) {
+                                ?>
+                                <tr>
+                                    <td>
+                                        <a target="_blank" href="http://steamcommunity.com/profiles/<?=$admin['steamid'];?>">
+                                            <img src="<?=$playerdata[$admin['steamid']];?>" class="player-avatar">
+                                            <?=$playerdata['username-'.$admin['steamid']];?>
+                                        </a>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <a href="<?=$CurrentURL;?>edit/<?=$admin["id"];?>" class="btn btn-warning btn-mini"><?=_("edit");?></a>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <a href="<?=$CurrentURL;?>delete/<?=$admin["id"];?>" class="btn btn-danger btn-mini"><?=_("delete");?></a>
+                                    </td>
+                                </tr>
+                                <?php
+                            }
+                        }
+                        ?>
                         </tbody>
                     </table>
                 </div>

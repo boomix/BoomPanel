@@ -19,19 +19,20 @@ if($database == 'bp_bans') {
 $CurrentPage = (isset($match['params']['action']) && $match['params']['action'] == 'page') ? $match['params']['id'] : 1;
 $limit = ($CurrentPage == 1) ? ITEMSPERPAGE : ($CurrentPage - 1) * ITEMSPERPAGE.','.ITEMSPERPAGE;
 
+$leftjoins = "LEFT JOIN bp_servers s ON b.sid = s.id
+                LEFT JOIN bp_players p ON b.pid = p.id
+                LEFT JOIN bp_players p2 ON b.aid = p2.id
+                LEFT JOIN (SELECT `username`, `pid` FROM bp_players_username WHERE active = 1 GROUP BY pid) pu ON b.pid = pu.pid
+                LEFT JOIN (SELECT `username`, `pid` FROM bp_players_username WHERE active = 1 GROUP BY pid) pu2 ON b.aid = pu2.pid
+                LEFT JOIN bp_countries c ON c.country_code = p.country";
+
 $defaultSelect = "SELECT *,
                 p.steamid player_steamid,
                 p2.steamid admin_steamid,
                 pu.username player_username,
                 pu2.username admin_username,
                 IF(TIMESTAMPDIFF(MINUTE, b.time, now()) < b.length, '" . htmlspecialchars(ACTIVE) . "', '" . htmlspecialchars(EXPIRED) . "') as banstatus
-                FROM ".$database." b
-                LEFT JOIN bp_servers s ON b.sid = s.id
-                LEFT JOIN bp_players p ON b.pid = p.id
-                LEFT JOIN bp_players p2 ON b.aid = p2.id
-                LEFT JOIN bp_players_username pu ON b.pid = pu.pid
-                LEFT JOIN bp_players_username pu2 ON b.aid = pu2.pid
-                LEFT JOIN bp_countries c ON c.country_code = p.country";
+                FROM ".$database." b ".$leftjoins;
 
 
 if(isset($_GET['search']))
@@ -101,7 +102,9 @@ if(isset($_GET['search']))
 
     //Count all search bans
     $leftjoin = explode("FROM", $defaultSelect);
-    $CountAllBans   = $db->selectOne("SELECT COUNT(DISTINCT bid) AS count FROM ".$leftjoin[1]." WHERE 1 = 0 ".$query." ORDER BY bid", $data);
+    $CountAllBans   = $db->selectOne("SELECT COUNT(DISTINCT bid) AS count FROM ".$database." b ".$leftjoins." WHERE 1 = 0 ".$query, $data);
+
+
 
 } else {
 
@@ -178,6 +181,15 @@ if(isset($match['params']['action'], $match['params']['id']) && !isset($_POST['s
 
         header('Location: ' . $CurrentURL );
         exit;
+    } else if($match['params']['action'] == 'delete') {
+
+        $_SESSION['success'] = _('Ban is now deleted!');
+        $db->query("DELETE FROM ".$database." WHERE bid = :id", $data);
+        CommandToPlayer($Query, $ban['pid'], 'sm_BPmutegagrem "{STEAMID}" "'.$ban['mgtype'].'"');
+
+        header('Location: ' . $CurrentURL );
+        exit;
+
     }
 
 }
@@ -295,6 +307,38 @@ if(isset($_POST['player'], $_POST['reason'], $_POST['server'], $_POST['days'], $
 
 
 }
+
+
+
+//Allowed - true or false
+$prev2 = ($CurrentPage - 2 >= 1) ? true : false;
+$prev1 = ($CurrentPage - 1 >= 1) ? true : false;
+$next1 = ($CurrentPage + 1 <= $MaxPages) ? true : false;
+$next2 = ($CurrentPage + 2 <= $MaxPages) ? true : false;
+
+//Numbers
+$prev2Num = ($prev2) ? $CurrentPage - 2 : '-';
+$prev1Num = ($prev1) ? $CurrentPage - 1 : '-';
+$next1Num = ($next1) ? $CurrentPage + 1 : '-';
+$next2Num = ($next2) ? $CurrentPage + 2 : '-';
+
+//URLs
+$prev2url = ($prev2) ? ($CurrentURL.'page/'.$prev2Num.'/?'.http_build_query($_GET)) : '#';
+$prev1url = ($prev1) ? ($CurrentURL.'page/'.$prev1Num.'/?'.http_build_query($_GET)) : '#';
+$next1url = ($next1) ? ($CurrentURL.'page/'.$next1Num.'/?'.http_build_query($_GET)) : '#';
+$next2url = ($next2) ? ($CurrentURL.'page/'.$next2Num.'/?'.http_build_query($_GET)) : '#';
+
+$maxpageurl     = ($next2) ? ($CurrentURL.'page/'.$MaxPages.'/?'.http_build_query($_GET)) : '#';
+$firstpageurl   = ($prev2) ? ($CurrentURL.'page/1/?'.http_build_query($_GET)) : '#';
+
+
+//LI class
+$disabled = ' class="disabled"';
+$prev2class = (!$prev2) ? $disabled : '';
+$prev1class = (!$prev1) ? $disabled : '';
+$next1class = (!$next1) ? $disabled : '';
+$next2class = (!$next2) ? $disabled : '';
+
 
 
 ?>

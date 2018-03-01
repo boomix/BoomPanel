@@ -53,6 +53,53 @@
 
         </div>
     </div>
+
+
+    <div class="row-fluid">
+        <div class="span12">
+
+            <div class="widget-box">
+                <div class="widget-title"> <span class="icon"> <i class="icon-bar-chart"></i> </span>
+                    <h5><?= _("Server stats");?></h5>
+                </div>
+                <div class="widget-content nopadding">
+
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                            <th><?= _("Server name");?></th>
+                            <th><?= _("Online now");?></th>
+                            <th><?= _("Online today");?></th>
+                            <th><?= _("Online all time");?></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                            <?php foreach ((array)$GetAllServers as $server) { ?>
+                            <tr class="odd gradeX">
+                                <td><?=$server['name'];?></td>
+                                <td style="text-align: center"><?=$server['onlinePlayers'];?></td>
+                                <td style="text-align: center"><?=CountOnlinePastInServer($db, $server['name'], 1);?></td>
+                                <td style="text-align: center"><?=CountOnlinePastInServer($db, $server['name'], -1);?></td>
+                            </tr>
+                            <?php } ?>
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
 </div>
 
 

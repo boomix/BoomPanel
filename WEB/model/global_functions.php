@@ -94,13 +94,31 @@ function GetPlayerData($steamid)
 
 function GetPlayersAvatars($steamids)
 {
+
+    global $c;
+
     $url = 'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key='.APIKEY.'&steamids=';
-    foreach ($steamids as $steamid)
-        $url .= $steamid.",%20";
+    foreach ($steamids as $steamid) {
+        if($c->retrieve($steamid) && $c->retrieve('username-'.$steamid)) {
+            $data[$steamid] = $c->retrieve($steamid);
+            $data['username-'.$steamid] = $c->retrieve('username-'.$steamid);
+        }
+        else
+            $url .= $steamid . ",%20";
+    }
+
+    $c->eraseExpired();
+
+    if(substr($url, -1) == '=')
+        return $data;
 
     $parsed = json_decode(file_get_contents($url));
     foreach($parsed->response->players as $player) {
         $data[$player->steamid] = $player->avatar;
+
+        $c->store($player->steamid, $player->avatar, 86400);
+        $c->store('username-'.$player->steamid, $player->personaname, 86400);
+
         //Add also username to get usernames if they are not in database
         $data["username-".$player->steamid] = $player->personaname;
     }
@@ -124,24 +142,55 @@ function toSteamID($id) {
     return 'STEAM_1:' . $y . ':' . floor($z);
 }
 
-function convertToHoursMinsBans($time, $allowzero = false)
+function convertToHoursMinsBans($time, $allowzero = false, $shortdate = false)
 {
     if (!$allowzero && (empty($time) || $time < 1))
         return PERMANENET;
     else if($allowzero && (empty($time) || $time < 1))
-        return '0m';
+        return (!$shortdate) ? '0m' : '0 minutes';
 
     $format = null;
     $params = array();
 
-    $days       = floor($time / 1440);
-    if($days > 0) {$format .= "%01dd ";array_push($params, $days);};
+    if(!$shortdate) {
+        $days = floor($time / 1440);
+        if ($days > 0) {
+            $format .= "%01dd ";
+            array_push($params, $days);
+        };
 
-    $hours      = floor($time / 60);
-    if($hours > 0 && ($hours % 24) != 0) {$format .= "%01dh ";array_push($params, $hours - ($days * 24));};
+        $hours = floor($time / 60);
+        if ($hours > 0 && ($hours % 24) != 0) {
+            $format .= "%01dh ";
+            array_push($params, $hours - ($days * 24));
+        };
 
-    $minutes    = ($time % 60);
-    if($minutes > 0) {$format .= "%01dm";array_push($params, $minutes);};
+        $minutes = ($time % 60);
+        if ($minutes > 0) {
+            $format .= "%01dm";
+            array_push($params, $minutes);
+        };
+    } else {
+
+        $days = floor($time / 1440);
+        if ($days > 0) {
+            $format .= "%01d days";
+            array_push($params, $days);
+        };
+
+        $hours = floor($time / 60);
+        if ($hours > 0 && $days == 0 && ($hours % 24) != 0) {
+            $format .= "%01d hours";
+            array_push($params, $hours - ($days * 24));
+        };
+
+        $minutes = ($time % 60);
+        if ($minutes > 0 && $days == 0 && $hours == 0) {
+            $format .= "%01d minutes";
+            array_push($params, $minutes);
+        };
+
+    }
 
     if($format != null)
         return vsprintf($format, $params);
@@ -196,11 +245,9 @@ function CommandToPlayer($Query, $pid, $command)
 
     //Check in which server player is online *UPDATE SHOULD GET LATEST SERVER ONLINE*
     $online = $db->selectOne("
-        SELECT `steamid`, `ip`, `port`, `rcon_pw` FROM bp_players_online o 
-        LEFT JOIN bp_servers s ON o.sid = s.id 
-        LEFT JOIN bp_players p ON o.pid = p.id 
-        WHERE pid = :pid AND connected = disconnected 
-        ORDER BY connected DESC LIMIT 1
+        SELECT `steamid`, `ip`, `port`, `rcon_pw` FROM bp_servers s
+		LEFT JOIN bp_players p ON s.id = p.online
+		WHERE p.id = :pid AND online > 0
     ", array("pid" => intval($pid)));
 
     if($online) {

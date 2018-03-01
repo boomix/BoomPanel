@@ -1,13 +1,24 @@
-FROM php:latest
+FROM php:fpm
 VOLUME /boom/SERVER/cfg/sourcemod
 
+# RUN apt-get update
+# RUN apt-get install -y gnupg wget
+# RUN echo "deb http://packages.dotdeb.org stable all" >> /etc/apt/sources.list
+# RUN echo "deb-src http://packages.dotdeb.org stable all" >> /etc/apt/sources.list
+# RUN wget http://www.dotdeb.org/dotdeb.gpg
+# RUN cat dotdeb.gpg | apt-key add -
+
+# RUN rm /etc/apt/preferences.d/no-debian-php
 RUN apt-get update
-RUN apt-get upgrade -y
-RUN apt-get install -y nginx php7.0-fpm php7.0-mysql php7.0-bcm g++ libicu-dev mysql-client
+RUN apt-get install -y nginx g++ libicu-dev mysql-client
+
 RUN docker-php-ext-configure pdo_mysql
 RUN docker-php-ext-configure intl
+RUN docker-php-ext-configure bcmath
+
 RUN docker-php-ext-install pdo_mysql
 RUN docker-php-ext-install intl
+RUN docker-php-ext-install bcmath
 # RUN docker-php-ext-enable pdo_mysql
 # RUN docker-php-ext-enable pdo_intl
 
@@ -22,7 +33,7 @@ RUN chmod 777 -R /usr/local/etc/php/
 RUN chmod 777 -R /etc/nginx/sites-available/default
 RUN chmod 777 -R /usr/local/etc/php
 RUN chmod 777 ./wait_for_mysql.sh
-RUN echo "cgi.fix_pathinfo: 0;" >> /etc/php/7.0/fpm/php.ini
+RUN echo "cgi.fix_pathinfo: 0;" >> /usr/local/etc/php-fpm.conf
 
 ENV TIMEZONE="0" DEBUG="0" LANG="en" \
     DBHOST="localhost" DBNAME="boompanel" DBUSER="root" DBPASS=""

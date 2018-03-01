@@ -20,6 +20,9 @@
     include 'model/permissions.php';
     include 'model/navigation.php';
 
+    require 'class/cache.class.php';
+
+    $c = new Cache();
 
     $db = new DataBase();
     use xPaw\SourceQuery\SourceQuery;

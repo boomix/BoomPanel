@@ -528,30 +528,89 @@ CREATE TABLE IF NOT EXISTS `bp_servers` (
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
-CREATE TABLE `bp_panel_permissions` (
-	`permissionid` INT(11) NOT NULL AUTO_INCREMENT,
-	`name` VARCHAR(40) NOT NULL COLLATE 'utf8mb4_unicode_ci',
-	PRIMARY KEY (`permissionid`),
-	UNIQUE INDEX `name` (`name`)
-)
-COLLATE='utf8mb4_unicode_ci'
-ENGINE=InnoDB
-AUTO_INCREMENT=34
-;
+-- Dumping structure for table boompanel.bp_panel_admin_permissions
+CREATE TABLE IF NOT EXISTS `bp_panel_admin_permissions` (
+  `paneladmin` int(11) DEFAULT NULL,
+  `permissionid` int(11) DEFAULT NULL,
+  UNIQUE KEY `paneladmin` (`paneladmin`,`permissionid`),
+  KEY `pid` (`paneladmin`),
+  KEY `permissionid` (`permissionid`),
+  CONSTRAINT `bp_panel_admin_permissions_ibfk_2` FOREIGN KEY (`permissionid`) REFERENCES `bp_panel_permissions` (`permissionid`) ON DELETE CASCADE,
+  CONSTRAINT `bp_panel_admin_permissions_ibfk_3` FOREIGN KEY (`paneladmin`) REFERENCES `bp_panel_admins` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Dumping data for table boompanel.bp_panel_admin_permissions: ~34 rows (approximately)
+/*!40000 ALTER TABLE `bp_panel_admin_permissions` DISABLE KEYS */;
+INSERT IGNORE INTO `bp_panel_admin_permissions` (`paneladmin`, `permissionid`) VALUES
+	(4, 1),
+	(4, 18),
+	(4, 19),
+	(4, 20),
+	(4, 21),
+	(4, 22),
+	(4, 23),
+	(4, 24),
+	(4, 25),
+	(4, 26),
+	(4, 27),
+	(4, 28),
+	(4, 29),
+	(4, 30),
+	(4, 31),
+	(4, 32),
+	(4, 33),
+	(7, 1),
+	(7, 18),
+	(7, 19),
+	(7, 20),
+	(7, 21),
+	(7, 22),
+	(7, 23),
+	(7, 25),
+	(7, 26),
+	(7, 27),
+	(7, 28),
+	(7, 29),
+	(7, 30),
+	(7, 31),
+	(7, 32),
+	(7, 33),
+	(7, 34);
+/*!40000 ALTER TABLE `bp_panel_admin_permissions` ENABLE KEYS */;
 
 
-CREATE TABLE `bp_panel_admin_permissions` (
-	`paneladmin` INT(11) NULL DEFAULT NULL,
-	`permissionid` INT(11) NULL DEFAULT NULL,
-	UNIQUE INDEX `paneladmin` (`paneladmin`, `permissionid`),
-	INDEX `pid` (`paneladmin`),
-	INDEX `permissionid` (`permissionid`),
-	CONSTRAINT `bp_panel_admin_permissions_ibfk_2` FOREIGN KEY (`permissionid`) REFERENCES `bp_panel_permissions` (`permissionid`) ON DELETE CASCADE,
-	CONSTRAINT `bp_panel_admin_permissions_ibfk_3` FOREIGN KEY (`paneladmin`) REFERENCES `bp_panel_admins` (`id`) ON DELETE CASCADE
-)
-COLLATE='utf8mb4_unicode_ci'
-ENGINE=InnoDB
-;
+-- Dumping structure for table boompanel.bp_panel_permissions
+CREATE TABLE IF NOT EXISTS `bp_panel_permissions` (
+  `permissionid` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`permissionid`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Dumping data for table boompanel.bp_panel_permissions: ~17 rows (approximately)
+/*!40000 ALTER TABLE `bp_panel_permissions` DISABLE KEYS */;
+INSERT IGNORE INTO `bp_panel_permissions` (`permissionid`, `name`) VALUES
+	(20, 'Access add admin group page'),
+	(19, 'Access add panel admins page'),
+	(18, 'Access add server admins page'),
+	(1, 'Access add server page'),
+	(22, 'Access admin logs'),
+	(21, 'Access admin online time page'),
+	(26, 'Access annoncements page'),
+	(33, 'Access chat search'),
+	(24, 'Access community bans'),
+	(29, 'Access just online page'),
+	(30, 'Access most active page'),
+	(25, 'Access mute gag page'),
+	(27, 'Access player search page'),
+	(23, 'Access server bans'),
+	(31, 'Access servers page'),
+	(32, 'Can send rcon command'),
+	(28, 'Show player search IP');
+/*!40000 ALTER TABLE `bp_panel_permissions` ENABLE KEYS */;
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 
 
 

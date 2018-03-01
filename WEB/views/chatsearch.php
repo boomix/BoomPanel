@@ -86,7 +86,7 @@
                             ?>
 
 
-                            <?php foreach ((array)$ChatSearch as $result) { if(!empty($result['steamid'])) {?>
+                            <?php if(isset($ChatSearch)) {foreach ((array)$ChatSearch as $result) { if(!empty($result['steamid'])) {?>
                                 <tr>
                                     <?php
                                     //Give other style if player is online
@@ -99,7 +99,7 @@
                                     <td class="steamidrow"><?=htmlspecialchars($result['name']);?></td>
                                     <td class="steamidrow"><?=date(TIMEFORMAT, strtotime($result['time']));?></td>
                                 </tr>
-                            <?php } } ?>
+                            <?php } } }?>
                             </tbody>
                         </table>
 

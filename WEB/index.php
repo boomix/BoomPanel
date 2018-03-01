@@ -4,6 +4,7 @@ session_start();
 ob_start();
 
 
+
 //Redirect to url with slash if there is no slash
 if( strlen($_SERVER['REQUEST_URI']) > 1 && substr($_SERVER['REQUEST_URI'], -1) != '/' && strpos($_SERVER['REQUEST_URI'], '?') != true) {
      $url = $_SERVER['REQUEST_URI']."/";
@@ -13,6 +14,12 @@ if( strlen($_SERVER['REQUEST_URI']) > 1 && substr($_SERVER['REQUEST_URI'], -1) !
 
 include 'config.php';
 include 'includes.php';
+
+//Show errors | disable when live
+if(DEVELOPERMOD == 1) {
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+}
 
 require_once('./class/i18n.php');
 I18N::init('boompanel', './lang', 'en_US', array(
@@ -33,12 +40,6 @@ if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
     // totally not a retrigger
 }
 
-//Show errors | disable when live
-if(DEVELOPERMOD == 1) {
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
-}
-
 $offset = intval(TIMEZONE);
 $timezone_name = timezone_name_from_abbr('', $offset * 3600, FALSE);
 date_default_timezone_set($timezone_name);
@@ -50,6 +51,10 @@ $url        = parse_url($url);
 if(isset($url['path'])) {
     $explode    = explode('/', $url['path']);
     $basepath   = (!empty($explode[1])) ? "/".$explode[1] : '';
+
+    for($i = 2;$i <= count($explode);$i++)
+        $basepath .= (!empty($explode[$i])) ? "/".$explode[$i] : '';
+
 } else {
     $basepath 	= '';
 }
