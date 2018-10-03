@@ -83,12 +83,24 @@
                         <tbody>
 
                             <?php
-                                //Load all player avatars with 1 request to steam
-                                $Players = array();
-                                foreach ((array)$GetAllAdmins as $admin)
-                                    if(!in_array($admin['steamid'], $Players))
+                                $Players = [];
+                                foreach ((array)$GetAllAdmins as $admin) {
+                                    if(!in_array($admin['steamid'], $Players)) {
                                         array_push($Players, $admin['steamid']);
-                                $avatars = GetPlayersAvatars($Players);
+                                    }
+                                }
+
+                                $avatars = [];
+                                $first = true;
+                                foreach (array_chunk($Players, 100) as $players) {
+                                    if ($first) {
+                                        $avatars = GetPlayersAvatars($players);
+                                        $first = false;
+                                        continue;
+                                    }
+
+                                    array_replace($avatars, GetPlayersAvatars($players));
+                                }
                             ?>
 
                             <?php foreach ((array) $GetAllAdmins as $admin) { if(!empty($admin['steamid'])){?>
